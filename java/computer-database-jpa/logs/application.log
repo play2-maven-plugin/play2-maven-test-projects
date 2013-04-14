@@ -1,0 +1,105 @@
+2013-01-03 11:20:28,578 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:29,609 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:29,703 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:29,796 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:29,921 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-1777579410] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:29,984 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:20:30,078 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-554801792] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:21,937 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:25,890 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:26,875 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:27,171 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:27,843 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test--1010732054] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:28,484 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:53:28,703 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test--905897108] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:26,578 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:30,078 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:30,937 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:31,234 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:31,953 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test--845776351] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:35,109 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:54:35,359 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-358625838] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:24,218 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:27,937 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:28,968 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:29,312 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:30,171 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-2015813291] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:35,031 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 11:56:35,375 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-115732034] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:04,718 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:08,046 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:08,890 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:09,171 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:09,859 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-843597500] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:13,531 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2013-01-03 13:57:13,781 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play-test-1660563455] bound to JNDI as DefaultDS
+

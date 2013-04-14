@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright 2013 Grzegorz Slowikowski (gslowikowski at gmail dot com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.google.code.play2-maven-plugin</groupId>
+        <artifactId>maven-parent</artifactId>
+        <version>1.0.0-alpha1-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.google.code.play2-maven-plugin</groupId>
+    <artifactId>test-projects</artifactId>
+    <version>1.0.0-alpha1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Play! Framework 2.0 Maven Test Projects</name>
+
+    <repositories>
+        <repository>
+            <id>com.google.code.play2-maven-plugin</id>
+            <name>Maven Play 2.0 Plugin - releases</name>
+            <url>https://play2-maven-plugin.googlecode.com/svn/mavenrepo/releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>com.google.code.play2-maven-plugin-snapshots</id>
+            <name>Maven Play 2.0 Plugin - snapshots</name>
+            <url>https://play2-maven-plugin.googlecode.com/svn/mavenrepo/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <scm>
+        <connection>scm:svn:http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</connection>
+        <developerConnection>scm:svn:https://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</developerConnection>
+        <url>http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</url>
+    </scm>
+
+    <modules>
+        <module>java</module>
+        <module>scala</module>
+        <module>reporting</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>with-external-modules</id>
+
+            <modules>
+                <module>external-modules</module>
+            </modules>
+        </profile>
+    </profiles>
+
+</project>
