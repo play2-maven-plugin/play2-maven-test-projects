@@ -8,5 +8,5 @@ Twitter Bootstrap requires a different form layout to the default one that the P
 
 =================
 
-1. Run "mvn site" or "mvn cobertura:cobertura"
+1. Run "mvn clean site" or "mvn clean cobertura:cobertura"
 2. Open target/site/cobertura/index.html

@@ -19,12 +19,6 @@ under the License.
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <groupId>com.google.code.play2-maven-plugin</groupId>
-        <artifactId>play2-java-default-parent</artifactId>
-        <version>1.0.0-alpha1-SNAPSHOT</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.java</groupId>
     <artifactId>websocket-chat</artifactId>
@@ -33,12 +27,88 @@ under the License.
 
     <name>Play! Framework 2.0 Maven Test Projects : Java : WebSocket Chat</name>
 
+    <repositories>
+        <repository>
+            <id>typesafe</id>
+            <name>Typesafe - releases</name>
+            <url>http://repo.typesafe.com/typesafe/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <play2.plugin.version>1.0.0-alpha1-SNAPSHOT</play2.plugin.version>
+        <play2.version>2.1.0</play2.version>
+        <play2-scala.version>2.10</play2-scala.version>
+        <scala.version>2.10.0</scala.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>play</groupId>
+            <artifactId>play_${play2-scala.version}</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>play</groupId>
+            <artifactId>play-java_${play2-scala.version}</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
+        <sourceDirectory>${basedir}/app</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>${basedir}/conf</directory>
+            </resource>
+            <resource>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>public/**</include>
+                </includes>
+            </resource>
+        </resources>
+        <!--<outputDirectory>target/scala-${play2-scala.version}/classes</outputDirectory>-->
+
         <plugins>
             <plugin>
                 <groupId>com.google.code.play2-maven-plugin</groupId>
                 <artifactId>play2-maven-plugin</artifactId>
+                <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Specification-Vendor>${project.artifactId}</Specification-Vendor>
+                            <Specification-Title>${project.artifactId}</Specification-Title>
+                            <Specification-Version>${project.version}</Specification-Version>
+                            <Implementation-Vendor>${project.artifactId}</Implementation-Vendor>
+                            <Implementation-Title>${project.artifactId}</Implementation-Title>
+                            <Implementation-Version>${project.version}</Implementation-Version>
+                            <Implementation-Vendor-Id>${project.artifactId}</Implementation-Vendor-Id>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
