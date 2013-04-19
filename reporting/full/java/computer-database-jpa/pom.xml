@@ -231,6 +231,13 @@ under the License.
                     </links>
                     <source>1.5</source>
                 </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc</report> <!-- skip: aggregate, test-javadoc and test-aggregate reports -->
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
@@ -242,6 +249,13 @@ under the License.
                         <exclude>controllers/routes.java</exclude>
                     </excludes>
                 </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>jxr</report> <!-- skip: aggregate, test-jxr and test-aggregate reports -->
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
