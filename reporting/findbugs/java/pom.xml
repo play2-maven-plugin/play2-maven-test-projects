@@ -30,10 +30,9 @@ under the License.
     <artifactId>java</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play Framework 2.0 Maven Test Projects : Reporting : Findbugs : Java</name>
+    <name>Play! Framework 2.x Maven Test Projects : Reporting : Findbugs : Java</name>
 
     <modules>
-        <!--<module>computer-database-ebean</module>-->
         <module>computer-database-jpa</module>
     </modules>
 

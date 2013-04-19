@@ -30,7 +30,7 @@ under the License.
     <artifactId>scala</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play! Framework 2.0 Maven Test Projects : Scala</name>
+    <name>Play! Framework 2.x Maven Test Projects : Scala</name>
 
     <modules>
         <module>comet-clock</module>

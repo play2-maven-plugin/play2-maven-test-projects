@@ -30,11 +30,13 @@ under the License.
     <artifactId>reporting</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play Framework 2.0 Maven Test Projects : Reporting</name>
+    <name>Play! Framework 2.x Maven Test Projects : Reporting</name>
 
     <modules>
         <module>cobertura</module>
         <module>findbugs</module>
+        <module>full</module>
+        <module>pmd</module>
     </modules>
 
 </project>

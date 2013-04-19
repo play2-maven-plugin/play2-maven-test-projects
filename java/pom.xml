@@ -30,7 +30,7 @@ under the License.
     <artifactId>java</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play! Framework 2.0 Maven Test Projects : Java</name>
+    <name>Play! Framework 2.x Maven Test Projects : Java</name>
 
     <modules>
         <module>comet-clock</module>

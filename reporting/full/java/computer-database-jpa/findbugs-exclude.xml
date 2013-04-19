@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+
+    <Match>
+        <Class name="~Routes.*" />
+    </Match>
+
+    <Match>
+        <Class name="~controllers\.routes.*" />
+    </Match>
+
+    <Match>
+        <Class name="controllers.ReverseApplication" />
+    </Match>
+
+    <Match>
+        <Class name="controllers.ReverseAssets" />
+    </Match>
+
+    <Match>
+        <Package name="controllers.javascript" />
+    </Match>
+
+    <Match>
+        <Package name="controllers.ref" />
+    </Match>
+
+    <Match>
+        <Package name="~views\.html\.*" />
+    </Match>
+
+</FindBugsFilter>

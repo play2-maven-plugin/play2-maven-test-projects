@@ -30,7 +30,7 @@ under the License.
     <artifactId>cobertura</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play Framework 2.0 Maven Test Projects : Reporting : Cobertura</name>
+    <name>Play! Framework 2.x Maven Test Projects : Reporting : Cobertura</name>
 
     <modules>
         <module>java</module>

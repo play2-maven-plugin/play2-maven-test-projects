@@ -30,7 +30,7 @@ under the License.
     <artifactId>pmd</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play Framework 2.0 Maven Test Projects : Reporting : PMD</name>
+    <name>Play! Framework 2.x Maven Test Projects : Reporting : PMD</name>
 
     <modules>
         <module>java</module>
