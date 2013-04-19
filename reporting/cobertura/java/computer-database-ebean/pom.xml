@@ -111,6 +111,7 @@ under the License.
                             <goal>ebean-enhance</goal>
                         </goals>
                         <phase>generate-test-sources</phase> <!-- Cobertura instrumentation in "process-classes" phase must be before Ebean enhancements -->
+                        <!-- WARNING: not compatible with play2:run and play2:start -->
                     </execution>
                 </executions>
             </plugin>

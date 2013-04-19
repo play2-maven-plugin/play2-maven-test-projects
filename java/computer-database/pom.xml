@@ -104,6 +104,9 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-play2-ebean-enhance</id>
