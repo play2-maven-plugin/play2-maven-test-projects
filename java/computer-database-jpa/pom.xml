@@ -46,6 +46,8 @@ under the License.
         <play2.version>2.1.0</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <scala.version>2.10.0</scala.version>
+
+        <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
 
     <dependencies>
@@ -111,7 +113,9 @@ under the License.
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
+                    -->
                 </configuration>
             </plugin>
 
