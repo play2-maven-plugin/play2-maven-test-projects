@@ -42,8 +42,8 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.plugin.version>1.0.0-alpha2</play2.plugin.version>
-        <play2.version>2.1.0</play2.version>
+        <play2.plugin.version>1.0.0-alpha3-SNAPSHOT</play2.plugin.version>
+        <play2.version>2.1.5</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <scala.version>2.10.0</scala.version>
     </properties>
@@ -51,9 +51,8 @@ under the License.
     <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
-            <artifactId>scala-compiler</artifactId>
+            <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -92,6 +91,13 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.google.code.play2-maven-plugin</groupId>
+                        <artifactId>play2-provider-play21</artifactId>
+                        <version>${play2.plugin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>
