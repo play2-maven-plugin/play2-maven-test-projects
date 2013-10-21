@@ -96,6 +96,9 @@ under the License.
                         <version>${play2.plugin.version}</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <javacOptions>-g -Xlint:deprecation</javacOptions>
+                </configuration>
             </plugin>
 
             <plugin>
