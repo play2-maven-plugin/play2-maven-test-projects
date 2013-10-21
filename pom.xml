@@ -38,14 +38,4 @@ under the License.
         <module>play22</module>
     </modules>
 
-    <profiles>
-        <profile>
-            <id>with-external-modules</id>
-
-            <modules>
-                <module>external-modules</module>
-            </modules>
-        </profile>
-    </profiles>
-
 </project>
