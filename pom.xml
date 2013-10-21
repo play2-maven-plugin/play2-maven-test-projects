@@ -38,4 +38,47 @@ under the License.
         <module>play22</module>
     </modules>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                        <providerImplementations>
+                            <svn>javasvn</svn>
+                        </providerImplementations>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                            <artifactId>maven-scm-provider-svnjava</artifactId>
+                            <version>1.15</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.6</version>
+                    <configuration>
+                        <providerImplementations>
+                            <svn>javasvn</svn>
+                        </providerImplementations>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                            <artifactId>maven-scm-provider-svnjava</artifactId>
+                            <version>1.15</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>
