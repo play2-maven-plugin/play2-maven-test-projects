@@ -22,7 +22,7 @@ under the License.
     <parent>
         <groupId>com.google.code.play2-maven-plugin.test-projects.play21</groupId>
         <artifactId>reporting</artifactId>
-        <version>1.0.0-alpha3</version>
+        <version>1.0.0-alpha4-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
