@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play22.scala</groupId>
     <artifactId>helloworld</artifactId>
-    <version>1.0.0-alpha3-SNAPSHOT</version>
+    <version>1.0.0-alpha3</version>
     <packaging>play2</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.2.x : Scala : Hello World</name>
