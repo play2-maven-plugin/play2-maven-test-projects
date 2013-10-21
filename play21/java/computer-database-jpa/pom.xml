@@ -173,26 +173,25 @@ The problematic artifacts are:
 
 Here is a fragment of dependency tree (mvn dependency:tree -Dverbose):
 
-com.google.code.play2-maven-plugin:play2-app-default-parent:pom:1.0.0-alpha1-SNAPSHOT
-+- play:play_2.10:jar:2.1.0:provided
-|  +- oauth.signpost:signpost-core:jar:1.2.1.2:provided
-|  |  \- commons-codec:commons-codec:jar:1.3:provided
-|  +- oauth.signpost:signpost-commonshttp4:jar:1.2.1.2:provided
-|  |  +- (oauth.signpost:signpost-core:jar:1.2.1.2:provided - omitted for duplicate)
-|  |  +- org.apache.httpcomponents:httpcore:jar:4.0.1:provided
-|  |  \- org.apache.httpcomponents:httpclient:jar:4.0.1:provided
-|  |     +- (org.apache.httpcomponents:httpcore:jar:4.0.1:provided - omitted for duplicate)
-|  |     +- commons-logging:commons-logging:jar:1.1.1:provided
-|  |     \- (commons-codec:commons-codec:jar:1.3:provided - omitted for duplicate)
+com.google.code.play2-maven-plugin.test-projects.play21.java:computer-database-jpa:play2:1.0.0-alpha4-SNAPSHOT
++- play:play_2.10:jar:2.1.5:compile
+|  +- oauth.signpost:signpost-core:jar:1.2.1.2:compile
+|  |  \- commons-codec:commons-codec:jar:1.3:compile
+|  +- oauth.signpost:signpost-commonshttp4:jar:1.2.1.2:compile
+|  |  +- (oauth.signpost:signpost-core:jar:1.2.1.2:compile - omitted for duplicate)
+|  |  +- org.apache.httpcomponents:httpcore:jar:4.0.1:compile
+|  |  \- org.apache.httpcomponents:httpclient:jar:4.0.1:compile
+|  |     +- (org.apache.httpcomponents:httpcore:jar:4.0.1:compile - omitted for duplicate)
+|  |     \- (commons-codec:commons-codec:jar:1.3:compile - omitted for duplicate)
 
-+- play:play-test_2.10:jar:2.1.0:test
+\- play:play-test_2.10:jar:2.1.5:test
    \- org.fluentlenium:fluentlenium-festassert:jar:0.7.3:test
       +- org.fluentlenium:fluentlenium-core:jar:0.7.3:test
       |  +- org.seleniumhq.selenium:selenium-java:jar:2.25.0:test
       |  |  +- org.seleniumhq.selenium:selenium-android-driver:jar:2.25.0:test
       |  |  |  \- org.seleniumhq.selenium:selenium-remote-driver:jar:2.25.0:test
       |  |  |     +- (org.apache.httpcomponents:httpclient:jar:4.1.2:test - omitted for conflict with 4.0.1)
-      |  |  +- org.seleniumhq.selenium:selenium-htmlunit-driver:jar:2.25.:test
+      |  |  +- org.seleniumhq.selenium:selenium-htmlunit-driver:jar:2.25.0:test
       |  |  |  +- net.sourceforge.htmlunit:htmlunit:jar:2.9:test
       |  |  |  |  +- org.apache.httpcomponents:httpmime:jar:4.1.2:test
       |  |  |  |  |  +- (org.apache.httpcomponents:httpcore:jar:4.1.2:test - omitted for conflict with 4.0.1)
