@@ -19,12 +19,6 @@ under the License.
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <groupId>com.google.code.play2-maven-plugin</groupId>
-        <artifactId>maven-parent</artifactId>
-        <version>1.0.0-alpha3-SNAPSHOT</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin</groupId>
     <artifactId>test-projects</artifactId>
@@ -40,9 +34,8 @@ under the License.
     </scm>
 
     <modules>
-        <module>java</module>
-        <module>scala</module>
-        <module>reporting</module>
+        <module>play21</module>
+        <module>play22</module>
     </modules>
 
     <profiles>
