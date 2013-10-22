@@ -20,21 +20,21 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>com.google.code.play2-maven-plugin.test-projects</groupId>
-        <artifactId>play21</artifactId>
+        <groupId>com.google.code.play2-maven-plugin.test-projects.play21</groupId>
+        <artifactId>external-modules</artifactId>
         <version>1.0.0-alpha4-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.google.code.play2-maven-plugin.test-projects.play21</groupId>
-    <artifactId>external-modules</artifactId>
+    <groupId>com.google.code.play2-maven-plugin.test-projects.play21.external-modules</groupId>
+    <artifactId>securesocial</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play! Framework 2.x Maven Test Projects : Play! 2.1.x : External Modules</name>
+    <name>Play! Framework 2.x Maven Test Projects : Play! 2.1.x : External Modules : SecureSocial</name>
 
     <modules>
-        <module>deadbolt</module>
-        <module>securesocial</module>
+        <module>java</module>
+        <module>scala</module>
     </modules>
 
 </project>
