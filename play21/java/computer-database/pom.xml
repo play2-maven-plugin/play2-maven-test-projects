@@ -42,7 +42,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.plugin.version>1.0.0-alpha3</play2.plugin.version>
+        <play2.plugin.version>1.0.0-alpha4-SNAPSHOT</play2.plugin.version>
         <play2.version>2.1.5</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <scala.version>2.10.0</scala.version>
@@ -113,6 +113,7 @@ under the License.
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <mainLang>java</mainLang>
                     <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
                     -->

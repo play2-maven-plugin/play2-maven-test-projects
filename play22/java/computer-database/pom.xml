@@ -42,7 +42,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.plugin.version>1.0.0-alpha3</play2.plugin.version>
+        <play2.plugin.version>1.0.0-alpha4-SNAPSHOT</play2.plugin.version>
         <play2.version>2.2.0</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <scala.version>2.10.2</scala.version>
