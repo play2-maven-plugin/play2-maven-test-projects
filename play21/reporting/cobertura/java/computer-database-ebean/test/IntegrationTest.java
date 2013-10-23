@@ -17,8 +17,7 @@ public class IntegrationTest {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333");
                 
-//GS                assertThat(browser.$("header h1").first().getText()).isEqualTo("Play 2.0 sample application â_" Computer database");
-                assertThat(browser.$("header h1").first().getText()).isEqualTo("Play 2.0 sample application - Computer database");
+                assertThat(browser.$("header h1").first().getText()).isEqualTo("Play 2.0 sample application â€” Computer database");
                 assertThat(browser.$("section h1").first().getText()).isEqualTo("574 computers found");
 
                 assertThat(browser.$("#pagination li.current").first().getText()).isEqualTo("Displaying 1 to 10 of 574");
