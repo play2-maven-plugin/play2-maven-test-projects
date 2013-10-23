@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                               controllers.Application.index
+GET     /restrictIndex                  controllers.RestrictController.index
+GET     /restrict1                      controllers.RestrictController.restrictOne
+GET     /restrict2                      controllers.RestrictController.restrictTwo
+GET     /restrict3                      controllers.RestrictController.restrictThree
+GET     /restrict4                      controllers.RestrictController.restrictFour
+GET     /restrict5                      controllers.RestrictController.restrictFive
+GET     /customRestrict1                controllers.RestrictController.customRestrictOne
+GET     /customRestrict2                controllers.RestrictController.customRestrictTwo
+GET     /index                          controllers.DynamicRestrictionsController.index
+GET     /pureLuck                       controllers.DynamicRestrictionsController.pureLuck
+GET     /noWayJose                      controllers.DynamicRestrictionsController.noWayJose
+GET     /viewProfile                    controllers.DynamicRestrictionsController.viewProfile(userName: String)
+GET     /editPrinter                    controllers.PatternController.editPrinter
+GET     /detonatePrinter                controllers.PatternController.detonatePrinter
+GET     /editAnythingRegex              controllers.PatternController.editPrinterRegex
+GET     /rhp_in                         controllers.SubjectController.subjectPresent
+GET     /rhp_out                        controllers.SubjectController.subjectPresent_notLoggedIn
+GET     /rhnp_out                       controllers.SubjectController.subjectNotPresent
+GET     /rhnp_in                        controllers.SubjectController.subjectNotPresent_loggedIn
+GET     /bug                            controllers.EdgeCaseController.index
+GET     /deferredRestrict               controllers.DeferredController.deferredRestrict
+GET     /deferredRestrictions           controllers.DeferredController.deferredRestrictions
+GET     /deferredPattern                controllers.DeferredController.deferredPattern
+GET     /deferredDynamic                controllers.DeferredController.deferredDynamic
+GET     /deferredSubjectPresent         controllers.DeferredController.deferredSubjectPresent
+GET     /deferredSubjectNotPresent      controllers.DeferredController.deferredSubjectNotPresent
+GET     /unrestrictedIndex              controllers.UnrestrictedController.index
+GET     /unrestrictedOpen               controllers.UnrestrictedController.unrestrictedWithinAConstrainedController
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
