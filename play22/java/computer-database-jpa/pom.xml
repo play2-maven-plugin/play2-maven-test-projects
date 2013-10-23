@@ -119,6 +119,7 @@ under the License.
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <mainLang>java</mainLang>
                     <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
                     -->

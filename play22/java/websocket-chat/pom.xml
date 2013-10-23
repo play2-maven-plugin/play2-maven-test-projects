@@ -97,6 +97,7 @@ under the License.
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <mainLang>java</mainLang>
                     <javacOptions>-g -Xlint:deprecation</javacOptions>
                 </configuration>
             </plugin>
