@@ -30,7 +30,7 @@ under the License.
     <artifactId>java</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play Framework 2.x Maven Test Projects : Play! 2.1.x : Reporting : Full Site : Java</name>
+    <name>Play! Framework 2.x Maven Test Projects : Play! 2.1.x : Reporting : Full Site : Java</name>
 
     <modules>
         <module>computer-database-jpa</module>
