@@ -38,6 +38,8 @@ under the License.
         <module>java</module>
         <module>scala</module>
 
+        <module>multimodule</module>
+
         <module>reporting</module>
     </modules>
 
