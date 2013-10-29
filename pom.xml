@@ -34,6 +34,7 @@ under the License.
     </scm>
 
     <modules>
+        <module>activator</module>
         <module>play21</module>
         <module>play22</module>
     </modules>
