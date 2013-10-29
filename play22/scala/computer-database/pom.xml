@@ -75,6 +75,13 @@ under the License.
             <version>${play2.version}</version>
         </dependency>
 
+        <!-- adding this dependency did not fix failing ApplicationSpec test -->
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>0.8.0.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-test_${play2-scala.version}</artifactId>
