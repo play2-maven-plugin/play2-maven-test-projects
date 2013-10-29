@@ -1,0 +1,55 @@
+@main("Welcome to Play Framework") {
+
+    <div class="modal fade" id="addMessageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3>Add a message</h3>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="messageField">Message</label>
+                            <input type="text" class="form-control" id="messageField" placeholder="Enter message"
+                                data-bind="value: messageField"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-link" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-bind="click: saveMessage">Add message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Messages</h2>
+            <p>Welcome to the Play MongoDB and knockout.js template.</p>
+            <p>This template shows how you can create a reactive Play application with a rich front end and scalable backend.</p>
+            <p>Try adding a message: <a data-toggle="modal" href="#addMessageModal" class="btn btn-primary">Add message</a></p>
+            <p>In the backend, <a href="http://mongodb.org">MongoDB</a> is being used to store messages entered in the front end.  <a href="http://reactivemongo.org">Reactive Mongo</a> is being used to talk to MongoDB, using reactive IO.  MongoDB is also being used to publish events, using a tailable cursor on a capped collection.  This ensures that a Play application stays stateless, which allows it to easily scale out to react to load, and gracefully handle faults.</p>
+            <p>In the front end, <a href="http://knockoutjs.com/">knockout.js</a> is being used to provide a reactive user interface.  <a href="http://getbootstrap.com/">Bootstrap</a> is being used for styling, and <a href="http://jquery.org">jQuery</a> is being used to make AJAX calls, in combination with the Play Javascript router.</p>
+            <p>To receive real time updates of new messages, server sent events are being used, subscribing to the MongoDB tailable cursor on the backend.</p>
+        </div>
+        <div class="col-md-8">
+            <ul class="pager">
+                <li class="previous" data-bind="css: { disabled: prevMessagesUrl() == null }">
+                    <a href="#" data-bind="click: prevMessages">Previous</a>
+                </li>
+                <li class="next" data-bind="css: { disabled: nextMessagesUrl() == null }">
+                    <a href="#" data-bind="click: nextMessages">Next</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled messages" data-bind="foreach: messages">
+                <li data-bind="text: $data.message"></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+}
