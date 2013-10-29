@@ -34,7 +34,7 @@ under the License.
 
     <modules>
         <module>comet-clock</module>
-        <!-- does not work <module>comet-live-monitoring</module>-->
+        <module>comet-live-monitoring</module>
         <module>computer-database</module>
         <module>eventsource-clock</module>
         <module>forms</module>
