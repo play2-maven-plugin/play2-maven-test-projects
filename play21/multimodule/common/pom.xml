@@ -41,6 +41,8 @@ under the License.
     </dependencies>
 
     <build>
+        <sourceDirectory>${basedir}/src/main/scala</sourceDirectory>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -53,8 +55,16 @@ under the License.
             </plugin>
 
             <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
+                <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
+                <artifactId>sbt-compiler-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-sbt-compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

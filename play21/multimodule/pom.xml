@@ -42,10 +42,12 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.plugin.version>1.0.0-alpha5</play2.plugin.version>
         <play2.version>2.1.5</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
+        <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
+
         <scala.version>2.10.0</scala.version>
+        <sbt-compiler.plugin.version>1.0.0-beta1</sbt-compiler.plugin.version>
     </properties>
 
     <modules>
@@ -71,28 +73,10 @@ under the License.
                 </dependencies>
             </plugin>
 
-            <!-- TODO - replace with Play! 2.x plugin -->
             <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>3.1.6</version>
-                <configuration>
-                    <recompileMode>incremental</recompileMode>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>scala-compile</id>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>scala-test-compile</id>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
+                <artifactId>sbt-compiler-maven-plugin</artifactId>
+                <version>${sbt-compiler.plugin.version}</version>
             </plugin>
 
             <plugin>

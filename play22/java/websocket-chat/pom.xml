@@ -42,10 +42,12 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.plugin.version>1.0.0-alpha5</play2.plugin.version>
         <play2.version>2.2.0</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
+        <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
+
         <scala.version>2.10.2</scala.version>
+        <sbt-compiler.plugin.version>1.0.0-beta1</sbt-compiler.plugin.version>
     </properties>
 
     <dependencies>
@@ -98,6 +100,14 @@ under the License.
                 </dependencies>
                 <configuration>
                     <mainLang>java</mainLang>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
+                <artifactId>sbt-compiler-maven-plugin</artifactId>
+                <version>${sbt-compiler.plugin.version}</version>
+                <configuration>
                     <javacOptions>-g -Xlint:deprecation</javacOptions>
                 </configuration>
             </plugin>
