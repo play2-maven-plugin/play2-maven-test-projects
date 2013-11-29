@@ -50,12 +50,13 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.2.0</play2.version>
+        <play2.version>2.2.1</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
 
         <scala.version>2.10.2</scala.version>
-        <sbt-compiler.plugin.version>1.0.0-beta1</sbt-compiler.plugin.version>
+        <sbt.version>0.13.0</sbt.version> <!-- used by sbt-compiler -->
+        <sbt-compiler.plugin.version>1.0.0-beta2</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
