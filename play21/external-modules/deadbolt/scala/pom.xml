@@ -142,15 +142,10 @@ under the License.
                 <version>2.4</version>
                 <configuration>
                     <archive>
-                        <manifestEntries>
-                            <Specification-Vendor>${project.artifactId}</Specification-Vendor>
-                            <Specification-Title>${project.artifactId}</Specification-Title>
-                            <Specification-Version>${project.version}</Specification-Version>
-                            <Implementation-Vendor>${project.artifactId}</Implementation-Vendor>
-                            <Implementation-Title>${project.artifactId}</Implementation-Title>
-                            <Implementation-Version>${project.version}</Implementation-Version>
-                            <Implementation-Vendor-Id>${project.artifactId}</Implementation-Vendor-Id>
-                        </manifestEntries>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
