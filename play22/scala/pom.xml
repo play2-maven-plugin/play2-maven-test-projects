@@ -39,6 +39,8 @@ under the License.
         <module>eventsource-clock</module>
         <module>forms</module>
         <module>helloworld</module>
+        <module>helloworld-war-servlet-2.5</module>
+        <module>helloworld-war-servlet-3.0</module>
         <module>websocket-chat</module>
         <module>zentasks</module>
     </modules>
