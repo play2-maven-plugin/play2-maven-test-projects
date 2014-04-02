@@ -42,13 +42,12 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.2.1</play2.version>
+        <play2.version>2.2.2</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
 
-        <scala.version>2.10.2</scala.version>
-        <sbt.version>0.13.0</sbt.version> <!-- used by sbt-compiler -->
-        <sbt-compiler.plugin.version>1.0.0-beta2</sbt-compiler.plugin.version>
+        <scala.version>2.10.3</scala.version>
+        <sbt-compiler.plugin.version>1.0.0-beta3-SNAPSHOT</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
@@ -76,13 +75,6 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-jdbc_${play2-scala.version}</artifactId>
             <version>${play2.version}</version>
-        </dependency>
-
-        <!-- adding this dependency did not fix failing ApplicationSpec test -->
-        <dependency>
-            <groupId>com.jolbox</groupId>
-            <artifactId>bonecp</artifactId>
-            <version>0.8.0.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -115,13 +107,6 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.google.code.play2-maven-plugin</groupId>
-                        <artifactId>play2-provider-play22</artifactId>
-                        <version>${play2.plugin.version}</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
@@ -158,7 +143,7 @@ under the License.
                         <include>**/*Spec.java</include>
                     </includes>
                     <excludes>
-                        <exclude>ApplicationSpec.java</exclude> <!-- does not work, check why -->
+                        <!--TEST<exclude>ApplicationSpec.java</exclude>--> <!-- does not work, check why -->
                         <exclude>IntegrationSpec.java</exclude>
                     </excludes>
                 </configuration>

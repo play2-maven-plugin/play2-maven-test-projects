@@ -50,13 +50,12 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.2.1</play2.version>
+        <play2.version>2.2.2</play2.version>
         <play2-scala.version>2.10</play2-scala.version>
         <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
 
-        <scala.version>2.10.2</scala.version>
-        <sbt.version>0.13.0</sbt.version> <!-- used by sbt-compiler -->
-        <sbt-compiler.plugin.version>1.0.0-beta2</sbt-compiler.plugin.version>
+        <scala.version>2.10.3</scala.version>
+        <sbt-compiler.plugin.version>1.0.0-beta3-SNAPSHOT</sbt-compiler.plugin.version>
     </properties>
 
     <dependencies>
@@ -100,13 +99,6 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.google.code.play2-maven-plugin</groupId>
-                        <artifactId>play2-provider-play22</artifactId>
-                        <version>${play2.plugin.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <plugin>
