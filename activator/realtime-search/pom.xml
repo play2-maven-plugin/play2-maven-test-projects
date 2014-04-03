@@ -47,7 +47,6 @@ under the License.
         <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
 
         <scala.version>2.10.0</scala.version>
-        <sbt.version>0.12.4</sbt.version>
         <sbt-compiler.plugin.version>1.0.0-beta3-SNAPSHOT</sbt-compiler.plugin.version>
     </properties>
 

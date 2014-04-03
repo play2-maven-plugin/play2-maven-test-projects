@@ -11,8 +11,15 @@ object ChatApplication extends Controller {
   /** Central hub for distributing chat messages */
   val (chatOut, chatChannel) = Concurrent.broadcast[JsValue]
 
-  /** Controller action serving chat page */
-  def index = Action { Ok(views.html.index("Chat using Server Sent Events")) }
+  /** Controller action serving AngularJS chat page */
+  def index = Action { Ok(views.html.index("Chat using Server Sent Events and AngularJS")) }
+
+  /** Controller action serving React chat page */
+  def indexReact = Action { Ok(views.html.react("Chat using Server Sent Events and React")) }
+
+  /** Controller action serving React chat page */
+  def indexReactScalaJS = Action { Ok(views.html.react_scala_js("Chat using Server Sent Events, React and Scala.js")) }
+  def indexReactScalaJsOpt = Action { Ok(views.html.react_scala_js_opt("Chat using Server Sent Events, React and Scala.js")) }
 
   /** Controller action for POSTing chat messages */
   def postMessage = Action(parse.json) { req => chatChannel.push(req.body); Ok }
@@ -27,7 +34,7 @@ object ChatApplication extends Controller {
   /** Controller action serving activity based on room */
   def chatFeed(room: String) = Action { req =>
     println(req.remoteAddress + " - SSE connected")
-    Ok.chunked(chatOut
+    Ok.feed(chatOut
       &> filter(room) 
       &> Concurrent.buffer(50) 
       &> connDeathWatch(req.remoteAddress)

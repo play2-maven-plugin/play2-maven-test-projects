@@ -6,30 +6,29 @@ import play.api.libs.concurrent.Execution.Implicits._
 import models._
 import services.MessageDao
 import reactivemongo.bson.BSONObjectID
+import scala.concurrent.Future
 
 object MessageController extends Controller {
 
   /** Action to get the messages */
-  def getMessages(page: Int, perPage: Int) = Action { implicit req =>
-    Async {
-      for {
-        count <- MessageDao.count
-        messages <- MessageDao.findAll(page, perPage)
-      } yield {
-        val result = Ok(Json.toJson(messages))
+  def getMessages(page: Int, perPage: Int) = Action.async { implicit req =>
+    for {
+      count <- MessageDao.count
+      messages <- MessageDao.findAll(page, perPage)
+    } yield {
+      val result = Ok(Json.toJson(messages))
 
-        // Calculate paging headers, if necessary
-        val next = if (count > (page + 1) * perPage) Some("next" -> (page + 1)) else None
-        val prev = if (page > 0) Some("prev" -> (page - 1)) else None
-        val links = next ++ prev
-        if (links.isEmpty) {
-          result
-        } else {
-          result.withHeaders("Link" -> links.map {
-            case (rel, p) =>
-              "<" + routes.MessageController.getMessages(p, perPage).absoluteURL() + ">; rel=\"" + rel + "\""
-          }.mkString(", "))
-        }
+      // Calculate paging headers, if necessary
+      val next = if (count > (page + 1) * perPage) Some("next" -> (page + 1)) else None
+      val prev = if (page > 0) Some("prev" -> (page - 1)) else None
+      val links = next ++ prev
+      if (links.isEmpty) {
+        result
+      } else {
+        result.withHeaders("Link" -> links.map {
+          case (rel, p) =>
+            "<" + routes.MessageController.getMessages(p, perPage).absoluteURL() + ">; rel=\"" + rel + "\""
+        }.mkString(", "))
       }
     }
   }
@@ -44,12 +43,10 @@ object MessageController extends Controller {
   implicit val messageFormFormat = Json.format[MessageForm]
 
   /** Action to save a message */
-  def saveMessage = Action(parse.json) { req =>
+  def saveMessage = Action.async(parse.json) { req =>
     Json.fromJson[MessageForm](req.body).fold(
-      invalid => BadRequest("Bad message form"),
-      form => Async {
-        MessageDao.save(form.toMessage).map(_ => Created)
-      }
+      invalid => Future.successful(BadRequest("Bad message form")),
+      form => MessageDao.save(form.toMessage).map(_ => Created)
     )
   }
 
