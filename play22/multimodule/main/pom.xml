@@ -49,6 +49,7 @@ under the License.
             <groupId>${project.groupId}</groupId>
             <artifactId>admin</artifactId>
             <version>${project.version}</version>
+            <type>play2</type>
         </dependency>
 
         <dependency>
@@ -86,11 +87,6 @@ under the License.
                 <groupId>com.google.code.play2-maven-plugin</groupId>
                 <artifactId>play2-maven-plugin</artifactId>
                 <extensions>true</extensions>
-            </plugin>
-
-            <plugin>
-                <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
-                <artifactId>sbt-compiler-maven-plugin</artifactId>
             </plugin>
 
             <plugin>

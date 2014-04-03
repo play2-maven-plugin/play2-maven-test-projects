@@ -63,7 +63,6 @@ under the License.
                 <groupId>com.google.code.play2-maven-plugin</groupId>
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
-                <extensions>true</extensions>
             </plugin>
 
             <plugin>

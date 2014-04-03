@@ -68,11 +68,6 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <extensions>true</extensions>
             </plugin>
-
-            <plugin>
-                <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
-                <artifactId>sbt-compiler-maven-plugin</artifactId>
-            </plugin>
         </plugins>
     </build>
 
