@@ -44,9 +44,9 @@ under the License.
 
         <play2.groupId>com.typesafe.play</play2.groupId>
         <play2.version>2.2.2</play2.version>
-        <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
-
         <scala.version>2.10.3</scala.version>
+
+        <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta3-SNAPSHOT</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
