@@ -33,6 +33,11 @@ under the License.
         <url>http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</url>
     </scm>
 
+    <properties>
+        <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0-beta3-SNAPSHOT</sbt-compiler.plugin.version>
+    </properties>
+
     <modules>
         <module>activator</module>
         <module>play21</module>
@@ -43,6 +48,18 @@ under the License.
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>com.google.code.play2-maven-plugin</groupId>
+                    <artifactId>play2-maven-plugin</artifactId>
+                    <version>${play2.plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
+                    <artifactId>sbt-compiler-maven-plugin</artifactId>
+                    <version>${sbt-compiler.plugin.version}</version>
+                </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
