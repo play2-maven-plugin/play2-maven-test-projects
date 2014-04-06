@@ -43,7 +43,6 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <play2.version>2.1.5</play2.version>
-        <play2-scala.version>2.10</play2-scala.version>
         <play2.plugin.version>1.0.0-alpha6-SNAPSHOT</play2.plugin.version>
 
         <scala.version>2.10.0</scala.version>
@@ -61,19 +60,19 @@ under the License.
 
         <dependency>
             <groupId>play</groupId>
-            <artifactId>play_${play2-scala.version}</artifactId>
+            <artifactId>play_2.10</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>play</groupId>
-            <artifactId>play-java_${play2-scala.version}</artifactId>
+            <artifactId>play-java_2.10</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>play</groupId>
-            <artifactId>play-java-ebean_${play2-scala.version}</artifactId>
+            <artifactId>play-java-ebean_2.10</artifactId>
             <version>${play2.version}</version>
         </dependency>
     </dependencies>
@@ -92,7 +91,7 @@ under the License.
                 </includes>
             </resource>
         </resources>
-        <!--<outputDirectory>target/scala-${play2-scala.version}/classes</outputDirectory>-->
+        <!--<outputDirectory>target/scala-2.10/classes</outputDirectory>-->
 
         <plugins>
             <plugin>
