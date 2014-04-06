@@ -39,8 +39,6 @@ under the License.
         <module>scala</module>
 
         <module>multimodule</module>
-
-        <module>reporting</module>
     </modules>
 
 </project>

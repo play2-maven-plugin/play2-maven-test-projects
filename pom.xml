@@ -37,6 +37,7 @@ under the License.
         <module>activator</module>
         <module>play21</module>
         <module>play22</module>
+        <module>reporting</module>
     </modules>
 
     <build>

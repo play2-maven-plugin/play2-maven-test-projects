@@ -75,6 +75,12 @@ under the License.
             <groupId>play</groupId>
             <artifactId>play-jdbc_${play2-scala.version}</artifactId>
             <version>${play2.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>play</groupId>
+                    <artifactId>play-java_${play2-scala.version}</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
