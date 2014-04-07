@@ -20,12 +20,12 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.google.code.play2-maven-plugin.test-projects.play22.scala</groupId>
-    <artifactId>helloworld-war-servlet-2.5</artifactId>
+    <groupId>com.google.code.play2-maven-plugin.test-projects.war</groupId>
+    <artifactId>helloworld-war-servlet-3.0</artifactId>
     <version>1.0.0-alpha6-SNAPSHOT</version>
     <packaging>play2</packaging>
 
-    <name>Play! Framework 2.x Maven Test Projects : Play! 2.2.x : Scala : Hello World with WAR packaging (Servlet 2.5)</name>
+    <name>Play! Framework 2.x Maven Test Projects : WAR Packaging : Hello World with WAR packaging (Servlet 3.0)</name>
 
     <repositories>
         <repository>
@@ -42,6 +42,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <play2.groupId>com.typesafe.play</play2.groupId>
         <play2.version>2.2.2</play2.version>
         <scala.version>2.10.3</scala.version>
 
@@ -57,13 +58,13 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.play</groupId>
+            <groupId>${play2.groupId}</groupId>
             <artifactId>play_2.10</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.play</groupId>
+            <groupId>${play2.groupId}</groupId>
             <artifactId>play-test_2.10</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
@@ -71,7 +72,7 @@ under the License.
 
         <dependency>
             <groupId>com.github.play2war</groupId>
-            <artifactId>play2-war-core-servlet25_2.10</artifactId>
+            <artifactId>play2-war-core-servlet30_2.10</artifactId>
             <version>1.2-beta4</version>
         </dependency>
     </dependencies>
@@ -139,7 +140,7 @@ under the License.
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warSourceDirectory>${basedir}/war</warSourceDirectory>
                 </configuration>
                 <executions>
