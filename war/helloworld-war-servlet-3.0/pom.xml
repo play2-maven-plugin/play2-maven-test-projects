@@ -141,6 +141,7 @@ under the License.
                 <version>2.4</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <primaryArtifact>false</primaryArtifact>
                     <warSourceDirectory>${basedir}/war</warSourceDirectory>
                 </configuration>
                 <executions>
