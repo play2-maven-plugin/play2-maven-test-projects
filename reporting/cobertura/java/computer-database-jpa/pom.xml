@@ -46,8 +46,8 @@ under the License.
         <play2.version>2.2.2</play2.version>
         <scala.version>2.10.3</scala.version>
 
-        <play2.plugin.version>1.0.0-alpha6</play2.plugin.version>
-        <sbt-compiler.plugin.version>1.0.0-beta3</sbt-compiler.plugin.version>
+        <play2.plugin.version>1.0.0-alpha7-SNAPSHOT</play2.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0-beta4</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
