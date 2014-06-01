@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.reporting.cobertura.java</groupId>
     <artifactId>computer-database-ebean</artifactId>
-    <version>1.0.0-alpha7</version>
+    <version>1.0.0-alpha8-SNAPSHOT</version>
     <packaging>play2</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects : Reporting : Cobertura : Java : Computer Database Ebean</name>
