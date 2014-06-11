@@ -20,25 +20,20 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>com.google.code.play2-maven-plugin</groupId>
-        <artifactId>test-projects</artifactId>
+        <groupId>com.google.code.play2-maven-plugin.test-projects</groupId>
+        <artifactId>play23</artifactId>
         <version>1.0.0-alpha8-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.google.code.play2-maven-plugin.test-projects</groupId>
-    <artifactId>play23</artifactId>
+    <groupId>com.google.code.play2-maven-plugin.test-projects.play23</groupId>
+    <artifactId>external-modules</artifactId>
     <packaging>pom</packaging>
 
-    <name>Play! Framework 2.x Maven Test Projects : Play! 2.3.x</name>
+    <name>Play! Framework 2.x Maven Test Projects : Play! 2.3.x : External Modules</name>
 
     <modules>
-        <module>external-modules</module>
-
-        <module>java</module>
-        <module>scala</module>
-
-        <module>multimodule</module>
+        <module>deadbolt</module>
     </modules>
 
 </project>
