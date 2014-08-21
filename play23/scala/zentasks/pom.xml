@@ -115,7 +115,7 @@ under the License.
                     <execution>
                         <id>default-play2-compile-assets</id>
                         <goals>
-                            <goal>closure-compile</goal>
+                            <goal>coffee-compile</goal>
                             <goal>less-compile</goal>
                         </goals>
                     </execution>
