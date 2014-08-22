@@ -44,7 +44,7 @@ under the License.
 
         <akka.version>2.2.1</akka.version>
 
-        <play2.version>2.2.3</play2.version>
+        <play2.version>2.2.4</play2.version>
         <scala.version>2.10.3</scala.version>
 
         <play2.plugin.version>1.0.0-alpha7</play2.plugin.version>
