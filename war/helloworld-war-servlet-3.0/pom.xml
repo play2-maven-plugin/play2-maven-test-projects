@@ -73,7 +73,8 @@ under the License.
         <dependency>
             <groupId>com.github.play2war</groupId>
             <artifactId>play2-war-core-servlet30_2.10</artifactId>
-            <version>1.2-beta4</version>
+            <version>1.2</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
