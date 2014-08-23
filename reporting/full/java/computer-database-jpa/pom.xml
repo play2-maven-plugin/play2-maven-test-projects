@@ -155,7 +155,7 @@ under the License.
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>2.9.1</version>
                     <configuration>
                         <links>
                             <link>http://download.oracle.com/javase/5/docs/api/</link>
@@ -167,8 +167,9 @@ under the License.
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.2</version>
                     <configuration>
+                        <includeTests>true</includeTests>
                         <targetJdk>1.5</targetJdk>
                     </configuration>
                 </plugin>
@@ -231,47 +232,33 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
+                <version>2.9.1</version>
                 <configuration>
                     <links>
                         <link>http://download.oracle.com/javase/5/docs/api/</link>
                     </links>
                     <source>1.5</source>
                 </configuration>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>javadoc</report> <!-- skip: aggregate, test-javadoc and test-aggregate reports -->
-                        </reports>
-                    </reportSet>
-                </reportSets>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.4</version>
                 <configuration>
                     <excludes>
                         <exclude>controllers/routes.java</exclude>
                     </excludes>
                 </configuration>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>jxr</report> <!-- skip: aggregate, test-jxr and test-aggregate reports -->
-                        </reports>
-                    </reportSet>
-                </reportSets>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.2</version>
                 <configuration>
-                    <targetJdk>1.5</targetJdk>
                     <includeTests>true</includeTests>
+                    <targetJdk>1.5</targetJdk>
                 </configuration>
             </plugin>
 
@@ -291,7 +278,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.6</version>
+                <version>2.7</version>
                 <configuration>
                     <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                 </configuration>
