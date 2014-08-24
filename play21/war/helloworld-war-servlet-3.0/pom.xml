@@ -132,7 +132,7 @@ under the License.
                         <include>**/*Spec.java</include>
                     </includes>
                     <excludes>
-                        <exclude>IntegrationSpec.java</exclude>
+                        <exclude>test/IntegrationSpec.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
