@@ -34,7 +34,7 @@ under the License.
     </scm>
 
     <properties>
-        <play2.plugin.version>1.0.0-alpha7</play2.plugin.version>
+        <play2.plugin.version>1.0.0-alpha8</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta4</sbt-compiler.plugin.version>
     </properties>
 
