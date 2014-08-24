@@ -1,11 +1,12 @@
-package test
-
 import org.specs2.mutable._
+import org.specs2.runner._
+import org.junit.runner._
 
 import play.api.test._
 import play.api.test.Helpers._
 
-class ApplicationSpec extends SpecificationWithJUnit {
+@RunWith(classOf[JUnitRunner])
+class ApplicationSpec extends Specification {
   
   import models._
 
@@ -60,9 +61,9 @@ class ApplicationSpec extends SpecificationWithJUnit {
         )
         
         status(badDateFormat) must equalTo(BAD_REQUEST)
-        contentAsString(badDateFormat) must contain("""<option value="1" selected>Apple Inc.</option>""")
-        contentAsString(badDateFormat) must contain("""<input type="text" id="introduced" name="introduced" value="badbadbad" >""")
-        contentAsString(badDateFormat) must contain("""<input type="text" id="name" name="name" value="FooBar" >""")
+        contentAsString(badDateFormat) must contain("""<option value="1" selected="selected">Apple Inc.</option>""")
+        contentAsString(badDateFormat) must contain("""<input type="text" id="introduced" name="introduced" value="badbadbad" />""")
+        contentAsString(badDateFormat) must contain("""<input type="text" id="name" name="name" value="FooBar" />""")
         
         val result = controllers.Application.save(
           FakeRequest().withFormUrlEncodedBody("name" -> "FooBar", "introduced" -> "2011-12-24", "company" -> "1")
