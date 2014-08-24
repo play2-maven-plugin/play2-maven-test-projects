@@ -22,15 +22,15 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin</groupId>
     <artifactId>test-projects</artifactId>
-    <version>1.0.0-alpha8</version>
+    <version>1.0.0-alpha9-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects</name>
 
     <scm>
-        <connection>scm:svn:http://play2-maven-plugin.googlecode.com/svn/tags/test-projects-1.0.0-alpha8</connection>
-        <developerConnection>scm:svn:https://play2-maven-plugin.googlecode.com/svn/tags/test-projects-1.0.0-alpha8</developerConnection>
-        <url>http://play2-maven-plugin.googlecode.com/svn/tags/test-projects-1.0.0-alpha8</url>
+        <connection>scm:svn:http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</connection>
+        <developerConnection>scm:svn:https://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</developerConnection>
+        <url>http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</url>
     </scm>
 
     <properties>
