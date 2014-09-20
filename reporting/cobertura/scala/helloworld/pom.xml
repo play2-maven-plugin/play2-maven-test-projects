@@ -79,10 +79,8 @@ under the License.
                 <directory>${basedir}/conf</directory>
             </resource>
             <resource>
-                <directory>${basedir}</directory>
-                <includes>
-                    <include>public/**</include>
-                </includes>
+                <directory>${basedir}/public</directory>
+                <targetPath>public</targetPath>
             </resource>
         </resources>
         <!--<outputDirectory>target/scala-2.10/classes</outputDirectory>-->
