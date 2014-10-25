@@ -35,12 +35,14 @@ under the License.
     <modules>
         <module>comet-clock</module>
         <module>comet-live-monitoring</module>
+        <module>comet-live-monitoring-using-sbtweb</module>
         <module>computer-database</module>
         <module>eventsource-clock</module>
         <module>forms</module>
         <module>helloworld</module>
         <module>websocket-chat</module>
         <module>zentasks</module>
+        <module>zentasks-using-sbtweb</module>
     </modules>
 
 </project>

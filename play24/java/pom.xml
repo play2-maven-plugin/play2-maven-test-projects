@@ -34,6 +34,7 @@ under the License.
 
     <modules>
         <module>play-java-intro</module>
+        <module>play-java-intro-using-sbtweb</module>
     </modules>
 
 </project>

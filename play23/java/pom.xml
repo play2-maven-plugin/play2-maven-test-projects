@@ -41,6 +41,7 @@ under the License.
         <module>helloworld</module>
         <module>websocket-chat</module>
         <module>zentasks</module>
+        <module>zentasks-using-sbtweb</module>
     </modules>
 
 </project>
