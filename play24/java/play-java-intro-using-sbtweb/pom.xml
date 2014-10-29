@@ -98,7 +98,6 @@ under the License.
                 <directory>${basedir}/conf</directory>
             </resource>
         </resources>
-        <!--<outputDirectory>target/scala-2.11/classes</outputDirectory>-->
 
         <plugins>
             <plugin>

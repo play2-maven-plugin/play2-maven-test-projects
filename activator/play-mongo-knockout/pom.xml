@@ -118,7 +118,6 @@ under the License.
                 <targetPath>public</targetPath>
             </resource>
         </resources>
-        <!--<outputDirectory>target/scala-2.10/classes</outputDirectory>-->
 
         <plugins>
             <plugin>
