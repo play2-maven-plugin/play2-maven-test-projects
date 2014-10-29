@@ -41,7 +41,7 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play_2.10</artifactId>
+            <artifactId>play_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
@@ -60,7 +60,7 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-test_2.10</artifactId>
+            <artifactId>play-test_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
         </dependency>
@@ -78,7 +78,7 @@ under the License.
                 <targetPath>public</targetPath>
             </resource>
         </resources>
-        <!--<outputDirectory>target/scala-2.10/classes</outputDirectory>-->
+        <!--<outputDirectory>target/scala-2.11/classes</outputDirectory>-->
 
         <plugins>
             <plugin>

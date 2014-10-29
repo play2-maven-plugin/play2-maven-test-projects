@@ -43,7 +43,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <play2.version>2.3.6</play2.version>
-        <scala.version>2.11.1</scala.version>
+        <scala.version>2.11.2</scala.version>
         <deadbolt.version>2.3.2</deadbolt.version>
 
         <play2.plugin.version>1.0.0-alpha9-SNAPSHOT</play2.plugin.version>
