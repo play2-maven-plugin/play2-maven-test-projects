@@ -36,22 +36,15 @@ under the License.
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>com.google.code.play2-maven-plugin</id>
-            <name>Maven Play2 Plugin - releases</name>
-            <url>https://play2-maven-plugin.googlecode.com/svn/mavenrepo/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
     </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.3.3</play2.version>
+        <play2.version>2.3.5</play2.version>
         <scala.version>2.11.1</scala.version>
+        <deadbolt.version>2.3.2</deadbolt.version>
 
         <play2.plugin.version>1.0.0-alpha9-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5-SNAPSHOT</sbt-compiler.plugin.version>
@@ -73,9 +66,9 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.google.code.play2-maven-plugin.be.objectify</groupId>
+            <groupId>be.objectify</groupId>
             <artifactId>deadbolt-java_2.11</artifactId>
-            <version>2.3.0-RC1</version>
+            <version>${deadbolt.version}</version>
         </dependency>
     </dependencies>
 
