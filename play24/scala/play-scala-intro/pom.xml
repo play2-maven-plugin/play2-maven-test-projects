@@ -51,7 +51,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <play2.version>2.4.0-M1</play2.version>
-        <scala.version>2.10.4</scala.version>
+        <scala.version>2.11.2</scala.version>
 
         <play2.plugin.version>1.0.0-alpha9-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5-SNAPSHOT</sbt-compiler.plugin.version>
@@ -66,14 +66,14 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play_2.10</artifactId>
+            <artifactId>play_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <!-- New in Play! 2.4.x -->
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-netty-server_2.10</artifactId>
+            <artifactId>play-netty-server_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
@@ -91,7 +91,7 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-test_2.10</artifactId>
+            <artifactId>play-test_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
         </dependency>
@@ -109,7 +109,7 @@ under the License.
                 <targetPath>public</targetPath>
             </resource>
         </resources>
-        <!--<outputDirectory>target/scala-2.10/classes</outputDirectory>-->
+        <!--<outputDirectory>target/scala-2.11/classes</outputDirectory>-->
 
         <plugins>
             <plugin>
