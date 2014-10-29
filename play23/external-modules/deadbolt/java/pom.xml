@@ -42,7 +42,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.3.5</play2.version>
+        <play2.version>2.3.6</play2.version>
         <scala.version>2.11.1</scala.version>
         <deadbolt.version>2.3.2</deadbolt.version>
 
