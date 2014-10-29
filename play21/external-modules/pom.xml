@@ -33,7 +33,6 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.1.x : External Modules</name>
 
     <modules>
-        <module>deadbolt</module>
         <module>webjars</module>
     </modules>
 
