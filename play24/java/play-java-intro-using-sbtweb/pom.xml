@@ -106,6 +106,7 @@ under the License.
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <distClassifierIncludes>assets</distClassifierIncludes>
                     <mainLang>java</mainLang>
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
                 </configuration>

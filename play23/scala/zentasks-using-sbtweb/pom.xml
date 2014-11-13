@@ -101,6 +101,7 @@ under the License.
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <distClassifierIncludes>assets</distClassifierIncludes>
                     <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
                     -->
