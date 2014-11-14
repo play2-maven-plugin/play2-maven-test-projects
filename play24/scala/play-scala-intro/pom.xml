@@ -51,7 +51,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <play2.version>2.4.0-M1</play2.version>
-        <scala.version>2.11.2</scala.version>
+        <scala.version>2.11.4</scala.version>
 
         <play2.plugin.version>1.0.0-alpha9-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
