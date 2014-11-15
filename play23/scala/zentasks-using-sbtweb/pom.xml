@@ -45,7 +45,7 @@ under the License.
         <play2.version>2.3.6</play2.version>
         <scala.version>2.11.4</scala.version>
 
-        <play2.plugin.version>1.0.0-alpha9-SNAPSHOT</play2.plugin.version>
+        <play2.plugin.version>1.0.0-alpha9</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
         <sbtrun.plugin.version>1.0.0-beta2</sbtrun.plugin.version>
 
