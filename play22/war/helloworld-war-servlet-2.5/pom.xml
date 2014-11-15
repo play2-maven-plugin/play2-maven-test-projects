@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play22.war</groupId>
     <artifactId>helloworld-war-servlet-2.5</artifactId>
-    <version>1.0.0-alpha9</version>
+    <version>1.0.0-beta1-SNAPSHOT</version>
     <packaging>play2</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.2.x : WAR Packaging : Hello World with WAR packaging (Servlet 2.5)</name>
