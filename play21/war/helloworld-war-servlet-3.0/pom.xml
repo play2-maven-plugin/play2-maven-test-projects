@@ -158,6 +158,32 @@ under the License.
 
     <profiles>
         <profile>
+            <id>eclipse</id> <!-- for M2Eclipse only -->
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <skipMain>true</skipMain>
+                            <skip>true</skip>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>default-compile</id>
+                                <goals><goal>compile</goal></goals>
+                            </execution>
+                            <execution>
+                                <id>default-testCompile</id>
+                                <goals><goal>testCompile</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
             <id>it</id> <!-- run integration tests -->
 
 <!--
