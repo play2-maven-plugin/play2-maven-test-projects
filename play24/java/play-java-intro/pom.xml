@@ -36,16 +36,25 @@ under the License.
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+
+        <repository>
+            <id>scalaz-bintray</id>
+            <name>Scalaz Bintray Repo - releases</name>
+            <url>http://dl.bintray.com/scalaz/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.4.0-M1</play2.version>
+        <play2.version>2.4.0-M2</play2.version>
         <scala.version>2.11.4</scala.version>
 
-        <play2.plugin.version>1.0.0-alpha9</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta1-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
     </properties>
 
