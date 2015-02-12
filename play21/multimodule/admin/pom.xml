@@ -58,14 +58,6 @@ under the License.
                 <targetPath>public</targetPath>
             </resource>
         </resources>
-
-        <plugins>
-            <plugin>
-                <groupId>com.google.code.play2-maven-plugin</groupId>
-                <artifactId>play2-maven-plugin</artifactId>
-                <extensions>true</extensions>
-            </plugin>
-        </plugins>
     </build>
 
     <profiles>

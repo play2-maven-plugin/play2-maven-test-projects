@@ -56,6 +56,15 @@ under the License.
     </modules>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.code.play2-maven-plugin</groupId>
+                <artifactId>play2-maven-plugin</artifactId>
+                <version>${play2.plugin.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+
       <pluginManagement>
         <plugins>
             <plugin>
