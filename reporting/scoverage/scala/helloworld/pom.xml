@@ -42,7 +42,6 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.groupId>com.typesafe.play</play2.groupId>
         <play2.version>2.3.8</play2.version>
         <scala.version>2.11.4</scala.version>
 
@@ -59,13 +58,13 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>${play2.groupId}</groupId>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>${play2.groupId}</groupId>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play-test_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
