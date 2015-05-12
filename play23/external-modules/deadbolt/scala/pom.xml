@@ -42,11 +42,11 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.3.8</play2.version>
+        <play2.version>2.3.9</play2.version>
         <scala.version>2.11.5</scala.version>
         <deadbolt.version>2.3.2</deadbolt.version>
 
-        <play2.plugin.version>1.0.0-beta1</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta2-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
