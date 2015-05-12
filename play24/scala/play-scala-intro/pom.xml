@@ -29,15 +29,6 @@ under the License.
 
     <repositories>
         <repository>
-            <id>typesafe</id>
-            <name>Typesafe - releases</name>
-            <url>https://repo.typesafe.com/typesafe/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-
-        <repository>
             <id>sorm-framework</id>
             <name>SORM - releases</name>
             <url>http://markusjura.github.io/sorm/</url>
@@ -48,8 +39,8 @@ under the License.
 
         <repository>
             <id>scalaz-bintray</id>
-            <name>Scalaz Bintray Repo - releases</name>
-            <url>http://dl.bintray.com/scalaz/releases/</url>
+            <name>Scalaz Bintray - releases</name>
+            <url>https://dl.bintray.com/scalaz/releases/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -60,10 +51,10 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.4.0-M2</play2.version>
-        <scala.version>2.11.4</scala.version>
+        <play2.version>2.4.0-RC2</play2.version>
+        <scala.version>2.11.6</scala.version>
 
-        <play2.plugin.version>1.0.0-beta1</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta2-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
     </properties>
 
@@ -101,7 +92,7 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-test_2.11</artifactId>
+            <artifactId>play-specs2_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
         </dependency>
@@ -140,6 +131,9 @@ under the License.
                 <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
                 <artifactId>sbt-compiler-maven-plugin</artifactId>
                 <version>${sbt-compiler.plugin.version}</version>
+                <!--<configuration>
+                    <scalacOptions>-deprecation -unchecked -Ylog-classpath</scalacOptions>
+                </configuration>-->
             </plugin>
 
             <plugin>
