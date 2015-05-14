@@ -33,6 +33,7 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.4.x : Scala</name>
 
     <modules>
+        <module>play-scala</module>
         <module>play-scala-intro</module>
         <module>play-scala-intro-using-sbtweb</module>
     </modules>

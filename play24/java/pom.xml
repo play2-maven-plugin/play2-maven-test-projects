@@ -33,6 +33,7 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.4.x : Java</name>
 
     <modules>
+        <module>play-java</module>
         <module>play-java-intro</module>
         <module>play-java-intro-using-sbtweb</module>
     </modules>
