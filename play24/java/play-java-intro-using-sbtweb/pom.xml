@@ -97,6 +97,7 @@ under the License.
                 <configuration>
                     <distClassifierIncludes>assets</distClassifierIncludes>
                     <mainLang>java</mainLang>
+                    <routesGenerator>injected</routesGenerator>
                 </configuration>
             </plugin>
 

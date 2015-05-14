@@ -99,6 +99,7 @@ under the License.
                 <extensions>true</extensions>
                 <configuration>
                     <mainLang>java</mainLang>
+                    <routesGenerator>injected</routesGenerator>
                 </configuration>
                 <executions>
                     <execution>

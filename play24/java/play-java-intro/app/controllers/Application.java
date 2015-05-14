@@ -12,19 +12,19 @@ import static play.libs.Json.*;
 
 public class Application extends Controller {
 
-    public static Result index() {
+    public Result index() {
         return ok(index.render());
     }
 
     @Transactional
-    public static Result addPerson() {
+    public Result addPerson() {
         Person person = Form.form(Person.class).bindFromRequest().get();
         JPA.em().persist(person);
         return redirect(routes.Application.index());
     }
 
     @Transactional(readOnly = true)
-    public static Result getPersons() {
+    public Result getPersons() {
         List<Person> persons = (List<Person>) JPA.em().createQuery("select p from Person p").getResultList();
         return ok(toJson(persons));
     }
