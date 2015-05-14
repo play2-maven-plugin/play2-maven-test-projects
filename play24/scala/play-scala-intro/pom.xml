@@ -117,6 +117,9 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <!-- <routesGenerator>injected</routesGenerator> DOES NOT WORK -->
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-play2-compile-assets</id>

@@ -116,6 +116,7 @@ under the License.
                 <extensions>true</extensions>
                 <configuration>
                     <distClassifierIncludes>assets</distClassifierIncludes>
+                    <!-- <routesGenerator>injected</routesGenerator> DOES NOT WORK -->
                 </configuration>
             </plugin>
 
