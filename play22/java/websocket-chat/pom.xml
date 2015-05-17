@@ -67,6 +67,13 @@ under the License.
             <artifactId>play-java_2.10</artifactId>
             <version>${play2.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.10</artifactId>
+            <version>${play2.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
