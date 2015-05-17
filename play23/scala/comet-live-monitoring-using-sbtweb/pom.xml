@@ -66,6 +66,7 @@ under the License.
 
     <build>
         <sourceDirectory>${basedir}/app</sourceDirectory>
+        <testSourceDirectory>${basedir}/test</testSourceDirectory>
         <resources>
             <resource>
                 <directory>${basedir}/conf</directory>
