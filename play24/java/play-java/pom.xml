@@ -51,11 +51,11 @@ under the License.
             <version>${play2.version}</version>
         </dependency>
 
-        <!-- New in Play! 2.4.x -->
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-netty-server_2.11</artifactId>
             <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
