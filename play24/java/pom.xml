@@ -36,6 +36,16 @@ under the License.
         <module>play-java</module>
         <module>play-java-intro</module>
         <module>play-java-intro-using-sbtweb</module>
+
+        <module>comet-clock</module>
+        <!-- <module>computer-database</module> -->
+        <module>computer-database-jpa</module>
+        <module>eventsource-clock</module>
+        <module>forms</module>
+        <module>helloworld</module>
+        <module>websocket-chat</module>
+        <module>zentasks</module>
+        <module>zentasks-using-sbtweb</module>
     </modules>
 
 </project>
