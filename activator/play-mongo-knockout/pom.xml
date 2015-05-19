@@ -105,6 +105,13 @@ under the License.
             <artifactId>requirejs</artifactId>
             <version>2.1.8</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.10</artifactId>
+            <version>${play2.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

@@ -101,6 +101,13 @@ under the License.
         </dependency>
 
         <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.10</artifactId>
+            <version>${play2.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-testkit_2.10</artifactId>
             <version>${akka.version}</version>
