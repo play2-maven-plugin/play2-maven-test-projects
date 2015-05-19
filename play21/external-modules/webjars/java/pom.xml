@@ -72,6 +72,12 @@ under the License.
             <groupId>org.webjars</groupId>
             <artifactId>webjars-play_2.10</artifactId>
             <version>2.1.0-3</version>
+            <exclusions>
+                <exclusion> <!-- required -->
+                    <groupId>play</groupId>
+                    <artifactId>play_2.10</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
