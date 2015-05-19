@@ -1,5 +1,7 @@
 import models.Message
 import org.specs2.mutable.Specification
+import org.specs2.runner.JUnitRunner
+import org.junit.runner.RunWith
 import play.api.libs.iteratee.Iteratee
 import play.api.libs.json.Json
 import reactivemongo.bson.BSONObjectID
@@ -8,6 +10,7 @@ import scala.concurrent.duration.Duration
 import services.{EventDao, MessageDao}
 import MongoDBTestUtils.withMongoDb
 
+@RunWith(classOf[JUnitRunner])
 object EventsSpec extends Specification {
 
   "Events" should {

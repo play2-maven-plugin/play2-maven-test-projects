@@ -3,6 +3,8 @@ import models.Message
 import services.MessageDao
 
 import org.specs2.mutable.Specification
+import org.specs2.runner.JUnitRunner
+import org.junit.runner.RunWith
 import MongoDBTestUtils._
 
 import play.api.libs.json.Json
@@ -13,6 +15,7 @@ import reactivemongo.bson.BSONObjectID
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
+@RunWith(classOf[JUnitRunner])
 object MessageControllerSpec extends Specification {
 
   "the message controller" should {
