@@ -27,6 +27,13 @@ under the License.
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.4.x : Scala : Play! Scala Intro</name>
 
+    <!--
+      1. 'org.sorm-framework:sorm:0.4.1' is not available in Maven central repository
+      2. 'com.typesafe.play:play-specs2_2.11' depends on
+         'org.scalaz.stream:scalaz-stream_2.11:0.7a'
+         and this artifact is not available in Maven central repository yet,
+         see https://github.com/scalaz/scalaz-stream/issues/258
+    -->
     <repositories>
         <repository>
             <id>sorm-framework</id>
