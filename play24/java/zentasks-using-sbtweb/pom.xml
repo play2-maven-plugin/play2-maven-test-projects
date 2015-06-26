@@ -33,6 +33,7 @@ under the License.
 
         <play2.version>2.4.0</play2.version>
         <play2-ebean.version>1.0.0</play2-ebean.version>
+        <play2-enhancer.version>1.1.0</play2-enhancer.version>
         <scala.version>2.11.6</scala.version>
 
         <play2.plugin.version>1.0.0-beta3-SNAPSHOT</play2.plugin.version>
@@ -69,6 +70,13 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
+            <artifactId>play-enhancer</artifactId>
+            <version>${play2-enhancer.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play-netty-server_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>runtime</scope>
@@ -100,8 +108,9 @@ under the License.
                 </configuration>
                 <executions>
                     <execution>
-                        <id>default-play2-ebean-enhance</id>
+                        <id>default-play2-enhance</id>
                         <goals>
+                            <goal>enhance</goal>
                             <goal>ebean-enhance</goal>
                         </goals>
                     </execution>

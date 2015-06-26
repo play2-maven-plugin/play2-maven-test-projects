@@ -45,7 +45,7 @@ under the License.
         <play2.version>2.1.5</play2.version>
         <scala.version>2.10.4</scala.version>
 
-        <play2.plugin.version>1.0.0-beta2</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta3-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
     </properties>
 
@@ -91,6 +91,14 @@ under the License.
                 <configuration>
                     <mainLang>java</mainLang>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-play2-enhance</id>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
