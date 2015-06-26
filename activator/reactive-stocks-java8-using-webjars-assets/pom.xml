@@ -21,31 +21,18 @@ under the License.
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.activator</groupId>
-    <artifactId>reactive-stocks</artifactId>
+    <artifactId>reactive-stocks-java8-using-webjars-assets</artifactId>
     <version>1.0.0-beta3-SNAPSHOT</version>
     <packaging>play2</packaging>
 
-    <name>Play! Framework 2.x Maven Test Projects : Activator : Reactive Stocks</name>
-
-    <repositories>
-        <repository>
-            <id>typesafe</id>
-            <name>Typesafe - releases</name>
-            <url>https://dl.bintray.com/typesafe/maven-releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+    <name>Play! Framework 2.x Maven Test Projects : Activator : Reactive Stocks Java8 using WebJarsAssets controller</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <akka.version>2.2.1</akka.version>
-
-        <play2.version>2.2.6</play2.version>
-        <scala.version>2.10.3</scala.version>
+        <play2.version>2.4.0</play2.version>
+        <scala.version>2.11.6</scala.version>
 
         <play2.plugin.version>1.0.0-beta3-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
@@ -59,39 +46,21 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-actor_2.10</artifactId>
-            <version>${akka.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-slf4j_2.10</artifactId>
-            <version>${akka.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play_2.10</artifactId>
+            <artifactId>play-java-ws_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.webjars</groupId>
-            <artifactId>webjars-play_2.10</artifactId>
-            <version>2.2.1</version>
+            <artifactId>webjars-play_2.11</artifactId>
+            <version>2.4.0-1</version>
         </dependency>
 
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>2.3.1</version>
+            <version>2.3.2</version>
         </dependency>
 
         <dependency>
@@ -102,28 +71,48 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-test_2.10</artifactId>
+            <artifactId>play-netty-server_2.11</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.11</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-testkit_2.10</artifactId>
-            <version>${akka.version}</version>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert</artifactId>
+            <version>1.4</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-testkit_2.11</artifactId>
+            <version>2.3.11</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion> <!-- version 1.2.1 -->
+                    <groupId>com.typesafe</groupId>
+                    <artifactId>config</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>${basedir}/app</sourceDirectory>
-        <testSourceDirectory>${basedir}/test</testSourceDirectory>
+        <sourceDirectory>${project.basedir}/app</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
         <resources>
             <resource>
-                <directory>${basedir}/conf</directory>
+                <directory>${project.basedir}/conf</directory>
             </resource>
             <resource>
-                <directory>${basedir}/public</directory>
+                <directory>${project.basedir}/public</directory>
                 <targetPath>public</targetPath>
             </resource>
         </resources>
@@ -134,9 +123,12 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <mainLang>java</mainLang>
+                    <routesGenerator>injected</routesGenerator>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>default-play2-compile-assets</id>
                         <goals>
                             <goal>coffee-compile</goal>
                             <goal>less-compile</goal>
@@ -149,12 +141,15 @@ under the License.
                 <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
                 <artifactId>sbt-compiler-maven-plugin</artifactId>
                 <version>${sbt-compiler.plugin.version}</version>
+                <configuration>
+                    <javacOptions>-g -source 1.8 -target 1.8 -Xlint</javacOptions>
+                </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.6</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -169,12 +164,28 @@ under the License.
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Spec.java</include>
-                    </includes>
-                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>enforce-java8</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>1.8</version>
+                                    <message>Java 1.8 or later required.</message>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

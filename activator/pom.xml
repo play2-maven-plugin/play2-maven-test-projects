@@ -37,7 +37,10 @@ under the License.
         <module>angular-seed-play-using-webjars-assets</module>
         <module>play-mongo-knockout</module>
         <module>play-slick</module>
-        <module>reactive-stocks</module>
+        <module>reactive-stocks-java8-using-sbtweb</module>
+        <module>reactive-stocks-java8-using-webjars-assets</module>
+        <module>reactive-stocks-using-sbtweb</module>
+        <module>reactive-stocks-using-webjars-assets</module>
         <module>realtime-search</module>
         <module>sse-chat</module>
     </modules>

@@ -4,9 +4,6 @@ import akka.actor._
 import akka.testkit._
 
 import org.specs2.mutable._
-import org.specs2.time.NoTimeConversions
-import org.specs2.runner._
-import org.junit.runner._
 
 import scala.concurrent.duration._
 
@@ -14,8 +11,8 @@ import scala.collection.JavaConverters._
 import play.api.test.WithApplication
 import org.specs2.matcher.JsonMatchers
 
-@RunWith(classOf[JUnitRunner])
-class UserActorSpec extends TestkitExample with SpecificationLike with JsonMatchers with NoTimeConversions {
+@org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner]) // for Maven Surefire plugin
+class UserActorSpec extends TestkitExample with SpecificationLike with JsonMatchers {
 
   /*
    * Running tests in parallel (which would ordinarily be the default) will work only if no

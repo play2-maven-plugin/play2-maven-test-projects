@@ -4,17 +4,14 @@ import akka.actor._
 import akka.testkit._
 
 import org.specs2.mutable._
-import org.specs2.time.NoTimeConversions
-import org.specs2.runner._
-import org.junit.runner._
 
 import scala.concurrent.duration._
 import scala.collection.immutable.HashSet
 
 import utils.StockQuote
 
-@RunWith(classOf[JUnitRunner])
-class StockActorSpec extends TestkitExample with SpecificationLike with NoTimeConversions {
+@org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner]) // for Maven Surefire plugin
+class StockActorSpec extends TestkitExample with SpecificationLike {
 
   /*
    * Running tests in parallel (which would ordinarily be the default) will work only if no
