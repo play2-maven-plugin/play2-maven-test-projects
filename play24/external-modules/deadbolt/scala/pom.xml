@@ -31,7 +31,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.4.0</play2.version>
+        <play2.version>2.4.1</play2.version>
         <scala.version>2.11.6</scala.version>
         <deadbolt.version>2.4.0.2</deadbolt.version>
 
@@ -47,9 +47,52 @@ under the License.
         </dependency>
 
         <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-cache_2.11</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-java_2.11</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-server_2.11</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>be.objectify</groupId>
             <artifactId>deadbolt-scala_2.11</artifactId>
             <version>${deadbolt.version}</version>
+            <exclusions> <!-- versions 2.4.0 -->
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-cache_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-java_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-server_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-netty-server_2.11</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-netty-server_2.11</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
