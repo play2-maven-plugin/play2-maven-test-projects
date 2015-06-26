@@ -38,7 +38,6 @@ under the License.
         <module>play-java-intro-using-sbtweb</module>
 
         <module>comet-clock</module>
-        <!-- <module>computer-database</module> -->
         <module>computer-database-jpa</module>
         <module>eventsource-clock</module>
         <module>forms</module>
