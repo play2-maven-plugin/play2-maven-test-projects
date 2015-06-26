@@ -1,10 +1,8 @@
 package test
 
-import org.junit.runner._
-
 import org.specs2.mutable._
-import org.specs2.runner._
 
+import play.api.Play.current
 import play.api.test.Helpers._
 import play.api.test.TestServer
 import play.api.libs.ws.WS
@@ -19,7 +17,7 @@ import scala.concurrent.duration._
 case class Msg(room: String, text: String, user: String, date: String)
 object Msg { implicit val msgWriter = Json.writes[Msg] }
 
-@RunWith(classOf[JUnitRunner])
+@org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner])
 class IntegrationSpec extends Specification {
 
   "Application" should {

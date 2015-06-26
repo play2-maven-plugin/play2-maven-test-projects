@@ -1,9 +1,6 @@
 package test
 
-import org.junit.runner._
-
 import org.specs2.mutable._
-import org.specs2.runner._
 
 import play.api.test._
 import play.api.test.Helpers._
@@ -13,7 +10,7 @@ import play.api.test.Helpers._
  * You can mock out a whole application including requests, plugins etc.
  * For more information, consult the wiki.
  */
-@RunWith(classOf[JUnitRunner])
+@org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner])
 class ApplicationSpec extends Specification {
   
   "Application" should {

@@ -3,9 +3,11 @@ sse-chat
 
 This is a simple chat application using **[Play Framework](http://www.playframework.com)** together with **[AngularJS](http://angularjs.org)**. It makes use of a Concurrent.Broadcast object as an Enumerator, a filtering Enumeratee and EventSource as the **[Iteratee](http://www.playframework.com/documentation/2.1.0/Iteratees)**. Together these building blocks facilitate the chat message data flow within the application. 
 
+Check out the **[live demo](http://sse-chat.matthiasnehlsen.com)**.
+
 ![Architecture](./tutorial/sse-chat.png)
 
-The application uses Server Sent Events for delivering messages to the client and REST calls for sending messages to the server. The messages flow from the POST to the **[Server Sent Events (SSE)](http://dev.w3.org/html5/eventsource/)** stream through Concurrent.broadcast as the central information hub into the chatFeed controller which attaches an Enumeratee / Iteratee chain to the Enumerator provided by Concurrent.broadcast. Filtering for the correct chat room is done with a filtering Enumeratee. 
+The application uses Server Sent Events to deliver messages to the client and REST calls to send messages to the server. The messages flow from the POST to the **[Server Sent Events (SSE)](http://dev.w3.org/html5/eventsource/)** stream through Concurrent.broadcast as the central information hub into the chatFeed controller which attaches an Enumeratee / Iteratee chain to the Enumerator provided by Concurrent.broadcast. Filtering for the correct chat room is done with a filtering Enumeratee. 
 
 ![Architecture](./tutorial/sse-chat2.png)
 
@@ -17,15 +19,14 @@ There are Romeo and Juliet hanging out in Room 1 in order to make looking at the
 
 How to run this: 
 
-1) with Play installed on your machine: **play run** in the project folder
-    
-2) without Play installed you can make use of the Typesafe Activator feature: **./activator ui** in the project folder (or double click on activator script in OS X)
+1) if **[Typesafe Activator](https://typesafe.com/activator)** is installed on your machine: **activator run** from inside the project folder
+2) if Activator is not installed, you can run: **./activator run** in the project folder (or double click on activator script in OS X)
 
-This application will work in Firefox, Safari, Chrome and Opera. It will not work in Internet Explorer, simply because Microsoft for whatever reason does not support Server Sent Events.  
+This application will work in Firefox, Safari, Chrome and Opera. It will not work in Internet Explorer, simply because Microsoft for whatever reason does not support Server Sent Events.
 
-More information on **[matthiasnehlsen.com](http://matthiasnehlsen.com/blog/2013/06/23/angularjs-and-play-framework/)**.
+More information at **[matthiasnehlsen.com](http://matthiasnehlsen.com/blog/2013/06/23/angularjs-and-play-framework/)**.
 
-**Edit January 2014**: there is also a client version running Scala.js, please check the **[README](./scala-js/README.md)** in the scala-js folder for more information how to build this. The Closure Compiler optimized JavaScript of the application is included in this project, whereas the other resulting files from the build process are excluded for reasons of space.
+**Edit January 2014**: there also is a client version running Scala.js; please check the **[README](./scala-js/README.md)** in the scala-js folder for more information how to build this. The Closure Compiler optimized JavaScript of the application has been included in this project, whereas the other resulting files from the build process have been excluded for reasons of space.
 
 ## Licence
 
