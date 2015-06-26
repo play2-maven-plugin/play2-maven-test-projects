@@ -33,7 +33,8 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects : Activator</name>
 
     <modules>
-        <module>angular-seed-play</module>
+        <module>angular-seed-play-using-sbtweb</module>
+        <module>angular-seed-play-using-webjars-assets</module>
         <module>play-mongo-knockout</module>
         <module>play-slick</module>
         <module>reactive-stocks</module>
