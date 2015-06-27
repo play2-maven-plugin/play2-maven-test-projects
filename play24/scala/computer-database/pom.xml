@@ -48,8 +48,8 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <anorm.version>2.4.0</anorm.version>
         <play2.version>2.4.1</play2.version>
-        <play2-anorm.version>2.4.0</play2-anorm.version>
         <scala.version>2.11.6</scala.version>
 
         <play2.plugin.version>1.0.0-beta3-SNAPSHOT</play2.plugin.version>
@@ -74,7 +74,7 @@ under the License.
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>anorm_2.11</artifactId>
-            <version>${play2-anorm.version}</version>
+            <version>${anorm.version}</version>
         </dependency>
 
         <dependency>
