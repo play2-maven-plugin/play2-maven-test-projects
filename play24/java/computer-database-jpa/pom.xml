@@ -27,17 +27,6 @@ under the License.
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.4.x : Java : Computer Database JPA</name>
 
-    <!--???<repositories>
-        <repository>
-            <id>typesafe</id>
-            <name>Typesafe - releases</name>
-            <url>https://repo.typesafe.com/typesafe/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>-->
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
