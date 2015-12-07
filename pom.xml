@@ -28,9 +28,10 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects</name>
 
     <scm>
-        <connection>scm:svn:http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</connection>
-        <developerConnection>scm:svn:https://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</developerConnection>
-        <url>http://play2-maven-plugin.googlecode.com/svn/trunk/test-projects/</url>
+        <connection>scm:git:git://github.com/play2-maven-plugin/play2-maven-test-projects.git</connection>
+        <developerConnection>scm:git:git@github.com:play2-maven-plugin/play2-maven-test-projects.git</developerConnection>
+        <url>https://github.com/play2-maven-plugin/play2-maven-test-projects/tree/${project.scm.tag}</url>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
