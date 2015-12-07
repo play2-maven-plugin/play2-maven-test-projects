@@ -40,7 +40,7 @@ under the License.
     </ciManagement>
 
     <properties>
-        <play2.plugin.version>1.0.0-beta3</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
     </properties>
 
