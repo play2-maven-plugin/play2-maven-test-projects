@@ -34,6 +34,11 @@ under the License.
         <tag>HEAD</tag>
     </scm>
 
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/play2-maven-plugin/play2-maven-test-projects</url>
+    </ciManagement>
+
     <properties>
         <play2.plugin.version>1.0.0-beta3</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
