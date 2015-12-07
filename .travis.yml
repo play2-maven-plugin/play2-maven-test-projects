@@ -5,4 +5,4 @@ install: "mvn initialize --settings .travis.settings.xml"
 script: "mvn clean verify --settings .travis.settings.xml"
 
 jdk:
-  - oraclejdk7
+  - oraclejdk8
