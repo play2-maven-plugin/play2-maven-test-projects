@@ -139,7 +139,6 @@ under the License.
                         <include>**/*Spec.java</include>
                     </includes>
                     <excludes>
-                        <!--TEST<exclude>ApplicationSpec.java</exclude>--> <!-- does not work, check why -->
                         <exclude>IntegrationSpec.java</exclude>
                     </excludes>
                 </configuration>
@@ -250,8 +249,7 @@ in dependency hierarchy and Maven chooses the older ones.
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <excludes>
-                                <exclude>ApplicationSpec.java</exclude> <!-- does not work, check why -->
-                                <!--temporary <exclude>x</exclude>-->
+                                <exclude>x</exclude>
                             </excludes>
                         </configuration>
                     </plugin>

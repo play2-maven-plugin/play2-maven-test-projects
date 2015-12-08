@@ -138,9 +138,6 @@ under the License.
                     <includes>
                         <include>**/*Spec.java</include>
                     </includes>
-                    <excludes>
-                        <!--TEST<exclude>ApplicationSpec.java</exclude>--> <!-- does not work, check why -->
-                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
