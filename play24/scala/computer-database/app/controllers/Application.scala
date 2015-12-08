@@ -8,8 +8,6 @@ import play.api.data._
 import play.api.data.Forms._
 import play.api.i18n._
 
-import anorm._
-
 import views._
 import models._
 
@@ -28,7 +26,7 @@ class Application @Inject() (val messagesApi: MessagesApi) extends Controller wi
    */ 
   val computerForm = Form(
     mapping(
-      "id" -> ignored(NotAssigned:Pk[Long]),
+      "id" -> ignored(None:Option[Long]),
       "name" -> nonEmptyText,
       "introduced" -> optional(date("yyyy-MM-dd")),
       "discontinued" -> optional(date("yyyy-MM-dd")),
