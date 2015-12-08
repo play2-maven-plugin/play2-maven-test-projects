@@ -13,6 +13,14 @@ import play.api.test.WithApplication
 @org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner])
 class ModelSpec extends Specification {
 
+  /*
+   * Running tests in parallel (which would ordinarily be the default) will work only if no
+   * shared resources are used (e.g. database).
+   *
+   * It's usually safer to run the tests sequentially.
+   */
+  sequential
+
   import models._
 
   // -- Date helpers

@@ -9,6 +9,14 @@ import play.api.test.WithApplicationLoader
 @org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner])
 class ApplicationSpec extends PlaySpecification {
 
+  /*
+   * Running tests in parallel (which would ordinarily be the default) will work only if no
+   * shared resources are used (e.g. database).
+   *
+   * It's usually safer to run the tests sequentially.
+   */
+  sequential
+
   import models._
 
   // -- Date helpers

@@ -8,6 +8,13 @@ import play.api.test.Helpers._
 @RunWith(classOf[JUnitRunner])
 class ApplicationSpec extends Specification {
   
+  /*
+   * Running tests in parallel (which would ordinarily be the default) will work only if no
+   * shared resources are used (e.g. database).
+   *
+   * It's usually safer to run the tests sequentially.
+   */
+  sequential
   
   "Application" should {
     
