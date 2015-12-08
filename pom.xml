@@ -51,6 +51,7 @@ under the License.
         <module>play22</module>
         <module>play23</module>
         <module>play24</module>
+        <module>play25</module>
 
         <module>reporting</module>
     </modules>
