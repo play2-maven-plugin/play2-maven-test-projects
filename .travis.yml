@@ -3,6 +3,7 @@ language: java
 cache:
   directories:
     - $HOME/.m2
+    - $HOME/.ivy2
 
 install: "mvn install -DskipTests=true --settings .travis.settings.xml --quiet"
 
