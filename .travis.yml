@@ -5,9 +5,9 @@ cache:
     - $HOME/.m2
     - $HOME/.ivy2
 
-install: "mvn install -DskipTests=true --settings .travis.settings.xml --quiet"
+install: "mvn process-resources --settings .travis.settings.xml"
 
-script: "mvn verify --settings .travis.settings.xml"
+script: "mvn verify --settings .travis.settings.xml --quiet"
 
 jdk:
   - oraclejdk8
