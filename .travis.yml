@@ -7,7 +7,7 @@ cache:
 
 install: "mvn process-resources --settings .travis.settings.xml"
 
-script: "mvn verify --settings .travis.settings.xml --quiet"
+script: "mvn verify --settings .travis.settings.xml"
 
 jdk:
   - oraclejdk8
