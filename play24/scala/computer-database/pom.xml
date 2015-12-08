@@ -49,7 +49,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <anorm.version>2.4.0</anorm.version>
-        <play2.version>2.4.1</play2.version>
+        <play2.version>2.4.4</play2.version>
         <scala.version>2.11.6</scala.version>
 
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
