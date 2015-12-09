@@ -20,6 +20,15 @@ object Msg { implicit val msgWriter = Json.writes[Msg] }
 @org.junit.runner.RunWith(classOf[org.specs2.runner.JUnitRunner])
 class IntegrationSpec extends Specification {
 
+  /*
+   * Running tests in parallel (which would ordinarily be the default) will work only if no
+   * shared resources are used (e.g. top-level actors with the same name or the
+   * system.eventStream).
+   *
+   * It's usually safer to run the tests sequentially.
+   */
+  sequential
+
   "Application" should {
 
     "work from within a browser" in {
