@@ -162,6 +162,9 @@ under the License.
                     <includes>
                         <include>**/*Spec.java</include>
                     </includes>
+                    <excludes>
+                        <exclude>IntegrationSpec.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
