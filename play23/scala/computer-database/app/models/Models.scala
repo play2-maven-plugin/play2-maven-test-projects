@@ -177,7 +177,10 @@ object Company {
    * Construct the Map[String,String] needed to fill a select options set.
    */
   def options: Seq[(String,String)] = DB.withConnection { implicit connection =>
-    SQL("select * from company order by name").as(Company.simple *).map(c => c.id.toString -> c.name)
+    SQL("select * from company order by name").as(Company.simple *).
+      foldLeft[Seq[(String, String)]](Nil) { (cs, c) => 
+        c.id.fold(cs) { id => cs :+ (id.toString -> c.name) }
+      }
   }
   
 }
