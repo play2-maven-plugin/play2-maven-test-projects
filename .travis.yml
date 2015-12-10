@@ -7,10 +7,10 @@ cache:
     - $HOME/.sbt/boot/
     - $HOME/.zinc
 
-install: mvn process-resources --settings .travis.settings.xml
+install: mvn dependency:resolve-plugins --update-snapshots --settings .travis.settings.xml -e
 
 script:
-  - mvn verify --settings .travis.settings.xml
+  - mvn clean verify --update-snapshots --settings .travis.settings.xml
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
