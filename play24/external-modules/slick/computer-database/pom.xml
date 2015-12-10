@@ -158,6 +158,9 @@ under the License.
                     <includes>
                         <include>**/*Spec.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <slick.dbs.default.connectionTimeout>30 seconds</slick.dbs.default.connectionTimeout>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
