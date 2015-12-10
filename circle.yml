@@ -6,7 +6,7 @@ machine:
 
 dependencies:
  override: 
-  - mvn dependency:resolve-plugins --update-snapshots --settings .travis.settings.xml -e
+  - mvn dependency:resolve-plugins --quiet --update-snapshots --settings .travis.settings.xml -e
 
 test:
  override: 
