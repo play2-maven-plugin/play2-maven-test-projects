@@ -35,7 +35,7 @@ under the License.
         <scala.version>2.11.6</scala.version>
 
         <build-helper.plugin.version>1.9</build-helper.plugin.version>
-        <enforcer.plugin.version>1.4</enforcer.plugin.version>
+        <enforcer.plugin.version>1.4.1</enforcer.plugin.version>
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19</surefire.plugin.version>
 
