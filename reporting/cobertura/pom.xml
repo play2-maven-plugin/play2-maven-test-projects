@@ -34,7 +34,6 @@ under the License.
 
     <modules>
         <module>java</module>
-        <module>scala</module>
     </modules>
 
 </project>
