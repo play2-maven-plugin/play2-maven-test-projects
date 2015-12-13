@@ -33,7 +33,7 @@ under the License.
 
         <play2.version>2.4.4</play2.version>
         <scala.version>2.11.6</scala.version>
-        <deadbolt.version>2.4.0.2</deadbolt.version>
+        <deadbolt.version>2.4.2</deadbolt.version>
 
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
@@ -55,12 +55,6 @@ under the License.
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-java_2.11</artifactId>
-            <version>${play2.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.play</groupId>
-            <artifactId>play-server_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
