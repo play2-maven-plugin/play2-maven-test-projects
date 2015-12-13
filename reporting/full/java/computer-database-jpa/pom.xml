@@ -45,7 +45,7 @@ under the License.
         <play2.version>2.3.10</play2.version>
         <scala.version>2.11.6</scala.version>
 
-        <cobertura.plugin.version>2.6</cobertura.plugin.version>
+        <cobertura.plugin.version>2.7</cobertura.plugin.version>
         <findbugs.plugin.version>3.0.0</findbugs.plugin.version>
         <jar.plugin.version>2.6</jar.plugin.version>
         <javadoc.plugin.version>2.10.1</javadoc.plugin.version>
@@ -322,6 +322,13 @@ under the License.
                         </excludes>
                     </instrumentation>
                 </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>cobertura</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
