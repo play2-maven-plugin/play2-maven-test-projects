@@ -35,7 +35,7 @@ import views.html.linkResult;
  */
 public class Application extends Controller {
     public static Logger.ALogger logger = Logger.of("application.controllers.Application");
-    private RuntimeEnvironment env;
+    private RuntimeEnvironment<DemoUser> env;
 
     /**
      * A constructor needed to get a hold of the environment instance.
@@ -43,7 +43,7 @@ public class Application extends Controller {
      *
      * @param env
      */
-    public Application(RuntimeEnvironment env) {
+    public Application(RuntimeEnvironment<DemoUser> env) {
         this.env = env;
     }
     /**
@@ -58,7 +58,7 @@ public class Application extends Controller {
             logger.debug("access granted to index");
         }
         DemoUser user = (DemoUser) ctx().args.get(SecureSocial.USER_KEY);
-        return ok(index.render(user, SecureSocial.<DemoUser>env()));
+        return ok(index.render(user, SecureSocial.env()));
     }
 
     @UserAwareAction

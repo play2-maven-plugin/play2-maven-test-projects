@@ -44,6 +44,7 @@ under the License.
 
         <play2.version>2.3.10</play2.version>
         <scala.version>2.11.5</scala.version>
+        <securesocial.version>3.0-M3</securesocial.version>
 
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
@@ -58,14 +59,77 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play_2.11</artifactId>
+            <artifactId>filters-helpers_2.11</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-cache_2.11</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-ws_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>ws.securesocial</groupId>
             <artifactId>securesocial_2.11</artifactId>
-            <version>3.0-M1</version>
+            <version>${securesocial.version}</version>
+            <exclusions> <!-- versions 2.3.7 -->
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>filters-helpers_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-cache_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-ws_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>twirl-api_2.11</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>ws.securesocial</groupId>
+            <artifactId>securesocial_2.11</artifactId>
+            <version>${securesocial.version}</version>
+            <classifier>assets</classifier>
+            <exclusions> <!-- versions 2.3.7 -->
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>filters-helpers_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-cache_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>play-ws_2.11</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.typesafe.play</groupId>
+                    <artifactId>twirl-api_2.11</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
@@ -94,6 +158,10 @@ under the License.
                 <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
                 <artifactId>sbt-compiler-maven-plugin</artifactId>
                 <version>${sbt-compiler.plugin.version}</version>
+                <configuration>
+                    <javacOptions>-source 1.6 -target 1.6 -Xlint:-options</javacOptions>
+                    <scalacOptions>-Xlint -deprecation -unchecked -feature</scalacOptions>
+                </configuration>
             </plugin>
 
             <plugin>
