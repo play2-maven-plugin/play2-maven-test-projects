@@ -55,6 +55,8 @@ under the License.
         <scoverage.plugin.version>1.1.1</scoverage.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
+
+        <fluido.skin.version>1.4</fluido.skin.version>
     </properties>
 
     <dependencies>
