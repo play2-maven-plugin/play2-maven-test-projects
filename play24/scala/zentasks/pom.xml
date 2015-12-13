@@ -52,6 +52,9 @@ under the License.
         <play2.version>2.4.1</play2.version>
         <scala.version>2.11.6</scala.version>
 
+        <jar.plugin.version>2.6</jar.plugin.version>
+        <surefire.plugin.version>2.19</surefire.plugin.version>
+
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
 
@@ -149,7 +152,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+                <version>${jar.plugin.version}</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -163,7 +166,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19</version>
+                <version>${surefire.plugin.version}</version>
                 <configuration>
                     <includes>
                         <include>**/*Spec.java</include>

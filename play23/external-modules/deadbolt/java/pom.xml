@@ -46,6 +46,9 @@ under the License.
         <scala.version>2.11.5</scala.version>
         <deadbolt.version>2.3.2</deadbolt.version>
 
+        <enforcer.plugin.version>1.3.1</enforcer.plugin.version>
+        <jar.plugin.version>2.6</jar.plugin.version>
+
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
 
@@ -113,7 +116,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.3.1</version>
+                <version>${enforcer.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>enforce-java7</id> <!-- deadbolt is compiled for 1.7 -->
@@ -159,7 +162,7 @@ under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+                <version>${jar.plugin.version}</version>
                 <configuration>
                     <archive>
                         <manifest>
