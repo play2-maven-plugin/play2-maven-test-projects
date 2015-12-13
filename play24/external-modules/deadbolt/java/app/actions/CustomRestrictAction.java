@@ -15,10 +15,12 @@
  */
 package actions;
 
+import be.objectify.deadbolt.java.ExecutionContextProvider;
 import be.objectify.deadbolt.java.JavaAnalyzer;
 import be.objectify.deadbolt.java.actions.RestrictAction;
 import be.objectify.deadbolt.java.cache.HandlerCache;
 import be.objectify.deadbolt.java.cache.SubjectCache;
+import play.Configuration;
 import play.libs.F;
 import play.mvc.Action;
 import play.mvc.Http;
@@ -40,14 +42,22 @@ public class CustomRestrictAction extends Action<CustomRestrict>
 
     final HandlerCache handlerCache;
 
+    final Configuration config;
+
+    final ExecutionContextProvider ecProvider;
+
     @Inject
     public CustomRestrictAction(final JavaAnalyzer analyzer,
                                 final SubjectCache subjectCache,
-                                final HandlerCache handlerCache)
+                                final HandlerCache handlerCache,
+                                final Configuration config,
+                                final ExecutionContextProvider ecProvider)
     {
         this.analyzer = analyzer;
         this.subjectCache = subjectCache;
         this.handlerCache = handlerCache;
+        this.config = config;
+        this.ecProvider = ecProvider;
     }
 
     @Override
@@ -57,8 +67,10 @@ public class CustomRestrictAction extends Action<CustomRestrict>
         RestrictAction restrictionsAction = new RestrictAction(analyzer,
                                                                subjectCache,
                                                                handlerCache,
+                                                               config,
                                                                configuration.config(),
-                                                               this.delegate)
+                                                               this.delegate,
+                                                               ecProvider)
         {
             @Override
             public List<String[]> getRoleGroups()
