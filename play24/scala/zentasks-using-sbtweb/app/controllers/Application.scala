@@ -1,9 +1,9 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
+import play.api.routing._
 
 import models._
 import views._
@@ -52,7 +52,7 @@ class Application extends Controller {
   def javascriptRoutes = Action { implicit request =>
     import routes.javascript._
     Ok(
-      Routes.javascriptRouter("jsRoutes")(
+      JavaScriptReverseRouter("jsRoutes")(
         Projects.add, Projects.delete, Projects.rename,
         Projects.addGroup, Projects.deleteGroup, Projects.renameGroup,
         Projects.addUser, Projects.removeUser, Tasks.addFolder, 
