@@ -7,8 +7,6 @@ import play.api.data.Forms._
 
 import java.util.{Date}
 
-import anorm._
-
 import models._
 import views._
 
@@ -47,7 +45,7 @@ object Tasks extends Controller with Secured {
       {
         case (title, dueDate, assignedTo) => 
           val task =  Task.create(
-            Task(NotAssigned, folder, project, title, false, dueDate, assignedTo)
+            Task(None, folder, project, title, false, dueDate, assignedTo)
           )
           Ok(html.tasks.item(task))
       }
