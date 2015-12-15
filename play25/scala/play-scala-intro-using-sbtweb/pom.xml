@@ -224,9 +224,6 @@ under the License.
                     <includes>
                         <include>**/*Spec.java</include>
                     </includes>
-                    <systemPropertyVariables>
-                        <specs2.sequential>true</specs2.sequential> <!-- see https://github.com/playframework/playframework/issues/4253 -->
-                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
