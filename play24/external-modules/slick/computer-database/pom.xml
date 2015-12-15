@@ -162,7 +162,7 @@ under the License.
                         <include>**/*Spec.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <slick.dbs.default.connectionTimeout>30 seconds</slick.dbs.default.connectionTimeout>
+                        <slick.dbs.default.db.connectionTimeout>30 seconds</slick.dbs.default.db.connectionTimeout>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
