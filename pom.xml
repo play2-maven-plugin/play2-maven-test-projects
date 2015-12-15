@@ -40,6 +40,8 @@ under the License.
     </ciManagement>
 
     <properties>
+        <release.plugin.version>2.5.1</release.plugin.version>
+
         <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta6</sbt-compiler.plugin.version>
     </properties>
@@ -74,7 +76,7 @@ under the License.
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.1</version>
+                    <version>${release.plugin.version}</version>
                     <configuration>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                     </configuration>
