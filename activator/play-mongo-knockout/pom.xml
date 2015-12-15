@@ -175,7 +175,7 @@ under the License.
                     <includes>
                         <include>**/*Spec.java</include>
                     </includes>
-                    <skipTests>true</skipTests> <!-- temporarily -->
+                    <skipTests>true</skipTests> <!-- tests fail with MongoError['No primary node is available!'] -->
                 </configuration>
             </plugin>
         </plugins>
