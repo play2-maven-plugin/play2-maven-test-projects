@@ -42,7 +42,7 @@ under the License.
     <properties>
         <release.plugin.version>2.5.3</release.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta4-SNAPSHOT</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta4</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta7</sbt-compiler.plugin.version>
     </properties>
 
