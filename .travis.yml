@@ -7,7 +7,10 @@ cache:
     - $HOME/.sbt/boot/
     - $HOME/.zinc
 
-install: mvn dependency:resolve-plugins --quiet --update-snapshots --settings .travis.settings.xml -e
+install:
+  - java -XX:+PrintFlagsFinal -version
+  - mvn --version
+  - mvn dependency:resolve-plugins --update-snapshots --settings .travis.settings.xml -e
 
 script:
   - mvn clean verify --update-snapshots --settings .travis.settings.xml -e
@@ -15,5 +18,4 @@ script:
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
 
-jdk:
-  - oraclejdk8
+jdk: oraclejdk8

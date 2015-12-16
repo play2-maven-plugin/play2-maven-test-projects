@@ -1,13 +1,15 @@
 machine:
   environment:
-    _JAVA_OPTIONS: "-Xms512m -Xmx1024m"
+    _JAVA_OPTIONS: "-Xms512m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m"
   java:
     version: oraclejdk8
 
 dependencies:
- override: 
-  - mvn dependency:resolve-plugins --quiet --update-snapshots --settings .travis.settings.xml -e
+  override:
+    - java -XX:+PrintFlagsFinal -version
+    - mvn --version
+    - mvn dependency:resolve-plugins --update-snapshots --settings .travis.settings.xml -e
 
 test:
- override: 
-  - mvn clean verify --update-snapshots --settings .travis.settings.xml -e
+  override: 
+    - mvn clean verify --update-snapshots --settings .travis.settings.xml -e
