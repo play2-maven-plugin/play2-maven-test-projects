@@ -12,7 +12,7 @@ install:
   - mvn --version
 
 script:
-  - mvn clean verify --update-snapshots --settings .travis.settings.xml -e
+  - mvn verify --update-snapshots --settings .travis.settings.xml -e
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
