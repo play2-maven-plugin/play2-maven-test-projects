@@ -8,8 +8,8 @@ dependencies:
   override:
     - java -XX:+PrintFlagsFinal -version
     - mvn --version
-    - mvn compile --fail-never --update-snapshots --settings .travis.settings.xml --quiet -e
-    - mvn test-compile --fail-never --update-snapshots --settings .travis.settings.xml --quiet -e
+    - mvn compile --fail-never --update-snapshots --settings .travis.settings.xml -e
+    - mvn test-compile --fail-never --update-snapshots --settings .travis.settings.xml -e
   cache_directories:
     - ~/.zinc
 
