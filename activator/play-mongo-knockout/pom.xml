@@ -50,7 +50,7 @@ under the License.
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta4</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta5-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta7</sbt-compiler.plugin.version>
     </properties>
 

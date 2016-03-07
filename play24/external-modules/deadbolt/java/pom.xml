@@ -39,7 +39,7 @@ under the License.
 
         <jar.plugin.version>2.6</jar.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta4</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta5-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta7</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-Dplay.evolutions.db.default.autoApply=true</play2.serverJvmArgs>

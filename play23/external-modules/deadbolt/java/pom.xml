@@ -49,7 +49,7 @@ under the License.
         <enforcer.plugin.version>1.4.1</enforcer.plugin.version>
         <jar.plugin.version>2.6</jar.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta4</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta5-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-beta7</sbt-compiler.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
