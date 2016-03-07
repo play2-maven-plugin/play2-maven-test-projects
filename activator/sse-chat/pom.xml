@@ -200,6 +200,24 @@ under the License.
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>travis</id> <!-- for TravisCI only -->
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>test/IntegrationSpec.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
 </project>
