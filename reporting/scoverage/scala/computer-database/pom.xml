@@ -51,7 +51,7 @@ under the License.
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
         <play2.plugin.version>1.0.0-beta5-SNAPSHOT</play2.plugin.version>
-        <sbt-compiler.plugin.version>1.0.0-beta7</sbt-compiler.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0-beta8-SNAPSHOT</sbt-compiler.plugin.version>
         <scoverage.plugin.version>1.1.1</scoverage.plugin.version>
 
         <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
