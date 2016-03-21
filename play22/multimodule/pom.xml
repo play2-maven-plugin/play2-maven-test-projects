@@ -45,7 +45,7 @@ under the License.
         <play2.version>2.2.6</play2.version>
         <scala.version>2.10.3</scala.version>
 
-        <compiler.plugin.version>3.3</compiler.plugin.version>
+        <compiler.plugin.version>3.5</compiler.plugin.version>
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
