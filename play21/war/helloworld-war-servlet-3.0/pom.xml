@@ -50,7 +50,7 @@ under the License.
         <war.plugin.version>2.6</war.plugin.version>
 
         <play2.plugin.version>1.0.0-beta5-SNAPSHOT</play2.plugin.version>
-        <sbt-compiler.plugin.version>1.0.0-beta8-SNAPSHOT</sbt-compiler.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0-beta8</sbt-compiler.plugin.version>
 
         <play2war.version>1.1.1</play2war.version>
     </properties>
