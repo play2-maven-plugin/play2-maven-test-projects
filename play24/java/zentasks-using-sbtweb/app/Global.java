@@ -22,17 +22,17 @@ public class Global extends GlobalSettings {
 								Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
 
                 // Insert users first
-                Ebean.save(all.get("users"));
+                Ebean.saveAll(all.get("users"));
 
                 // Insert projects
-                Ebean.save(all.get("projects"));
+                Ebean.saveAll(all.get("projects"));
                 for(Object project: all.get("projects")) {
                     // Insert the project/user relation
                     Ebean.saveManyToManyAssociations(project, "members");
                 }
 
                 // Insert tasks
-                Ebean.save(all.get("tasks"));
+                Ebean.saveAll(all.get("tasks"));
                 
             }
         }
