@@ -135,6 +135,8 @@ under the License.
             <id>eclipse</id> <!-- for M2Eclipse only -->
 
             <build>
+                <directory>${project.basedir}/target-eclipse</directory>
+
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -142,6 +144,8 @@ under the License.
                         <configuration>
                             <skipMain>true</skipMain>
                             <skip>true</skip>
+                            <source>1.8</source>
+                            <target>1.8</target>
                         </configuration>
                         <executions>
                             <execution>
