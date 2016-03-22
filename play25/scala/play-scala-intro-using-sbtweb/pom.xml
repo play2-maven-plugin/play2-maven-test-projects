@@ -116,7 +116,6 @@ under the License.
                 <extensions>true</extensions>
                 <configuration>
                     <distClassifierIncludes>assets</distClassifierIncludes>
-                    <routesGenerator>injected</routesGenerator>
                     <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
                     <serverJvmArgs>-Dplay.evolutions.db.default.autoApply=true</serverJvmArgs>
                     -->
