@@ -15,4 +15,4 @@ dependencies:
 
 test:
   override: 
-    - mvn verify --settings .travis.settings.xml -e
+    - mvn verify -Pcircle --settings .travis.settings.xml -e
