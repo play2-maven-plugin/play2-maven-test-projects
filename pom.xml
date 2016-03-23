@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin</groupId>
     <artifactId>test-projects</artifactId>
-    <version>1.0.0-beta5-SNAPSHOT</version>
+    <version>1.0.0-beta5</version>
     <packaging>pom</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects</name>
@@ -31,7 +31,7 @@ under the License.
         <connection>scm:git:git://github.com/play2-maven-plugin/play2-maven-test-projects.git</connection>
         <developerConnection>scm:git:git@github.com:play2-maven-plugin/play2-maven-test-projects.git</developerConnection>
         <url>https://github.com/play2-maven-plugin/play2-maven-test-projects/tree/${project.scm.tag}</url>
-        <tag>HEAD</tag>
+        <tag>test-projects-1.0.0-beta5</tag>
     </scm>
 
     <ciManagement>
