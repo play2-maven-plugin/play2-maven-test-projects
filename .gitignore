@@ -1,6 +1,7 @@
 .settings/
 logs/
 target/
+target-eclipse/
 .cache
 .classpath
 .project
