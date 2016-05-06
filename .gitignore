@@ -3,6 +3,7 @@ logs/
 target/
 target-eclipse/
 .cache
+.cache-main
 .classpath
 .project
 pom.xml.tag
