@@ -126,6 +126,10 @@ under the License.
             <resource>
                 <directory>${basedir}/conf</directory>
             </resource>
+            <resource>
+                <directory>${basedir}/target/sbt/web/public/main</directory> <!-- assets processed by SbtWeb plugin -->
+                <targetPath>public</targetPath>
+            </resource>
         </resources>
 
         <plugins>
@@ -159,29 +163,6 @@ under the License.
                         <configuration>
                             <args>web-assets:assets</args>
                             <jvmArgs>-Dscala.version=${scala.version} -Dsecuresocial.version=${securesocial.version} -Dlogback.configurationFile=${project.basedir}/project/logback.xml</jvmArgs>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.9</version>
-                <executions>
-                    <execution>
-                        <id>add-web-assets-to-resources</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>add-resource</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/sbt/web/public/main</directory>
-                                    <targetPath>public</targetPath>
-                                </resource>
-                            </resources>
                         </configuration>
                     </execution>
                 </executions>
