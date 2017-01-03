@@ -18,7 +18,7 @@ public class User extends Model {
 
     private static final long serialVersionUID = 1L;
 
-	@Id
+    @Id
     @Constraints.Required
     @Formats.NonEmpty
     public String email;

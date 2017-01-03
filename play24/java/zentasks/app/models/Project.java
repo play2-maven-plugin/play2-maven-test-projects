@@ -16,7 +16,7 @@ public class Project extends Model {
 
     private static final long serialVersionUID = 1L;
 
-	@Id
+    @Id
     public Long id;
     
     public String name;
@@ -25,11 +25,11 @@ public class Project extends Model {
     
     @ManyToMany
     public List<User> members = new ArrayList<User>();
-    
+
     public Project(String name, String folder, User owner) {
         this.name = name;
         this.folder = folder;
-        this.members.add(owner);
+        //TEST this.members.add(owner);
     }
     
     // -- Queries
