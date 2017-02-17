@@ -39,7 +39,7 @@ under the License.
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
         <play2.plugin.version>1.0.0-beta6-SNAPSHOT</play2.plugin.version>
-        <sbt-compiler.plugin.version>1.0.0-beta9</sbt-compiler.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
         <sbtrun.plugin.version>1.0.0-beta4</sbtrun.plugin.version>
     </properties>
 
