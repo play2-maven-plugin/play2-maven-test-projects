@@ -4,6 +4,7 @@ target/
 target-eclipse/
 .cache
 .cache-main
+.cache-tests
 .classpath
 .project
 pom.xml.tag
