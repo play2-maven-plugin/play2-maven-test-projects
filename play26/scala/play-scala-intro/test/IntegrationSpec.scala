@@ -1,27 +1,26 @@
-import org.scalatestplus.play._
+import org.specs2.mutable._
+import org.specs2.runner._
+import org.junit.runner._
+
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
+
 import play.api.test._
 import play.api.test.Helpers._
-import play.api.Application
-import play.api.inject.guice._
-import org.scalatest.TestData
-import org.scalatestplus.play.guice.GuiceOneServerPerSuite
-
-import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
 
 /**
  * add your integration spec here.
  * An integration test will fire up a whole play application in a real (or headless) browser
  */
 @RunWith(classOf[JUnitRunner])
-class IntegrationSpec extends PlaySpec with OneBrowserPerTest with HtmlUnitFactory with GuiceOneServerPerSuite {
+class IntegrationSpec extends Specification {
 
   "Application" should {
 
-    "work from within a browser" in {
-      go to ("http://localhost:" + port)
+    "work from within a browser" in new WithBrowser {
 
-      pageSource must include ("Add Person")
+      browser.goTo("http://localhost:" + port)
+
+      browser.pageSource must contain("Add Person")
     }
   }
 }
