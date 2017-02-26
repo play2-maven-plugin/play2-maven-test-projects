@@ -1,22 +1,27 @@
-import org.scalatestplus.play._
-import play.api.test._
+import org.scalatestplus.play.PlaySpec
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import play.api.http.Status
+import play.api.test.FakeRequest
 import play.api.test.Helpers._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
- * Add your spec here.
- * You can mock out a whole application including requests, plugins etc.
- * For more information, consult the wiki.
+ * Functional tests start a Play application internally, available
+ * as `app`.
  */
 @RunWith(classOf[JUnitRunner])
-class HomeControllerSpec extends PlaySpec with OneAppPerTest {
+class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite {
 
   "Routes" should {
 
     "send 404 on a bad request" in  {
       route(app, FakeRequest(GET, "/boum")).map(status(_)) mustBe Some(NOT_FOUND)
+    }
+
+    "send 200 on a good request" in  {
+      route(app, FakeRequest(GET, "/")).map(status(_)) mustBe Some(OK)
     }
 
   }
@@ -26,7 +31,7 @@ class HomeControllerSpec extends PlaySpec with OneAppPerTest {
     "render the index page" in {
       val home = route(app, FakeRequest(GET, "/")).get
 
-      status(home) mustBe OK
+      status(home) mustBe Status.OK
       contentType(home) mustBe Some("text/html")
       contentAsString(home) must include ("Your new application is ready.")
     }
@@ -42,5 +47,4 @@ class HomeControllerSpec extends PlaySpec with OneAppPerTest {
     }
 
   }
-
 }
