@@ -34,7 +34,7 @@ under the License.
 
     <modules>
         <module>play-scala</module>
-        <module>play-scala-intro</module>
+        <module>play-slick-example</module>
         <module>play-scala-intro-using-sbtweb</module>
     </modules>
 
