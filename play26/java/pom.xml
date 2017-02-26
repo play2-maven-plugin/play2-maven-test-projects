@@ -35,7 +35,7 @@ under the License.
     <modules>
         <module>play-java</module>
         <module>play-jpa-example</module>
-        <module>play-java-intro-using-sbtweb</module>
+        <module>play-jpa-example-using-sbtweb</module>
     </modules>
 
 </project>
