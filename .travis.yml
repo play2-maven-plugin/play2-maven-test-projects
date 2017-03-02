@@ -10,8 +10,9 @@ cache:
 install:
   - java -XX:+PrintFlagsFinal -version
   - mvn --version
-  - mvn compile -Ptravis --quiet --fail-never --update-snapshots --settings .travis.settings.xml -e
-  - mvn test-compile -Ptravis --quiet --fail-never --update-snapshots --settings .travis.settings.xml -e
+  # Workaround to avoid build timeout
+  - mvn compile -Ptravis --fail-never --update-snapshots --settings .travis.settings.xml -e
+  - mvn test-compile -Ptravis --fail-never --update-snapshots --settings .travis.settings.xml -e
 
 script:
   - mvn verify -Ptravis --update-snapshots --settings .travis.settings.xml -e
