@@ -58,7 +58,7 @@ under the License.
         <play2.plugin.version>1.0.0-beta6-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
 
-        <play2war.version>1.4-beta1</play2war.version>
+        <play2war.version>1.4.0</play2war.version>
     </properties>
 
     <dependencies>
