@@ -21,11 +21,11 @@ under the License.
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play26.scala</groupId>
-    <artifactId>play-scala</artifactId>
+    <artifactId>play-scala-starter-example</artifactId>
     <version>1.0.0-beta6-SNAPSHOT</version>
     <packaging>play2</packaging>
 
-    <name>Play! Framework 2.x Maven Test Projects : Play! 2.6.x : Scala : Play! Scala</name>
+    <name>Play! Framework 2.x Maven Test Projects : Play! 2.6.x : Scala : Play! Scala Starter Example</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
