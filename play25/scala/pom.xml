@@ -33,7 +33,7 @@ under the License.
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.5.x : Scala</name>
 
     <modules>
-        <module>play-slick-example</module>
+        <module>slick-example</module>
         <module>play-slick-example-using-sbtweb</module>
         <module>starter-example</module>
     </modules>
