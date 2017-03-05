@@ -34,7 +34,7 @@ under the License.
 
     <modules>
         <module>jpa-example</module>
-        <module>play-jpa-example-using-sbtweb</module>
+        <module>jpa-example-using-sbtweb</module>
         <module>starter-example</module>
 
 <!--
