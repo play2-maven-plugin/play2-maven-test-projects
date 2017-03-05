@@ -34,7 +34,7 @@ under the License.
 
     <modules>
         <module>slick-example</module>
-        <module>play-slick-example-using-sbtweb</module>
+        <module>slick-example-using-sbtweb</module>
         <module>starter-example</module>
     </modules>
 
