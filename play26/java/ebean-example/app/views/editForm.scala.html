@@ -1,0 +1,37 @@
+@(id: Long, computerForm: Form[Computer])
+
+@import helper._
+
+@main {
+    
+    <h1>Edit computer</h1>
+    
+    @form(routes.HomeController.update(id)) {
+        
+        <fieldset>
+        
+            @inputText(computerForm("name"), '_label -> "Computer name", '_help -> "")
+            @inputText(computerForm("introduced"), '_label -> "Introduced date", 'type -> "date", '_help -> "")
+            @inputText(computerForm("discontinued"), '_label -> "Discontinued date", 'type -> "date", '_help -> "")
+            
+            @select(
+                computerForm("company.id"), 
+                options(Company.options), 
+                '_label -> "Company", '_default -> "-- Choose a company --",
+                '_showConstraints -> false
+            )
+        
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Save this computer" class="btn primary"> or 
+            <a href="@routes.HomeController.list()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+    @form(routes.HomeController.delete(id), 'class -> "topRight") {
+        <input type="submit" value="Delete this computer" class="btn danger">
+    }
+    
+}
