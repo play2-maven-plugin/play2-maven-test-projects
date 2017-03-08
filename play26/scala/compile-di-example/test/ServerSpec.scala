@@ -1,4 +1,6 @@
 import org.scalatest.concurrent.ScalaFutures
+import org.scalatest.time.Span;
+import org.scalatest.time.Seconds;
 import org.scalatestplus.play._
 import play.api.libs.ws.WSClient
 import play.api.mvc.Results
@@ -21,7 +23,7 @@ class ServerSpec extends PlaySpec
 
   "Server query should" should {
     "work" in {
-      whenReady(wsUrl("/").get) { response =>
+      whenReady(wsUrl("/").get, timeout(Span(10, Seconds))) { response =>
         response.status mustBe play.api.http.Status.OK
       }
     }
