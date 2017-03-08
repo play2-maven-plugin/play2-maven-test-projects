@@ -49,7 +49,7 @@ under the License.
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
         <war.plugin.version>2.6</war.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta6</play2.plugin.version>
+        <play2.plugin.version>1.0.0-beta7-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
 
         <play2war.version>1.2.1</play2war.version>
