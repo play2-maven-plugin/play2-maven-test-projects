@@ -51,8 +51,6 @@ under the License.
 
         <play2.plugin.version>1.0.0-beta7-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
-
-        <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
 
     <dependencies>
@@ -129,6 +127,12 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <!-- to automatically apply evolutions in development mode
+                    <devSettings>applyEvolutions.default=true</devSettings>
+                    -->
+                    <prodSettings>applyEvolutions.default=true</prodSettings>
+                </configuration>
             </plugin>
 
             <plugin>

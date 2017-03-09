@@ -50,8 +50,6 @@ under the License.
 
         <play2.plugin.version>1.0.0-beta7-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
-
-        <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
     </properties>
 
     <dependencies>
@@ -107,9 +105,10 @@ under the License.
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <!-- declaring here does not allow overriding when invoking Maven with -Dplay2.serverJvmArgs=... argument. Moved to properties.
-                    <serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
+                    <!-- to automatically apply evolutions in development mode
+                    <devSettings>applyEvolutions.default=true</devSettings>
                     -->
+                    <prodSettings>applyEvolutions.default=true</prodSettings>
                 </configuration>
             </plugin>
 

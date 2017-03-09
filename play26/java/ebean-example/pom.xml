@@ -41,8 +41,6 @@ under the License.
 
         <play2.plugin.version>1.0.0-beta7-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
-
-        <play2.serverJvmArgs>-Dplay.evolutions.db.default.autoApply=true</play2.serverJvmArgs>
     </properties>
 
     <dependencies>
@@ -124,7 +122,11 @@ under the License.
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <!-- to automatically apply evolutions in development mode
+                    <devSettings>play.evolutions.db.default.autoApply=true</devSettings>
+                    -->
                     <mainLang>java</mainLang>
+                    <prodSettings>play.evolutions.db.default.autoApply=true</prodSettings>
                     <templateAdditionalImports>play.data._ play.core.j.PlayFormsMagicForJava._</templateAdditionalImports>
                 </configuration>
                 <executions>

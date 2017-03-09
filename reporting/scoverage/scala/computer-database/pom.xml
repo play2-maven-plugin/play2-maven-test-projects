@@ -54,8 +54,6 @@ under the License.
         <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
         <scoverage.plugin.version>1.3.0</scoverage.plugin.version>
 
-        <play2.serverJvmArgs>-DapplyEvolutions.default=true</play2.serverJvmArgs>
-
         <fluido.skin.version>1.4</fluido.skin.version>
     </properties>
 
@@ -111,6 +109,12 @@ under the License.
                 <artifactId>play2-maven-plugin</artifactId>
                 <version>${play2.plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <!-- to automatically apply evolutions in development mode
+                    <devSettings>applyEvolutions.default=true</devSettings>
+                    -->
+                    <prodSettings>applyEvolutions.default=true</prodSettings>
+                </configuration>
             </plugin>
 
             <plugin>
