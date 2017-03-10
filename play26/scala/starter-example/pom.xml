@@ -21,7 +21,7 @@ under the License.
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play26.scala</groupId>
-    <artifactId>play-scala-starter-example</artifactId>
+    <artifactId>starter-example</artifactId>
     <version>1.0.0-beta7-SNAPSHOT</version>
     <packaging>play2</packaging>
 
