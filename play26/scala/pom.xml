@@ -42,6 +42,7 @@ under the License.
         <module>slick-example</module>
         <module>slick-example-using-sbtweb</module>
         <module>starter-example</module>
+        <module>streaming-example</module>
     </modules>
 
 </project>
