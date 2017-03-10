@@ -40,6 +40,7 @@ under the License.
         <module>jpa-example</module>
         <module>jpa-example-using-sbtweb</module>
         <module>starter-example</module>
+        <module>streaming-example</module>
     </modules>
 
 </project>
