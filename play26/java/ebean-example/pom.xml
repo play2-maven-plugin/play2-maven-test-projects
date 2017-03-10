@@ -51,12 +51,6 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.192</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-ebean_2.12</artifactId>
             <version>${play2-ebean.version}</version>
@@ -78,6 +72,13 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-java-forms_2.12</artifactId>
             <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.192</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
