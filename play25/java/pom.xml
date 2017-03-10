@@ -40,17 +40,6 @@ under the License.
         <module>jpa-example</module>
         <module>jpa-example-using-sbtweb</module>
         <module>starter-example</module>
-
-<!--
-        <module>comet-clock</module>
-        <module>computer-database-jpa</module>
-        <module>eventsource-clock</module>
-        <module>forms</module>
-        <module>helloworld</module>
-        <module>websocket-chat</module>
-        <module>zentasks</module>
-        <module>zentasks-using-sbtweb</module>
--->
     </modules>
 
 </project>
