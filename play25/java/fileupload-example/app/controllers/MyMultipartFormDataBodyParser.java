@@ -68,8 +68,11 @@ class MyMultipartFormDataBodyParser extends DelegatingMultipartFormDataBodyParse
     private File generateTempFile() {
         try {
             final EnumSet<PosixFilePermission> attrs = EnumSet.of(OWNER_READ, OWNER_WRITE);
+            /* doesn't work on Windows
             final FileAttribute<?> attr = PosixFilePermissions.asFileAttribute(attrs);
             final Path path = Files.createTempFile("multipartBody", "tempFile", attr);
+            */
+            final Path path = Files.createTempFile("multipartBody", "tempFile");
             return path.toFile();
         } catch (IOException e) {
             throw new IllegalStateException(e);

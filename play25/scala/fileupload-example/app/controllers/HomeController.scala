@@ -56,8 +56,11 @@ class HomeController @Inject() (implicit val messagesApi: MessagesApi) extends C
    */
   private def handleFilePartAsFile: FilePartHandler[File] = {
     case FileInfo(partName, filename, contentType) =>
+      /* doesn't work on Windows
       val attr = PosixFilePermissions.asFileAttribute(util.EnumSet.of(OWNER_READ, OWNER_WRITE))
       val path: Path = Files.createTempFile("multipartBody", "tempFile", attr)
+      */
+      val path: Path = Files.createTempFile("multipartBody", "tempFile")
       val file = path.toFile
       val fileSink: Sink[ByteString, Future[IOResult]] = FileIO.toFile(file)
       val accumulator: Accumulator[ByteString, IOResult] = Accumulator(fileSink)
