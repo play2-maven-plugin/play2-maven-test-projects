@@ -6,8 +6,8 @@ import akka.stream.scaladsl.Keep
 import akka.stream.testkit.scaladsl.{TestSink, TestSource}
 import akka.testkit.TestProbe
 import org.scalatest.MustMatchers
-import play.api.{ApplicationLoader, Environment, Mode}
-import play.api.http.DefaultHttpErrorHandler
+import play.api.{ApplicationLoader, Configuration, Environment, Mode}
+import play.api.http.{DefaultFileMimeTypes, DefaultHttpErrorHandler, FileMimeTypesConfiguration}
 import play.api.libs.json.{JsValue, Json}
 
 import scala.concurrent.ExecutionContext
@@ -28,8 +28,12 @@ class HomeControllerSpec extends TestKitSpec with MustMatchers {
       val env = new Environment(new java.io.File("."), classLoader, Mode.Test)
       val context = ApplicationLoader.createContext(env)
       val config = context.initialConfiguration
+      val assetsConfig = AssetsConfiguration.fromConfiguration(config, env.mode)
       val errorHandler = new DefaultHttpErrorHandler(env, config, None/*sourceMapper*/, None/*router*/)
-      implicit val webJarAssets: WebJarAssets = new WebJarAssets(errorHandler, config, env)
+      val fileMimeTypesConfiguration = FileMimeTypesConfiguration()
+      val fileMimeTypes = new DefaultFileMimeTypes(fileMimeTypesConfiguration)
+      val meta = new DefaultAssetsMetadata(env, assetsConfig, fileMimeTypes)
+      implicit val webJarAssets: WebJarAssets = new WebJarAssets(errorHandler, meta, config, env)
 
       val stocksActor = TestProbe("stocksActor")
       val userParentActor = TestProbe("userParentActor")
