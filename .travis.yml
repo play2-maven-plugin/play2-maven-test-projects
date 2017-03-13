@@ -30,7 +30,7 @@ env:
     - SUBDIR="play23"
     - SUBDIR="play22"
     - SUBDIR="play21"
-    - SUBDIR="activator"
+    # - SUBDIR="activator"
 
 script:
   - mvn verify --file $SUBDIR/pom.xml -Ptravis --update-snapshots --settings .travis.settings.xml -e
