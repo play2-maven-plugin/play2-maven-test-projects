@@ -2,7 +2,6 @@ package controllers
 
 import org.asynchttpclient.AsyncHttpClient
 import org.asynchttpclient.ws.WebSocket
-import org.scalatest.concurrent.PatienceConfiguration.Timeout
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatestplus.play._
 import play.api.inject.guice.GuiceApplicationBuilder
@@ -37,7 +36,7 @@ class FunctionalSpec extends PlaySpec with ScalaFutures {
           val listener = new WebSocketClient.LoggingListener
           val completionStage = webSocketClient.call(serverURL, origin, listener)
           val f = FutureConverters.toScala(completionStage)
-          val result = Await.result(f, atMost = 10000 millis)
+          val result = Await.result(f, atMost = 10 seconds)
           listener.getThrowable mustBe a[IllegalStateException]
         } catch {
           case e: IllegalStateException =>
@@ -66,7 +65,7 @@ class FunctionalSpec extends PlaySpec with ScalaFutures {
         val completionStage = webSocketClient.call(serverURL, origin, listener)
         val f = FutureConverters.toScala(completionStage)
 
-        whenReady(f, timeout = Timeout(10 second)) { webSocket =>
+        whenReady(f, timeout(10 seconds)) { webSocket =>
           webSocket mustBe a [WebSocket]
         }
       }

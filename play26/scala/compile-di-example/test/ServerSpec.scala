@@ -1,10 +1,10 @@
 import org.scalatest.concurrent.ScalaFutures
-import org.scalatest.time.Span;
-import org.scalatest.time.Seconds;
 import org.scalatestplus.play._
 import play.api.libs.ws.WSClient
 import play.api.mvc.Results
 import play.api.test.Injecting
+
+import scala.concurrent.duration._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -23,7 +23,7 @@ class ServerSpec extends PlaySpec
 
   "Server query should" should {
     "work" in {
-      whenReady(wsUrl("/").get, timeout(Span(10, Seconds))) { response =>
+      whenReady(wsUrl("/").get, timeout(10 seconds)) { response =>
         response.status mustBe play.api.http.Status.OK
       }
     }
