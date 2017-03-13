@@ -6,8 +6,6 @@ import akka.stream.scaladsl.Keep
 import akka.stream.testkit.scaladsl.{TestSink, TestSource}
 import akka.testkit.TestProbe
 import org.scalatest.MustMatchers
-import play.api.{ApplicationLoader, Environment, Mode}
-import play.api.http.DefaultHttpErrorHandler
 import play.api.libs.json.{JsValue, Json}
 
 import scala.concurrent.ExecutionContext
@@ -23,13 +21,6 @@ class HomeControllerSpec extends TestKitSpec with MustMatchers {
     "create a websocket flow and send a message through" in {
       implicit val materializer = ActorMaterializer()(system)
       implicit val ec: ExecutionContext = system.dispatcher
-
-      val classLoader = ApplicationLoader.getClass.getClassLoader
-      val env = new Environment(new java.io.File("."), classLoader, Mode.Test)
-      val context = ApplicationLoader.createContext(env)
-      val config = context.initialConfiguration
-      val errorHandler = new DefaultHttpErrorHandler(env, config, None/*sourceMapper*/, None/*router*/)
-      implicit val webJarAssets: WebJarAssets = new WebJarAssets(errorHandler, config, env)
 
       val stocksActor = TestProbe("stocksActor")
       val userParentActor = TestProbe("userParentActor")
