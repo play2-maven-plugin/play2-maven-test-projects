@@ -26,7 +26,7 @@ class StocksActorSpec extends TestKitSpec {
       stocksActor.tell(WatchStock(symbol), userActor)
 
       // Should create a new stockActor as a child and send it the stock history
-      val stockHistory = probe.receiveOne(500 millis)
+      val stockHistory = probe.receiveOne(10 seconds)
       stockHistory mustBe a[StockHistory]
     }
 

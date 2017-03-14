@@ -35,7 +35,7 @@ class UserActorSpec extends TestKitSpec with MustMatchers {
       userActor.receive(StockUpdate(symbol, price))
 
       // ...and expect it to be a JSON node.
-      val jsObj: JsObject = out.receiveOne(500 millis).asInstanceOf[JsObject]
+      val jsObj: JsObject = out.receiveOne(10 seconds).asInstanceOf[JsObject]
       jsObj \ "type" mustBe JsDefined(JsString("stockupdate"))
       jsObj \ "symbol" mustBe JsDefined(JsString(symbol))
       jsObj \ "price" mustBe JsDefined(JsNumber(price))
@@ -50,7 +50,7 @@ class UserActorSpec extends TestKitSpec with MustMatchers {
 
       // send off the stock update...
       userActor.receive(StockHistory(symbol, history))
-      val jsObj: JsObject = out.receiveOne(500 millis).asInstanceOf[JsObject]
+      val jsObj: JsObject = out.receiveOne(10 seconds).asInstanceOf[JsObject]
 
       // ...and expect it to be a JSON node.
       jsObj \ "type" mustBe JsDefined(JsString("stockhistory"))

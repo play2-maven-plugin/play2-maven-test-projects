@@ -35,7 +35,7 @@ class StockActorSpec extends TestKitSpec {
       stockActor ! FetchLatest
 
       // ... and ask the probe if it got the StockUpdate message.
-      val actualMessage = probe.receiveOne(500 millis)
+      val actualMessage = probe.receiveOne(10 seconds)
       val expectedMessage = StockUpdate(symbol, price)
       actualMessage must ===(expectedMessage)
     }
@@ -54,7 +54,7 @@ class StockActorSpec extends TestKitSpec {
       stockActor.tell(WatchStock(symbol), userActor)
 
       // the userActor will be added as a watcher and get a message with the stock history
-      val userActorMessage = probe.receiveOne(500.millis)
+      val userActorMessage = probe.receiveOne(10 seconds)
       userActorMessage mustBe a [StockHistory]
     }
   }
