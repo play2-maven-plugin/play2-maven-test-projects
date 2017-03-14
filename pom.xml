@@ -47,8 +47,6 @@ under the License.
     </properties>
 
     <modules>
-        <module>activator</module>
-
         <module>play21</module>
         <module>play22</module>
         <module>play23</module>
