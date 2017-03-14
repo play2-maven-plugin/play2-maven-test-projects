@@ -1,4 +1,4 @@
-# Play Chatroom
+# play-scala-chatroom-example
 
 This is a simple chatroom using Play and Websockets with the Scala API.
 

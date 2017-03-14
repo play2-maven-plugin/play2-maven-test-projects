@@ -6,8 +6,8 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
- * add your integration spec here.
- * An integration test will fire up a whole play application in a real (or headless) browser
+ * Add your integration spec here.
+ * An integration test will fire up a whole play application in a real (or headless) browser.
  */
 @RunWith(classOf[JUnitRunner])
 class IntegrationSpec extends PlaySpec with OneServerPerTest with OneBrowserPerTest with HtmlUnitFactory {

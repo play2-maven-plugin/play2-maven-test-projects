@@ -1,4 +1,4 @@
-# Play Chatroom
+# play-java-chatroom-example
 
 This is a simple chatroom using Play and Websockets with the Java API.
 

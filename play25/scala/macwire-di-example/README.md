@@ -1,5 +1,4 @@
-Play 2.5 Macwire DI
-=================================
+# play-scala-macwire-di-example
 
 This is an example project for setting up Play 2.5 with Macwire.
 
