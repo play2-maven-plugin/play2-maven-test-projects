@@ -104,6 +104,7 @@ under the License.
             <scope>test</scope>
         </dependency>
 
+        <!-- downgrade to version used by "play-test_2.11:2.4.10" -->
         <dependency>
             <groupId>org.fluentlenium</groupId>
             <artifactId>fluentlenium-core</artifactId>

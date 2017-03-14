@@ -103,6 +103,14 @@ under the License.
             <version>${play2.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- downgrade to version used by "play-test_2.11:2.4.10" -->
+        <dependency>
+            <groupId>org.fluentlenium</groupId>
+            <artifactId>fluentlenium-core</artifactId>
+            <version>0.10.3</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
