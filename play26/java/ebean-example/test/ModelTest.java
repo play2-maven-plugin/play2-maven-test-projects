@@ -8,7 +8,7 @@ import static play.test.Helpers.*;
 
 import models.*;
 
-import com.avaje.ebean.*;
+import io.ebean.*;
 
 public class ModelTest {
     

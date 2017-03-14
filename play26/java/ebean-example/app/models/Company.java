@@ -6,13 +6,13 @@ import javax.persistence.*;
 import play.db.ebean.*;
 import play.data.validation.*;
 
-
+import io.ebean.*;
 
 /**
  * Company entity managed by Ebean
  */
 @Entity 
-public class Company extends com.avaje.ebean.Model {
+public class Company extends Model {
 
     private static final long serialVersionUID = 1L;
 
@@ -25,11 +25,11 @@ public class Company extends com.avaje.ebean.Model {
     /**
      * Generic query helper for entity Company with id Long
      */
-    public static Find<Long,Company> find = new Find<Long,Company>(){};
+    public static Finder<Long,Company> find = new Finder<Long,Company>(Company.class){};
 
     public static Map<String,String> options() {
         LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
-        for(Company c: Company.find.orderBy("name").findList()) {
+        for(Company c: Company.find.query().orderBy("name").findList()) {
             options.put(c.id.toString(), c.name);
         }
         return options;

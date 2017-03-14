@@ -38,4 +38,6 @@ class MyComponents(context: ApplicationLoader.Context)
 
   lazy val router: Router = new _root_.router.Routes(httpErrorHandler, homeController, assets)
 
+  def httpFilters: Seq[EssentialFilter] = Seq()
+
 }

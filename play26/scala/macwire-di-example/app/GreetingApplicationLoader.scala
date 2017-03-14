@@ -28,11 +28,13 @@ class GreetingComponents(context: Context) extends BuiltInComponentsFromContext(
 
   lazy val parsers: PlayBodyParsers = playBodyParsers
   lazy val actionBuilder: ActionBuilder[Request, AnyContent] = defaultActionBuilder
-  lazy val controllerComponents: ControllerComponents = this
+  override lazy val controllerComponents: ControllerComponents = this
 
   lazy val router: Router = {
     // add the prefix string in local scope for the Routes constructor
     val prefix: String = "/"
     wire[Routes]
   }
+
+  def httpFilters: Seq[EssentialFilter] = Seq()
 }

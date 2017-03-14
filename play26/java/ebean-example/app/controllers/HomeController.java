@@ -1,7 +1,7 @@
 package controllers;
 
-import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Transaction;
+import io.ebean.Ebean;
+import io.ebean.Transaction;
 import play.mvc.*;
 import play.data.*;
 import static play.data.Form.*;
