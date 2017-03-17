@@ -33,6 +33,12 @@ class IntegrationSpec extends PlaySpec {
         
         browser.$("section h1").first.getText  must equal("Edit computer")
 
+        browser.$("#discontinued").text("xxx")
+        browser.$("input.primary").click()
+
+        browser.$("div.has-error").size must equal(1)
+        browser.$("div.has-error label").first.getText must equal("Discontinued date")
+
         browser.$("#discontinued").text("")
         browser.$("input.primary").click()
 
