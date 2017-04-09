@@ -1,5 +1,4 @@
 import org.scalatestplus.play.PlaySpec
-import play.api.ApplicationLoader.Context
 import play.api.test.Helpers._
 import play.api.test._
 
@@ -7,14 +6,12 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
-  * Add your spec here.
-  * You can mock out a whole application including requests, plugins etc.
-  * For more information, consult the wiki.
-  */
+ * Add your spec here.
+ * You can mock out a whole application including requests, plugins etc.
+ * For more information, consult the wiki.
+ */
 @RunWith(classOf[JUnitRunner])
-class ApplicationSpec extends PlaySpec with OneAppPerTestWithComponents[GreetingComponents] {
-
-  override def createComponents(context: Context) = new GreetingComponents(context)
+class ApplicationSpec extends PlaySpec with GreetingOneAppPerTest {
 
   "Routes" should {
 

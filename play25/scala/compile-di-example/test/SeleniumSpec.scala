@@ -4,11 +4,11 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class SeleniumSpec
-  extends PlaySpec
-    with OneServerPerTestWithMyComponents
-    with OneBrowserPerTest
-    with HtmlUnitFactory {
+class SeleniumSpec extends PlaySpec
+  with BaseOneServerPerTest
+  with OneBrowserPerTest
+  with MyApplicationFactory
+  with HtmlUnitFactory {
 
   "SeleniumSpec" should {
 
@@ -16,7 +16,7 @@ class SeleniumSpec
 
       go to ("http://localhost:" + port)
 
-      pageSource must include ("Your new application is ready.")
+      pageSource must include("Your new application is ready.")
     }
   }
 }

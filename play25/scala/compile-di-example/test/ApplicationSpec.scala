@@ -1,31 +1,25 @@
-import org.scalatest._
 import org.scalatestplus.play._
-import play.api.ApplicationLoader.Context
-import play.api.test._
 import play.api.test.Helpers._
-import play.api._
+import play.api.test._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
- * Add your spec here.
- * You can mock out a whole application including requests, plugins etc.
- * For more information, consult the wiki.
+ * Runs an integration test with an application
  */
 @RunWith(classOf[JUnitRunner])
-class ApplicationSpec extends PlaySpec with OneAppPerTestWithMyComponents {
+class ApplicationSpec extends PlaySpec
+  with BaseOneAppPerTest
+  with MyApplicationFactory {
 
   "Routes" should {
-
     "send 404 on a bad request" in {
       route(app, FakeRequest(GET, "/boum")).map(status(_)) mustBe Some(NOT_FOUND)
     }
-
   }
 
   "HomeController" should {
-
     "render the index page" in {
       val home = route(app, FakeRequest(GET, "/")).get
 
@@ -33,6 +27,5 @@ class ApplicationSpec extends PlaySpec with OneAppPerTestWithMyComponents {
       contentType(home) mustBe Some("text/html")
       contentAsString(home) must include("Your new application is ready.")
     }
-
   }
 }
