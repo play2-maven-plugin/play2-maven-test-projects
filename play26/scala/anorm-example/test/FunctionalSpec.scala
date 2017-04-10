@@ -4,12 +4,13 @@ import org.scalatest.concurrent.ScalaFutures
 import play.api.test._
 import play.api.test.Helpers._
 import org.scalatestplus.play._
+import org.scalatestplus.play.guice._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class FunctionalSpec extends PlaySpec with OneAppPerSuite with ScalaFutures {
+class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite with ScalaFutures {
 
   def dateIs(date: java.util.Date, str: String) = {
     new java.text.SimpleDateFormat("yyyy-MM-dd").format(date) == str

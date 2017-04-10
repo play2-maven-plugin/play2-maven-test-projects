@@ -50,6 +50,12 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
+            <artifactId>filters-helpers_2.12</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
@@ -90,7 +96,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.0.0-M1</version>
+            <version>3.0.0-M2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

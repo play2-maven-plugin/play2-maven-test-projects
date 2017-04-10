@@ -1,10 +1,5 @@
-import org.scalatest.concurrent.ScalaFutures
+import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 import org.scalatestplus.play._
-import play.api.libs.ws.WSClient
-import play.api.mvc.Results
-import play.api.test.Injecting
-
-import scala.concurrent.duration._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -16,19 +11,17 @@ import org.scalatest.junit.JUnitRunner
 class ServerSpec extends PlaySpec
   with BaseOneServerPerSuite
   with MyApplicationFactory
-  with Injecting
-  with ScalaFutures {
+  with ScalaFutures
+  with IntegrationPatience {
 
-  implicit val wsClient: WSClient = inject[WSClient]
+  private implicit val implicitPort = port
 
   "Server query should" should {
     "work" in {
-      whenReady(wsUrl("/").get, timeout(10 seconds)) { response =>
+      whenReady(play.api.test.WsTestClient.wsUrl("/").get) { response =>
         response.status mustBe play.api.http.Status.OK
       }
     }
-
   }
-
 }
 

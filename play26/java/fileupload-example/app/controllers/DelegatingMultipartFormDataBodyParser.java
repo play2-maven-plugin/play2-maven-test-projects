@@ -31,15 +31,15 @@ import static scala.collection.JavaConverters.seqAsJavaListConverter;
  */
 abstract class DelegatingMultipartFormDataBodyParser<A> implements BodyParser<Http.MultipartFormData<A>> {
 
-    private final HttpErrorHandler errorHandler;
     private final Materializer materializer;
+    private final HttpErrorHandler errorHandler;
     private final long maxLength;
     private final play.api.mvc.BodyParser<play.api.mvc.MultipartFormData<A>> delegate;
 
-    public DelegatingMultipartFormDataBodyParser(HttpErrorHandler errorHandler, Materializer materializer, long maxLength) {
+    public DelegatingMultipartFormDataBodyParser(Materializer materializer, long maxLength, HttpErrorHandler errorHandler) {
         this.maxLength = maxLength;
-        this.errorHandler = errorHandler;
         this.materializer = materializer;
+        this.errorHandler = errorHandler;
         delegate = multipartParser();
     }
 
@@ -53,7 +53,6 @@ abstract class DelegatingMultipartFormDataBodyParser<A> implements BodyParser<Ht
      */
     private play.api.mvc.BodyParser<play.api.mvc.MultipartFormData<A>> multipartParser() {
         ScalaFilePartHandler filePartHandler = new ScalaFilePartHandler();
-        //noinspection unchecked
         return Multipart.multipartParser((int) maxLength, filePartHandler, errorHandler, materializer);
     }
 

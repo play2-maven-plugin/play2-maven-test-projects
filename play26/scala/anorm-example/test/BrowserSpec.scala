@@ -9,7 +9,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class IntegrationSpec extends PlaySpec {
+class BrowserSpec extends PlaySpec {
   
   "Application" should {
     

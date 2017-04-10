@@ -34,8 +34,8 @@ import static java.nio.file.attribute.PosixFilePermission.OWNER_WRITE;
 class MyMultipartFormDataBodyParser extends DelegatingMultipartFormDataBodyParser<File> {
 
     @Inject
-    public MyMultipartFormDataBodyParser(HttpErrorHandler errorHandler, Materializer materializer, play.api.http.HttpConfiguration config) {
-        super(errorHandler, materializer, config.parser().maxDiskBuffer());
+    public MyMultipartFormDataBodyParser(Materializer materializer, play.api.http.HttpConfiguration config, HttpErrorHandler errorHandler) {
+        super(materializer, config.parser().maxDiskBuffer(), errorHandler);
     }
 
     /**
@@ -68,12 +68,9 @@ class MyMultipartFormDataBodyParser extends DelegatingMultipartFormDataBodyParse
      */
     private File generateTempFile() {
         try {
-            /* doesn't work on Windows
             final EnumSet<PosixFilePermission> attrs = EnumSet.of(OWNER_READ, OWNER_WRITE);
             final FileAttribute<?> attr = PosixFilePermissions.asFileAttribute(attrs);
             final Path path = Files.createTempFile("multipartBody", "tempFile", attr);
-            */
-            final Path path = Files.createTempFile("multipartBody", "tempFile");
             return path.toFile();
         } catch (IOException e) {
             throw new IllegalStateException(e);

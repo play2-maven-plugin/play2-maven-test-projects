@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <anorm.version>2.6.0-M1</anorm.version>
-        <play2.version>2.6.0-M2</play2.version>
+        <play2.version>2.6.0-M3</play2.version>
         <scala.version>2.12.1</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
@@ -112,7 +112,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.0.0-M1</version>
+            <version>3.0.0-M2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

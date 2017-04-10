@@ -4,7 +4,7 @@ This is an example Play application that uses Java, and communicates with an in 
 
 The Github location for this project is:
 
-[https://github.com/playframework/play-ebean-example](https://github.com/playframework/play-ebean-example)
+[https://github.com/playframework/play-java-ebean-example](https://github.com/playframework/play-java-ebean-example)
 
 ## Play
 
@@ -16,8 +16,8 @@ Play documentation is here:
 
 EBean is a Java ORM library that uses SQL:
 
-[https://www.playframework.com/documentation/2.5.x/JavaEbean](https://www.playframework.com/documentation/2.5.x/JavaEbean)
+[https://www.playframework.com/documentation/latest/JavaEbean](https://www.playframework.com/documentation/latest/JavaEbean)
 
-and
+and the documentation can be found here:
 
 [https://ebean-orm.github.io/](https://ebean-orm.github.io/)
