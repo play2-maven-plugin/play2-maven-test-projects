@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <anorm.version>2.5.3</anorm.version>
-        <play2.version>2.5.13</play2.version>
+        <play2.version>2.5.14</play2.version>
         <scala.version>2.11.8</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
