@@ -74,21 +74,6 @@ under the License.
             <version>${play2-slick.version}</version>
         </dependency>
 
-        <!-- Weird, but this dependency is required. Without it I see compilation warnings:
-[WARNING] Class org.joda.convert.FromString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.ToString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.FromString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.ToString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.FromString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.ToString not found - continuing with a stub.
-[WARNING] Class org.joda.convert.ToString not found - continuing with a stub.
-        -->
-        <dependency>
-            <groupId>org.joda</groupId>
-            <artifactId>joda-convert</artifactId>
-            <version>1.2</version>
-        </dependency>
-
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
