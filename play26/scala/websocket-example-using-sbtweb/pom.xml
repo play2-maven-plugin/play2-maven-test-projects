@@ -99,7 +99,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.0.0-M2</version>
+            <version>3.0.0-M3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

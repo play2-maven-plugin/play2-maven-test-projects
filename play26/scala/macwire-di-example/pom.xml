@@ -84,13 +84,6 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-ahc-ws_2.12</artifactId>
-            <version>${play2.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.play</groupId>
             <artifactId>play-test_2.12</artifactId>
             <version>${play2.version}</version>
             <scope>test</scope>
@@ -99,7 +92,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.0.0-M2</version>
+            <version>3.0.0-M3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
