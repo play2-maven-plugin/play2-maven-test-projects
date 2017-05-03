@@ -52,8 +52,8 @@ under the License.
         <site.plugin.version>3.4</site.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta7</play2.plugin.version>
-        <sbt-compiler.plugin.version>1.0.0-rc1</sbt-compiler.plugin.version>
+        <play2.plugin.version>1.0.0-beta8-SNAPSHOT</play2.plugin.version>
+        <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
 
         <fluido.skin.version>1.4</fluido.skin.version>
     </properties>
