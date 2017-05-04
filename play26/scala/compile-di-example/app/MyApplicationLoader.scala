@@ -7,10 +7,6 @@ class MyApplicationLoader extends ApplicationLoader {
   var components: MyComponents = _
 
   def load(context: ApplicationLoader.Context): Application = {
-    LoggerConfigurator(context.environment.classLoader).foreach {
-      _.configure(context.environment)
-    }
-
     components = new MyComponents(context)
     components.application
   }

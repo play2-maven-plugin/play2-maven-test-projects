@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <macwire.version>2.3.0</macwire.version>
-        <play2.version>2.6.0-M4</play2.version>
+        <play2.version>2.6.0-M5</play2.version>
         <scala.version>2.12.1</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
