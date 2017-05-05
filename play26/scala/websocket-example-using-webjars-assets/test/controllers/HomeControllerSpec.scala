@@ -6,8 +6,6 @@ import akka.stream.scaladsl.Keep
 import akka.stream.testkit.scaladsl.{TestSink, TestSource}
 import akka.testkit.TestProbe
 import org.scalatest.MustMatchers
-import play.api.{ApplicationLoader, Configuration, Environment, Mode}
-import play.api.http.{DefaultFileMimeTypes, DefaultHttpErrorHandler, FileMimeTypesConfiguration}
 import play.api.libs.json.{JsValue, Json}
 
 import scala.concurrent.ExecutionContext
@@ -24,17 +22,6 @@ class HomeControllerSpec extends TestKitSpec with MustMatchers {
       implicit val materializer = ActorMaterializer()(system)
       implicit val ec: ExecutionContext = system.dispatcher
 
-      val classLoader = ApplicationLoader.getClass.getClassLoader
-      val env = new Environment(new java.io.File("."), classLoader, Mode.Test)
-      val context = ApplicationLoader.createContext(env)
-      val config = context.initialConfiguration
-      val assetsConfig = AssetsConfiguration.fromConfiguration(config, env.mode)
-      val errorHandler = new DefaultHttpErrorHandler(env, config, None/*sourceMapper*/, None/*router*/)
-      val fileMimeTypesConfiguration = FileMimeTypesConfiguration()
-      val fileMimeTypes = new DefaultFileMimeTypes(fileMimeTypesConfiguration)
-      val meta = new DefaultAssetsMetadata(env, assetsConfig, fileMimeTypes)
-      implicit val webJarAssets: WebJarAssets = new WebJarAssets(errorHandler, meta, config, env)
-
       val stocksActor = TestProbe("stocksActor")
       val userParentActor = TestProbe("userParentActor")
       val userActor = TestProbe("userActor")
@@ -43,7 +30,8 @@ class HomeControllerSpec extends TestKitSpec with MustMatchers {
       val publisher = akka.stream.testkit.TestPublisher.probe[JsValue]()
 
       // instantiate the controller...
-      val controller = new HomeController(stocksActor.ref, userParentActor.ref)
+      val cc = play.api.test.Helpers.stubControllerComponents()
+      val controller = new HomeController(stocksActor.ref, userParentActor.ref, cc)
 
       // call method under test...
       val flowUnderTest = controller.createWebSocketFlow(publisher, userActor.ref)

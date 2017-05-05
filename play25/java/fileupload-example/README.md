@@ -1,5 +1,3 @@
-[<img src="https://img.shields.io/travis/playframework/play-java-fileupload-example.svg"/>](https://travis-ci.org/playframework/play-java-fileupload-example)
-
 # play-java-fileupload-example
 
 This is a sample project that shows how to upload a file through Akka Streams using a custom BodyParser using Akka Streams using the Java API.

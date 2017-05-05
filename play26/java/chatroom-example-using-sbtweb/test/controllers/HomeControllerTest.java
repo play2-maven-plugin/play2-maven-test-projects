@@ -1,12 +1,16 @@
 package controllers;
 
+import play.shaded.ahc.org.asynchttpclient.AsyncHttpClient;
+import play.shaded.ahc.org.asynchttpclient.DefaultAsyncHttpClient;
+import play.shaded.ahc.org.asynchttpclient.ws.WebSocket;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import play.libs.ws.WSClient;
 import play.libs.ws.WSResponse;
-import play.shaded.ahc.org.asynchttpclient.AsyncHttpClient;
-import play.shaded.ahc.org.asynchttpclient.ws.WebSocket;
 import play.test.WithServer;
 
+import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
@@ -20,10 +24,21 @@ import static play.mvc.Http.Status.OK;
  */
 public class HomeControllerTest extends WithServer {
 
+    private AsyncHttpClient asyncHttpClient;
+
+    @Before
+    public void setUp() {
+        asyncHttpClient = new DefaultAsyncHttpClient();
+    }
+
+    @After
+    public void tearDown() throws IOException {
+        asyncHttpClient.close();
+    }
+
     // Functional test to run through the server and check the page comes ups
     @Test
     public void testInServer() throws Exception {
-        int timeout = 5000;
         String url = "http://localhost:" + this.testServer.port() + "/";
         try (WSClient ws = play.test.WSTestClient.newClient(this.testServer.port())) {
             CompletionStage<WSResponse> stage = ws.url(url).get();
@@ -39,9 +54,8 @@ public class HomeControllerTest extends WithServer {
     public void testWebsocket() throws Exception {
         String serverURL = "ws://localhost:" + this.testServer.port() + "/chat";
         String origin = serverURL;
-        final AsyncHttpClient asyncHttpClient = app.injector().instanceOf(AsyncHttpClient.class);
-        WebSocketClient webSocketClient = new WebSocketClient(asyncHttpClient);
 
+        WebSocketClient webSocketClient = new WebSocketClient(asyncHttpClient);
         WebSocketClient.LoggingListener listener = new WebSocketClient.LoggingListener();
         CompletableFuture<WebSocket> future = webSocketClient.call(serverURL, origin, listener);
         await().until(() -> assertThat(future).isDone());

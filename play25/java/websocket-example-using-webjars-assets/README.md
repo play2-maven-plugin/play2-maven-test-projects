@@ -1,4 +1,4 @@
-# play-websocket-java
+# play-java-websocket-example
 
 This is an example Play application that shows how to use Play's Websocket API in Java, by showing a series of stock tickers updated using WebSocket.
 
@@ -8,6 +8,6 @@ There are also tests showing how Junit and Akka Testkit are used to test actors 
 
 For more information, please see the documentation for Websockets and Akka Streams:
 
-* https://www.playframework.com/documentation/2.5.x/JavaWebSockets
+* https://www.playframework.com/documentation/latest/JavaWebSockets
 * http://doc.akka.io/docs/akka/current/java/stream/stream-flows-and-basics.html#stream-materialization
 * http://doc.akka.io/docs/akka/current/java/stream/stream-integrations.html#integrating-with-actors

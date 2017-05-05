@@ -30,7 +30,8 @@ class HomeControllerSpec extends TestKitSpec with MustMatchers {
       val publisher = akka.stream.testkit.TestPublisher.probe[JsValue]()
 
       // instantiate the controller...
-      val controller = new HomeController(stocksActor.ref, userParentActor.ref)
+      val cc = play.api.test.Helpers.stubControllerComponents()
+      val controller = new HomeController(stocksActor.ref, userParentActor.ref, cc)
 
       // call method under test...
       val flowUnderTest = controller.createWebSocketFlow(publisher, userActor.ref)
