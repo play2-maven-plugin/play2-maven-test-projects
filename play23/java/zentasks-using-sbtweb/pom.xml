@@ -49,7 +49,7 @@ under the License.
 
         <play2.plugin.version>1.0.0-beta8-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
-        <sbtrun.plugin.version>1.0.0</sbtrun.plugin.version>
+        <sbtrun.plugin.version>1.0.1-SNAPSHOT</sbtrun.plugin.version>
     </properties>
 
     <dependencies>
