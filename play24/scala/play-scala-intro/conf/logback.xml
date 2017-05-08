@@ -15,6 +15,9 @@
   <logger name="play" level="INFO" />
   <logger name="application" level="DEBUG" />
 
+  <!-- Off these ones as they are annoying, and anyway we manage configuration ourself -->
+  <logger name="com.gargoylesoftware.htmlunit.javascript" level="OFF" />
+
   <root level="ERROR">
     <appender-ref ref="STDOUT" />
   </root>
