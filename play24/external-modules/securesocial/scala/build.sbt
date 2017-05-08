@@ -1,4 +1,4 @@
-scalaVersion := Option(System.getProperty("scala.version")).getOrElse("2.11.7")
+scalaVersion := Option(System.getProperty("scala.version")).getOrElse("2.11.11")
 
 val securesocialVersion = Option(System.getProperty("securesocial.version")).getOrElse("3.0-M4")
 

@@ -50,7 +50,7 @@ under the License.
 
         <play2.version>2.4.11</play2.version>
         <play2-slick.version>1.0.0</play2-slick.version>
-        <scala.version>2.11.6</scala.version>
+        <scala.version>2.11.11</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
