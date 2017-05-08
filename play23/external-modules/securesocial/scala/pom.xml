@@ -43,7 +43,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <play2.version>2.3.10</play2.version>
-        <scala.version>2.11.5</scala.version>
+        <scala.version>2.11.11</scala.version>
         <securesocial.version>3.0-M3</securesocial.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
