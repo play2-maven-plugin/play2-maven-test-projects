@@ -38,7 +38,7 @@ under the License.
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-beta9</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc1-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
 
@@ -105,7 +105,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.0.0-M3</version>
+            <version>3.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
