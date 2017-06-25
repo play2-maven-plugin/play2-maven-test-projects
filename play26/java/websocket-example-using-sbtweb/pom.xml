@@ -31,7 +31,8 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.6.0-RC2</play2.version>
+        <akka.version>2.5.3</akka.version>
+        <play2.version>2.6.0</play2.version>
         <scala.version>2.12.2</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
@@ -84,14 +85,14 @@ under the License.
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-testkit_2.12</artifactId>
-            <version>2.5.2</version>
+            <version>${akka.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-stream-testkit_2.12</artifactId>
-            <version>2.5.2</version>
+            <version>${akka.version}</version>
             <scope>test</scope>
         </dependency>
 

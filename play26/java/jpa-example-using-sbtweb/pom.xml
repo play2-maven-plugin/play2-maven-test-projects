@@ -31,7 +31,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.6.0-RC2</play2.version>
+        <play2.version>2.6.0</play2.version>
         <play2-enhancer.version>1.1.0</play2-enhancer.version>
         <scala.version>2.12.2</scala.version>
 
@@ -77,7 +77,7 @@ under the License.
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.6.Final</version>
+            <version>5.2.10.Final</version>
         </dependency>
 
         <dependency>

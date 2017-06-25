@@ -11,7 +11,7 @@ import org.scalatest.junit.JUnitRunner
  * Unit tests can run without a full Play application.
  */
 @RunWith(classOf[JUnitRunner])
-class UnitSpec extends PlaySpec with StubControllerComponentsFactory {
+class UnitSpec extends PlaySpec {
 
   "CountController" should {
 
