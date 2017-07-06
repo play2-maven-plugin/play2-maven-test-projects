@@ -19,6 +19,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.webjars.play.WebJarsUtil;
 import play.libs.Json;
 
 /**
@@ -28,7 +29,7 @@ public class HomeControllerTest {
 
     static ActorSystem system;
     static Materializer materializer;
-    static WebJarAssets webJarAssets; // can be null, not used test
+    static WebJarsUtil webJarsUtil; // can be null, not used test
 
     @BeforeClass
     public static void setup() {
@@ -52,7 +53,7 @@ public class HomeControllerTest {
         // Create the controller without having to create a play app...
         final HomeController controller = new HomeController(system,
                 materializer,
-                webJarAssets,
+                webJarsUtil,
                 stocksActorProbe.ref(),
                 userParentActorProbe.ref());
 
