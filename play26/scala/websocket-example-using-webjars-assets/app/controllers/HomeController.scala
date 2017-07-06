@@ -11,6 +11,7 @@ import akka.stream._
 import akka.stream.scaladsl._
 import akka.util.Timeout
 import org.reactivestreams.Publisher
+import org.webjars.play.WebJarsUtil
 import play.api.libs.json._
 import play.api.mvc._
 
@@ -27,14 +28,14 @@ class HomeController @Inject()(@Named("stocksActor") stocksActor: ActorRef,
                               (implicit actorSystem: ActorSystem,
                                mat: Materializer,
                                ec: ExecutionContext,
-                               webJarAssets: WebJarAssets) extends AbstractController(cc) {
+                               webJarsUtil: WebJarsUtil) extends AbstractController(cc) {
 
   // Use a direct reference to SLF4J
   private val logger = org.slf4j.LoggerFactory.getLogger("controllers.HomeController")
 
   // Home page that renders template
   def index = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.index(webJarAssets))
+    Ok(views.html.index(webJarsUtil))
   }
 
   /**

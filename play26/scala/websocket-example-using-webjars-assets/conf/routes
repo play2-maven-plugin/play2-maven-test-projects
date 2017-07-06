@@ -10,4 +10,4 @@ GET     /sentiment/:symbol          controllers.StockSentiment.get(symbol)
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # Enable webjar based resources to be returned
-GET     /webjars/*file              controllers.WebJarAssets.at(file)
+->      /webjars                    webjars.Routes

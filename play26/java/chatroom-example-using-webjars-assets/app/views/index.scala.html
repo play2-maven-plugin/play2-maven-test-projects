@@ -1,4 +1,4 @@
-@(webJarAssets: WebJarAssets, url: String)
+@(webJarUtil: org.webjars.play.WebJarsUtil, url: String)
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel='stylesheet' href='@routes.WebJarAssets.at(webJarAssets.locate("css/bootstrap.css"))'>
-        <link rel='stylesheet' href='@routes.WebJarAssets.at(webJarAssets.locate("css/bootstrap-theme.css"))'>
+        <link rel='stylesheet' href='@webJarUtil.url("css/bootstrap.css")'>
+        <link rel='stylesheet' href='@webJarUtil.url("css/bootstrap-theme.css")'>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <title>Chat Room</title>
@@ -45,8 +45,8 @@
             </div>
         </div>
 
-        <script type='text/javascript' src='@routes.WebJarAssets.at(webJarAssets.locate("jquery.js"))'></script>
-        <script type='text/javascript' src='@routes.WebJarAssets.at(webJarAssets.locate("jquery.flot.js"))'></script>
+        <script type='text/javascript' src='@webJarUtil.url("jquery.js")'></script>
+        <script type='text/javascript' src='@webJarUtil.url("jquery.flot.js")'></script>
 
         <script language="javascript">
                 var $messages = $("#messages"),

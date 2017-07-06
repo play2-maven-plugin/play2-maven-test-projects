@@ -25,6 +25,8 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
+import org.webjars.play.WebJarsUtil;
+
 import static akka.pattern.Patterns.ask;
 
 /**
@@ -39,23 +41,23 @@ public class HomeController extends Controller {
     private ActorRef userParentActor;
     private Materializer materializer;
     private ActorSystem actorSystem;
-    private WebJarAssets webJarAssets;
+    private WebJarsUtil webJarsUtil;
 
     @Inject
     public HomeController(ActorSystem actorSystem,
                           Materializer materializer,
-                          WebJarAssets webJarAssets,
+                          WebJarsUtil webJarsUtil,
                           @Named("stocksActor") ActorRef stocksActor,
                           @Named("userParentActor") ActorRef userParentActor) {
         this.stocksActor = stocksActor;
         this.userParentActor = userParentActor;
         this.materializer = materializer;
         this.actorSystem = actorSystem;
-        this.webJarAssets = webJarAssets;
+        this.webJarsUtil = webJarsUtil;
     }
 
     public Result index() {
-        return ok(views.html.index.render(webJarAssets, request()));
+        return ok(views.html.index.render(webJarsUtil, request()));
     }
 
     public WebSocket ws() {

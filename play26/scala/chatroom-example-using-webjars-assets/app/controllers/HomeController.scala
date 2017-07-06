@@ -7,6 +7,7 @@ import akka.actor.ActorSystem
 import akka.event.Logging
 import akka.stream.Materializer
 import akka.stream.scaladsl.{BroadcastHub, Flow, Keep, MergeHub, Source}
+import org.webjars.play.WebJarsUtil
 import play.api.mvc._
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -18,7 +19,7 @@ import scala.concurrent.{ExecutionContext, Future}
 class HomeController @Inject()(implicit actorSystem: ActorSystem,
                                mat: Materializer,
                                executionContext: ExecutionContext,
-                               webJarAssets: WebJarAssets)
+                               webJarsUtil: WebJarsUtil)
   extends Controller {
 
   private type WSMessage = String
@@ -46,7 +47,7 @@ class HomeController @Inject()(implicit actorSystem: ActorSystem,
 
   def index: Action[AnyContent] = Action { implicit request =>
     val url = routes.HomeController.chat().webSocketURL()
-    Ok(views.html.index(webJarAssets, url))
+    Ok(views.html.index(webJarsUtil, url))
   }
 
   def chat: WebSocket = {
