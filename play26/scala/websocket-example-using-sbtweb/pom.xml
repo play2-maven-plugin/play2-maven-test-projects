@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <akka.version>2.5.3</akka.version>
-        <play2.version>2.6.0</play2.version>
+        <play2.version>2.6.1</play2.version>
         <scala.version>2.12.2</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
