@@ -55,7 +55,7 @@ under the License.
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
         <war.plugin.version>2.6</war.plugin.version>
 
-        <play2.plugin.version>1.0.0-rc1</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc2-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
 
         <play2war.version>1.4.0</play2war.version>

@@ -39,7 +39,7 @@ under the License.
 
         <jar.plugin.version>2.6</jar.plugin.version>
 
-        <play2.plugin.version>1.0.0-rc1</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc2-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
 
