@@ -73,6 +73,13 @@ under the License.
             <version>${play2.version}</version>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.12</artifactId>
+            <version>${play2.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
