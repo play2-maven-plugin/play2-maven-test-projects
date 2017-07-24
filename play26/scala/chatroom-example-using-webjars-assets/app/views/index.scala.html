@@ -1,4 +1,4 @@
-@(webJarUtil: org.webjars.play.WebJarsUtil, webSocketUrl: String)
+@(webJarsUtil: org.webjars.play.WebJarsUtil, webSocketUrl: String)
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel='stylesheet' href='@webJarUtil.url("css/bootstrap.css")'>
-        <link rel='stylesheet' href='@webJarUtil.url("css/bootstrap-theme.css")'>
+        @Html(webJarsUtil.css("bootstrap.css"))
+        @Html(webJarsUtil.css("bootstrap-theme.css"))
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <title>Chat Room</title>
@@ -45,8 +45,8 @@
             </div>
         </div>
 
-        <script type='text/javascript' src='@webJarUtil.url("jquery.js")'></script>
-        <script type='text/javascript' src='@webJarUtil.url("jquery.flot.js")'></script>
+        @Html(webJarsUtil.script("jquery.js"))
+        @Html(webJarsUtil.script("jquery.flot.js"))
         <script type='text/javascript' src='@routes.Assets.at("javascripts/modernizr-3.5.0.js")'></script>
         <script type='text/javascript' src='@routes.Assets.at("javascripts/app.js")' data-url='@webSocketUrl'></script>
 

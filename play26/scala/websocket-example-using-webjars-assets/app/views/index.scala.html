@@ -1,14 +1,14 @@
-@(webJarUtil: org.webjars.play.WebJarsUtil)(implicit r: Request[_])
+@(webJarsUtil: org.webjars.play.WebJarsUtil)(implicit r: Request[_])
 <!DOCTYPE html>
 
 <html>
 <head>
     <title>Reactive Stock News Dashboard</title>
-    <link rel='stylesheet' href='@webJarUtil.url("css/bootstrap.min.css")'>
+    @Html(webJarsUtil.css("bootstrap.min.css"))
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-    <script type='text/javascript' src='@webJarUtil.url("jquery.min.js")'></script>
-    <script type='text/javascript' src='@webJarUtil.url("jquery.flot.js")'></script>
+    @Html(webJarsUtil.script("jquery.min.js"))
+    @Html(webJarsUtil.script("jquery.flot.js"))
     <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
 </head>
 <body data-ws-url="@routes.HomeController.ws.webSocketURL()">
