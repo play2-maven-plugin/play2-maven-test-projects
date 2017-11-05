@@ -40,7 +40,6 @@ under the License.
         <module>fileupload-example</module>
         <module>macwire-di-example</module>
         <module>slick-example</module>
-        <module>slick-example-using-sbtweb</module>
         <module>starter-example</module>
         <module>streaming-example</module>
         <module>websocket-example-using-sbtweb</module>

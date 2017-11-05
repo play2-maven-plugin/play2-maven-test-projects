@@ -57,6 +57,12 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
+            <artifactId>filters-helpers_2.12</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play-guice_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
@@ -127,15 +133,6 @@ under the License.
                     -->
                     <prodSettings>play.evolutions.db.default.autoApply=true</prodSettings>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>default-play2-compile-assets</id>
-                        <goals>
-                            <goal>coffee-compile</goal>
-                            <goal>less-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>
