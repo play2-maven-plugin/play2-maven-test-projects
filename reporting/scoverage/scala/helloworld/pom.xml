@@ -50,7 +50,7 @@ under the License.
         <site.plugin.version>3.4</site.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-rc2</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc3-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
         <scoverage.plugin.version>1.3.0</scoverage.plugin.version>
 
