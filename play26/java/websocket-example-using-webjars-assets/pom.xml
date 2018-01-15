@@ -33,7 +33,7 @@ under the License.
 
         <akka.version>2.5.8</akka.version>
         <play2.version>2.6.11</play2.version>
-        <scala.version>2.12.3</scala.version>
+        <scala.version>2.12.4</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
