@@ -1,4 +1,4 @@
-scalaVersion := Option(System.getProperty("scala.version")).getOrElse("2.11.11")
+scalaVersion := Option(System.getProperty("scala.version")).getOrElse("2.11.12")
 
 lazy val main = (project in file("."))
   .enablePlugins(SbtWeb)
