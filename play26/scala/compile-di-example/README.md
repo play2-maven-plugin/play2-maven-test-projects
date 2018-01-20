@@ -3,7 +3,7 @@
 This is an example of Play using the Scala API with manually wired compile time dependency injection.
 
 The application loader here is `MyApplicationLoader` which uses `MyComponents` to wire together an injector.
-  
+
 For testing, a `MyApplicationFactory` is defined and mixed in:
 
 ```scala
@@ -49,8 +49,8 @@ class ServerSpec extends PlaySpec
 
 ## Further Documentation
 
-* https://www.playframework.com/documentation/latest/ScalaCompileTimeDependencyInjection 
-* https://www.playframework.com/documentation/latest/ScalaTestingWithScalaTest#Using-ScalaTest-+-Play 
-* http://www.scalatest.org/user_guide
-* http://www.scalatest.org/release_notes/3.0.0
-* https://github.com/playframework/scalatestplus-play
+* <https://www.playframework.com/documentation/latest/ScalaCompileTimeDependencyInjection >
+* <https://www.playframework.com/documentation/latest/ScalaTestingWithScalaTest#Using-ScalaTest-+-Play >
+* <http://www.scalatest.org/user_guide>
+* <http://www.scalatest.org/release_notes/3.0.0>
+* <https://github.com/playframework/scalatestplus-play>

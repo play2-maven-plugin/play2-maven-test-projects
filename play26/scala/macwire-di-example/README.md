@@ -4,6 +4,6 @@ This is an example project for setting up Play with Macwire compile time depende
 
 For further details, please see:
 
-* https://www.playframework.com/documentation/latest/ScalaCompileTimeDependencyInjection
-* https://github.com/adamw/macwire/blob/master/README.md
-* https://di-in-scala.github.io/
+* <https://www.playframework.com/documentation/latest/ScalaCompileTimeDependencyInjection>
+* <https://github.com/adamw/macwire/blob/master/README.md>
+* <https://di-in-scala.github.io/>

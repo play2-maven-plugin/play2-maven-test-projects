@@ -30,9 +30,7 @@ import static akka.pattern.PatternsCS.ask;
 public class HomeController extends Controller {
 
     private final Timeout t = new Timeout(Duration.create(1, TimeUnit.SECONDS));
-
     private final Logger logger = org.slf4j.LoggerFactory.getLogger("controllers.HomeController");
-
     private final ActorRef userParentActor;
 
     @Inject

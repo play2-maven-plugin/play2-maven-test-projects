@@ -57,11 +57,11 @@ You will need [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/
 
 ## Running
 
-```
+```bash
 sbt run
 ```
 
-Go to http://localhost:9000 and open it in two different browsers.  Typing into one browser will cause it to show up in another browser.
+Go to <http://localhost:9000> and open it in two different browsers.  Typing into one browser will cause it to show up in another browser.
 
 ## Tributes
 
@@ -69,5 +69,4 @@ This project is originally taken from Johan Andrén's [Akka-HTTP version](https:
 
 Johan also has a blog post explaining dynamic streams in more detail:
 
-* http://markatta.com/codemonkey/blog/2016/10/02/chat-with-akka-http-websockets/
-
+* <http://markatta.com/codemonkey/blog/2016/10/02/chat-with-akka-http-websockets/>

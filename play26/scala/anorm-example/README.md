@@ -1,4 +1,4 @@
-# play-anorm
+# play-scala-anorm-example
 
 This is an example Play application that uses Scala on the front end, and communicates with an in memory database using Anorm.
 
@@ -6,14 +6,14 @@ This is an example Play application that uses Scala on the front end, and commun
 
 Play documentation is here:
 
-[https://playframework.com/documentation/latest/Home](https://playframework.com/documentation/latest/Home)
+<https://playframework.com/documentation/latest/Home>
 
 ## Anorm
 
 Anorm is a Scala ORM library that uses SQL:
 
-[https://www.playframework.com/documentation/2.5.x/ScalaAnorm](https://www.playframework.com/documentation/2.5.x/ScalaAnorm)
+<https://www.playframework.com/documentation/latest/ScalaAnorm>
 
 and
 
-[https://cchantep.github.io/anorm/](https://cchantep.github.io/anorm/)
+<https://cchantep.github.io/anorm/>

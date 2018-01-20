@@ -1,13 +1,12 @@
 package controllers
 
-import java.net.URL
+import java.net.URI
 import javax.inject._
 
 import akka.actor.ActorSystem
 import akka.event.Logging
 import akka.stream.Materializer
 import akka.stream.scaladsl.{BroadcastHub, Flow, Keep, MergeHub, Source}
-import org.webjars.play.WebJarsUtil
 import play.api.{Logger, MarkerContext}
 import play.api.mvc._
 
@@ -21,7 +20,7 @@ class HomeController @Inject()(cc: ControllerComponents)
                               (implicit actorSystem: ActorSystem,
                                mat: Materializer,
                                executionContext: ExecutionContext,
-                               webJarsUtil: WebJarsUtil) 
+                               webJarsUtil: org.webjars.play.WebJarsUtil) 
                                extends AbstractController(cc) with RequestMarkerContext {
 
   private type WSMessage = String
@@ -49,7 +48,7 @@ class HomeController @Inject()(cc: ControllerComponents)
   def index: Action[AnyContent] = Action { implicit request: RequestHeader =>
     val webSocketUrl = routes.HomeController.chat().webSocketURL()
     logger.info(s"index: ")
-    Ok(views.html.index(webJarsUtil, webSocketUrl))
+    Ok(views.html.index(webSocketUrl))
   }
 
   def chat(): WebSocket = {
@@ -105,7 +104,7 @@ class HomeController @Inject()(cc: ControllerComponents)
    */
   private def originMatches(origin: String): Boolean = {
     try {
-      val url = new URL(origin)
+      val url = new URI(origin)
       url.getHost == "localhost" &&
         (url.getPort match { case 9000 | 19001 => true; case _ => false })
     } catch {

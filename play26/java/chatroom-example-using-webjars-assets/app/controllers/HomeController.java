@@ -50,7 +50,7 @@ public class HomeController extends Controller {
     public Result index() {
         Http.Request request = request();
         String url = routes.HomeController.chat().webSocketURL(request);
-        return Results.ok(views.html.index.render(webJarsUtil, url));
+        return Results.ok(views.html.index.render(url, webJarsUtil));
     }
 
     public WebSocket chat() {
