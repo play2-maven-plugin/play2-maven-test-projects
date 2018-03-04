@@ -31,8 +31,8 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <akka.version>2.5.8</akka.version>
-        <play2.version>2.6.11</play2.version>
+        <akka.version>2.5.11</akka.version>
+        <play2.version>2.6.12</play2.version>
         <scala.version>2.12.4</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
