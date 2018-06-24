@@ -9,5 +9,6 @@ lazy val main = (project in file("."))
     ),
     sourceDirectory in Assets := baseDirectory.value / "app/assets",
     resourceDirectory in Assets := baseDirectory.value / "public",
+    LessKeys.compress := true,
     target := baseDirectory.value / "target/sbt"
   )
