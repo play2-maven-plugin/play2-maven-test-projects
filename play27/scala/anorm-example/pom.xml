@@ -105,8 +105,22 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>3.1.2</version>
+            <version>4.0.0-M1</version>
             <scope>test</scope>
+            <exclusions> <!-- to avoid overriding version 2.31 by 2.27 -->
+                <exclusion>
+                    <groupId>net.sourceforge.htmlunit</groupId>
+                    <artifactId>htmlunit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>net.sourceforge.htmlunit</groupId>
+                    <artifactId>htmlunit-core-js</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>net.sourceforge.htmlunit</groupId>
+                    <artifactId>neko-htmlunit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
