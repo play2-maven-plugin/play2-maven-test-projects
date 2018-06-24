@@ -46,14 +46,14 @@ under the License.
         <scala.version>2.11.12</scala.version>
 
         <cobertura.plugin.version>2.7</cobertura.plugin.version>
-        <findbugs.plugin.version>3.0.3</findbugs.plugin.version>
-        <jar.plugin.version>2.6</jar.plugin.version>
-        <javadoc.plugin.version>2.10.3</javadoc.plugin.version>
+        <findbugs.plugin.version>3.0.5</findbugs.plugin.version>
+        <jar.plugin.version>3.1.0</jar.plugin.version>
+        <javadoc.plugin.version>3.0.1</javadoc.plugin.version>
         <jxr.plugin.version>2.5</jxr.plugin.version>
-        <pmd.plugin.version>3.5</pmd.plugin.version>
+        <pmd.plugin.version>3.9.0</pmd.plugin.version>
         <project-info-reports.plugin.version>2.9</project-info-reports.plugin.version>
-        <site.plugin.version>3.4</site.plugin.version>
-        <surefire.plugin.version>2.19.1</surefire.plugin.version>
+        <site.plugin.version>3.7.1</site.plugin.version>
+        <surefire.plugin.version>2.22.0</surefire.plugin.version>
 
         <play2.plugin.version>1.0.0-rc3-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
