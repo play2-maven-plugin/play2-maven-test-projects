@@ -33,7 +33,7 @@ under the License.
 
         <macwire.version>2.3.0</macwire.version>
         <play2.version>2.6.12</play2.version>
-        <scala.version>2.12.4</scala.version>
+        <scala.version>2.12.6</scala.version>
 
         <jar.plugin.version>2.6</jar.plugin.version>
         <surefire.plugin.version>2.19.1</surefire.plugin.version>
