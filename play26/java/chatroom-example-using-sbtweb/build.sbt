@@ -4,8 +4,7 @@ lazy val main = (project in file("."))
   .enablePlugins(SbtWeb)
   .settings(
     libraryDependencies ++= Seq(
-      "org.webjars" % "bootstrap" % "3.3.6",
-      "org.webjars" % "flot" % "0.8.3"
+      "org.webjars" % "bootstrap" % "3.3.6"
     ),
     sourceDirectory in Assets := baseDirectory.value / "app/assets",
     resourceDirectory in Assets := baseDirectory.value / "public",

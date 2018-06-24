@@ -31,7 +31,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <anorm.version>2.5.3</anorm.version>
+        <anorm.version>2.6.1</anorm.version>
         <play2.version>2.6.15</play2.version>
         <scala.version>2.12.6</scala.version>
 
@@ -50,7 +50,7 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.play</groupId>
+            <groupId>org.playframework.anorm</groupId>
             <artifactId>anorm_2.12</artifactId>
             <version>${anorm.version}</version>
         </dependency>
@@ -70,7 +70,7 @@ under the License.
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.196</version>
+            <version>1.4.197</version>
             <scope>runtime</scope>
         </dependency>
 

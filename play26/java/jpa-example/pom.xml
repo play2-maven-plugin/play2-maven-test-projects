@@ -76,7 +76,7 @@ under the License.
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.10.Final</version>
+            <version>5.2.17.Final</version>
         </dependency>
 
         <dependency>
@@ -88,7 +88,7 @@ under the License.
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.196</version>
+            <version>1.4.197</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -165,6 +165,12 @@ under the License.
                     <mainLang>java</mainLang>
                 </configuration>
                 <executions>
+                    <execution>
+                        <id>default-play2-compile-assets</id>
+                        <goals>
+                            <goal>coffee-compile</goal>
+                        </goals>
+                    </execution>
                     <execution>
                         <id>default-play2-enhance</id>
                         <goals>
