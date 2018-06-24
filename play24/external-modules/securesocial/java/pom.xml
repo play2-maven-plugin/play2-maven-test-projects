@@ -186,6 +186,12 @@ under the License.
         <profile>
             <id>eclipse</id> <!-- for M2Eclipse only -->
 
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+
             <build>
                 <directory>${project.basedir}/target-eclipse</directory>
 
