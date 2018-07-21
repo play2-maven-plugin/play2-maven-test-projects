@@ -37,7 +37,7 @@ class HomeControllerSpec extends PlaySpec with ScalaFutures with IntegrationPati
           val listener = new WebSocketClient.LoggingListener
           val completionStage = webSocketClient.call(serverURL, origin, listener)
           val f = FutureConverters.toScala(completionStage)
-          val result = Await.result(f, atMost = 1000 millis)
+          val result = Await.result(f, atMost = 10000 millis)
           listener.getThrowable mustBe a[IllegalStateException]
         } catch {
           case e: IllegalStateException =>
@@ -66,7 +66,7 @@ class HomeControllerSpec extends PlaySpec with ScalaFutures with IntegrationPati
         val completionStage = webSocketClient.call(serverURL, origin, listener)
         val f = FutureConverters.toScala(completionStage)
 
-        whenReady(f, timeout = Timeout(1 second)) { webSocket =>
+        whenReady(f, timeout = Timeout(10 seconds)) { webSocket =>
           webSocket mustBe a [WebSocket]
         }
       }

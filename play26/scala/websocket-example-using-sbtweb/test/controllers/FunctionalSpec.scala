@@ -43,7 +43,7 @@ class FunctionalSpec extends PlaySpec with ScalaFutures {
           val listener = new WebSocketClient.LoggingListener(consumer)
           val completionStage = webSocketClient.call(serverURL, origin, listener)
           val f = FutureConverters.toScala(completionStage)
-          Await.result(f, atMost = 1000.millis)
+          Await.result(f, atMost = 10000.millis)
           listener.getThrowable mustBe a[IllegalStateException]
         } catch {
           case e: IllegalStateException =>
@@ -75,7 +75,7 @@ class FunctionalSpec extends PlaySpec with ScalaFutures {
         val f = FutureConverters.toScala(completionStage)
 
         // Test we can get good output from the websocket
-        whenReady(f, timeout = Timeout(1.second)) { webSocket =>
+        whenReady(f, timeout = Timeout(10.seconds)) { webSocket =>
           val condition: Callable[java.lang.Boolean] = new Callable[java.lang.Boolean] {
             override def call(): java.lang.Boolean = webSocket.isOpen && queue.peek() != null
           }
