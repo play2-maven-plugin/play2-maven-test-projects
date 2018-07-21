@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <anorm.version>2.6.2</anorm.version>
-        <play2.version>2.7.0-M1</play2.version>
+        <play2.version>2.7.0-M2</play2.version>
         <scala.version>2.12.6</scala.version>
 
         <jar.plugin.version>3.1.0</jar.plugin.version>
@@ -105,22 +105,19 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>4.0.0-M1</version>
+            <version>4.0.0-M2</version>
             <scope>test</scope>
-            <exclusions> <!-- to avoid overriding version 2.31 by 2.27 -->
+            <exclusions> <!-- to avoid mixing version 3.9.1 with 3.5.3 of Selenium dependencies -->
                 <exclusion>
-                    <groupId>net.sourceforge.htmlunit</groupId>
-                    <artifactId>htmlunit</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>net.sourceforge.htmlunit</groupId>
-                    <artifactId>htmlunit-core-js</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>net.sourceforge.htmlunit</groupId>
-                    <artifactId>neko-htmlunit</artifactId>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-java</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.9.1</version>
         </dependency>
     </dependencies>
 
