@@ -35,6 +35,7 @@ under the License.
     <modules>
         <module>anorm-example</module>
         <module>chatroom-example-using-sbtweb</module>
+        <module>chatroom-example-using-webjars-assets</module>
         <module>compile-di-example</module>
         <module>fileupload-example</module>
         <module>macwire-di-example</module>
@@ -42,6 +43,7 @@ under the License.
         <module>starter-example</module>
         <module>streaming-example</module>
         <module>websocket-example-using-sbtweb</module>
+        <module>websocket-example-using-webjars-assets</module>
     </modules>
 
 </project>
