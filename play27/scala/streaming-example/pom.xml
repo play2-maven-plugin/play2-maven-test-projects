@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play27.scala</groupId>
     <artifactId>streaming-example</artifactId>
-    <version>1.0.0-rc4-SNAPSHOT</version>
+    <version>1.0.0-rc5-SNAPSHOT</version>
     <packaging>play2</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.7.x : Scala : Streaming Example</name>
@@ -31,13 +31,13 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.7.0-M2</play2.version>
-        <scala.version>2.12.6</scala.version>
+        <play2.version>2.7.0-RC8</play2.version>
+        <scala.version>2.12.8</scala.version>
 
         <jar.plugin.version>3.1.0</jar.plugin.version>
         <surefire.plugin.version>2.22.0</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-rc4-SNAPSHOT</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc5-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
 
@@ -58,6 +58,13 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-guice_2.12</artifactId>
             <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>filters-helpers_2.12</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -84,7 +91,7 @@ under the License.
         <dependency>
             <groupId>org.scalatestplus.play</groupId>
             <artifactId>scalatestplus-play_2.12</artifactId>
-            <version>4.0.0-M2</version>
+            <version>4.0.0-RC2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -114,6 +121,9 @@ under the License.
                 <groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
                 <artifactId>sbt-compiler-maven-plugin</artifactId>
                 <version>${sbt-compiler.plugin.version}</version>
+                <configuration>
+                    <scalacOptions>-feature -deprecation -Xfatal-warnings</scalacOptions>
+                </configuration>
             </plugin>
 
             <plugin>

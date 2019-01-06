@@ -1,6 +1,8 @@
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 import org.scalatestplus.play._
 
+import scala.concurrent.duration._
+
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
@@ -18,7 +20,7 @@ class ServerSpec extends PlaySpec
 
   "Server query should" should {
     "work" in {
-      whenReady(play.api.test.WsTestClient.wsUrl("/").get) { response =>
+      whenReady(play.api.test.WsTestClient.wsUrl("/").get, timeout(10.seconds)) { response =>
         response.status mustBe play.api.http.Status.OK
       }
     }

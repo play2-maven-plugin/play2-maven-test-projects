@@ -33,9 +33,6 @@
     <logger name="com.gargoylesoftware.htmlunit" level="ERROR" />
     <logger name="org.apache.http.client.protocol" level="ERROR" />
 
-    <!-- https://hibernate.atlassian.net/browse/HV-1323 -->
-    <logger name="org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator" level="ERROR" />
-
     <root level="WARN">
         <appender-ref ref="ASYNCFILE" />
         <appender-ref ref="ASYNCSTDOUT" />

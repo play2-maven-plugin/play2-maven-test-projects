@@ -2,6 +2,7 @@ package controllers;
 
 import akka.NotUsed;
 import akka.actor.ActorSystem;
+import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import akka.japi.Pair;
 import akka.japi.pf.PFBuilder;
@@ -9,8 +10,6 @@ import akka.stream.Materializer;
 import akka.stream.javadsl.*;
 import play.libs.F;
 import play.mvc.*;
-
-import akka.event.Logging;
 
 import javax.inject.Inject;
 import java.net.URI;
@@ -42,8 +41,7 @@ public class HomeController extends Controller {
         this.userFlow = Flow.fromSinkAndSource(chatSink, chatSource).log("userFlow", logging);
     }
 
-    public Result index() {
-        Http.Request request = request();
+    public Result index(Http.Request request) {
         String url = routes.HomeController.chat().webSocketURL(request);
         return Results.ok(views.html.index.render(url));
     }
@@ -66,7 +64,7 @@ public class HomeController extends Controller {
      * http://blog.dewhurstsecurity.com/2013/08/30/security-testing-html5-websockets.html
      */
     private boolean sameOriginCheck(Http.RequestHeader request) {
-        List<String> origins = request.getHeaders().toMap().get("Origin");
+        List<String> origins = request.getHeaders().getAll("Origin");
         if (origins.size() > 1) {
             // more than one origin found
             return false;

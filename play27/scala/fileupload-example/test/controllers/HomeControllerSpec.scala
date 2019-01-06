@@ -1,14 +1,19 @@
+package controllers
+
 import java.io._
 import java.nio.file.Files
 
 import akka.stream.scaladsl._
 import akka.util.ByteString
+import akka.util.Timeout
 import org.scalatestplus.play._
 import org.scalatestplus.play.guice.GuiceOneServerPerSuite
 import play.api.libs.ws.WSClient
 import play.api.mvc._
 import play.api.test.Helpers._
 import play.api.test._
+
+import scala.concurrent.duration._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -23,9 +28,9 @@ class HomeControllerSpec extends PlaySpec with GuiceOneServerPerSuite with Injec
       val msg = "hello world"
       Files.write(tmpFile.toPath, msg.getBytes())
 
-      val url = s"http://localhost:${Helpers.testServerPort}/upload"
+      val url = s"http://localhost:${port}/upload"
       val responseFuture = inject[WSClient].url(url).post(postSource(tmpFile))
-      val response = await(responseFuture)
+      val response = await(responseFuture)(Timeout(10.seconds))
       response.status mustBe OK
       response.body mustBe "file size = 11"
     }

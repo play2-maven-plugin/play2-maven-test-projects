@@ -25,7 +25,7 @@ class ScalaCommentControllerSpec extends PlaySpec
       val request = FakeRequest(method = GET, path = "/scala/comet/liveClock")
       route(app, request) match {
         case Some(future) =>
-          whenReady(future, timeout(10 seconds)) { result =>
+          whenReady(future, timeout(10.seconds)) { result =>
             result.header.status mustEqual(OK)
           }
         case None =>
