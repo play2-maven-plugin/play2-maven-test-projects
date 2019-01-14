@@ -31,7 +31,7 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.7.0-RC8</play2.version>
+        <play2.version>2.7.0-RC9</play2.version>
         <play2-enhancer.version>1.2.2</play2-enhancer.version>
         <scala.version>2.12.8</scala.version>
 
