@@ -102,20 +102,6 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-testkit_2.12</artifactId>
-            <version>${akka.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-stream-testkit_2.12</artifactId>
-            <version>${akka.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-test_2.12</artifactId>
             <version>${play2.version}</version>
