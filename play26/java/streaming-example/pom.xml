@@ -50,14 +50,15 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-guice_2.12</artifactId>
+            <artifactId>play-java_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-java_2.12</artifactId>
+            <artifactId>play-guice_2.12</artifactId>
             <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>

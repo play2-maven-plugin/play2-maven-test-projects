@@ -56,15 +56,16 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.typesafe.play</groupId>
-            <artifactId>play-guice_2.12</artifactId>
-            <version>${play2.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-guice_2.12</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>

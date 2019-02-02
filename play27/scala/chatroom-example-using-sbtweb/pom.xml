@@ -59,6 +59,7 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-guice_2.12</artifactId>
             <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>

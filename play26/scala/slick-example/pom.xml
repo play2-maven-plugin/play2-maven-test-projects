@@ -51,19 +51,13 @@ under the License.
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play_2.12</artifactId>
-            <version>${play2.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.play</groupId>
             <artifactId>filters-helpers_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-guice_2.12</artifactId>
+            <artifactId>play_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
@@ -77,6 +71,13 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-slick-evolutions_2.12</artifactId>
             <version>${play2-slick.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-guice_2.12</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
