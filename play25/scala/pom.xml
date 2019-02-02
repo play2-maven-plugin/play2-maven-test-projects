@@ -38,6 +38,7 @@ under the License.
         <module>chatroom-example-using-webjars-assets</module>
         <module>compile-di-example</module>
         <module>fileupload-example</module>
+        <module>forms-example</module>
         <module>macwire-di-example</module>
         <module>slick-example</module>
         <module>slick-example-using-sbtweb</module>

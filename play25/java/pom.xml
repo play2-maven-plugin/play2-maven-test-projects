@@ -37,6 +37,7 @@ under the License.
         <module>chatroom-example-using-webjars-assets</module>
         <module>ebean-example</module>
         <module>fileupload-example</module>
+        <module>forms-example</module>
         <module>jpa-example</module>
         <module>jpa-example-using-sbtweb</module>
         <module>starter-example</module>
