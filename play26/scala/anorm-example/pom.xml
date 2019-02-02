@@ -32,7 +32,7 @@ under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <anorm.version>2.6.1</anorm.version>
-        <play2.version>2.6.20</play2.version>
+        <play2.version>2.6.21</play2.version>
         <scala.version>2.12.6</scala.version>
 
         <jar.plugin.version>3.1.0</jar.plugin.version>
@@ -50,9 +50,9 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>org.playframework.anorm</groupId>
-            <artifactId>anorm_2.12</artifactId>
-            <version>${anorm.version}</version>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>filters-helpers_2.12</artifactId>
+            <version>${play2.version}</version>
         </dependency>
 
         <dependency>
@@ -65,6 +65,12 @@ under the License.
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-jdbc_2.12</artifactId>
             <version>${play2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.playframework.anorm</groupId>
+            <artifactId>anorm_2.12</artifactId>
+            <version>${anorm.version}</version>
         </dependency>
 
         <dependency>

@@ -5,6 +5,7 @@ import play.api.test._
 import play.api.test.Helpers._
 import org.scalatestplus.play._
 import org.scalatestplus.play.guice._
+import play.api.test.CSRFTokenHelper._
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -44,12 +45,12 @@ class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite with ScalaFutures
     //running(FakeApplication(additionalConfiguration = inMemoryDatabase())) {
 
     "create new computer" in {
-      val badResult = homeController.save(FakeRequest())
+      val badResult = homeController.save(FakeRequest().withCSRFToken)
 
       status(badResult) must equal(BAD_REQUEST)
 
       val badDateFormat = homeController.save(
-        FakeRequest().withFormUrlEncodedBody("name" -> "FooBar", "introduced" -> "badbadbad", "company" -> "1")
+        FakeRequest().withFormUrlEncodedBody("name" -> "FooBar", "introduced" -> "badbadbad", "company" -> "1").withCSRFToken
       )
 
       status(badDateFormat) must equal(BAD_REQUEST)
@@ -59,7 +60,7 @@ class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite with ScalaFutures
 
 
       val result = homeController.save(
-        FakeRequest().withFormUrlEncodedBody("name" -> "FooBar", "introduced" -> "2011-12-24", "company" -> "1")
+        FakeRequest().withFormUrlEncodedBody("name" -> "FooBar", "introduced" -> "2011-12-24", "company" -> "1").withCSRFToken
       )
 
       status(result) must equal(SEE_OTHER)
