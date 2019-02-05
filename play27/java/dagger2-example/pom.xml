@@ -22,7 +22,7 @@ under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.play2-maven-plugin.test-projects.play27.java</groupId>
     <artifactId>dagger2-example</artifactId>
-    <version>1.0.0-rc5-SNAPSHOT</version>
+    <version>1.0.0-rc5</version>
     <packaging>play2</packaging>
 
     <name>Play! Framework 2.x Maven Test Projects : Play! 2.7.x : Java : Dagger2 Example</name>
@@ -121,7 +121,7 @@ under the License.
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/dagger2"/>
+                                <mkdir dir="${project.build.directory}/dagger2" />
                             </target>
                         </configuration>
                     </execution>
