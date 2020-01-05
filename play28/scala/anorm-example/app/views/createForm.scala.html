@@ -1,0 +1,34 @@
+@(computerForm: Form[Computer], companies: Seq[(String, String)])(implicit requestHeader: MessagesRequestHeader)
+
+@import views.html.helper._
+
+@main {
+    
+    <h1>Add a computer</h1>
+    
+    @form(routes.HomeController.save()) {
+        
+        <fieldset>
+            @CSRF.formField
+            @inputText(computerForm("name"), Symbol("_label") -> "Computer name", Symbol("_help") -> "")
+            @inputText(computerForm("introduced"), Symbol("_label") -> "Introduced date", Symbol("_help") -> "")
+            @inputText(computerForm("discontinued"), Symbol("_label") -> "Discontinued date", Symbol("_help") -> "")
+
+            @select(
+                computerForm("company"), 
+                companies, 
+                Symbol("_label") -> "Company", Symbol("_default") -> "-- Choose a company --",
+                Symbol("_showConstraints") -> false
+            )
+        </fieldset>
+
+        <p>Dates are in yyyy-MM-dd format</p>
+        
+        <div class="actions">
+            <input type="submit" value="Create this computer" class="btn primary"> or 
+            <a href="@routes.HomeController.list()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}
