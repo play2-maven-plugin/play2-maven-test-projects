@@ -2,9 +2,9 @@
 
 This is an example Play application that uses Java, and communicates with an in memory database using EBean.
 
-The Github location for this project is:
+The GitHub location for this project is inside:
 
-[https://github.com/playframework/play-java-ebean-example](https://github.com/playframework/play-java-ebean-example)
+<https://github.com/playframework/play-samples>
 
 ## Play
 

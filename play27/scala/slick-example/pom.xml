@@ -31,9 +31,9 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.7.0</play2.version>
-        <play2-slick.version>4.0.0</play2-slick.version>
-        <scala.version>2.12.8</scala.version>
+        <play2.version>2.7.4</play2.version>
+        <play2-slick.version>4.0.2</play2-slick.version>
+        <scala.version>2.12.10</scala.version>
 
         <jar.plugin.version>3.1.0</jar.plugin.version>
         <surefire.plugin.version>2.22.0</surefire.plugin.version>

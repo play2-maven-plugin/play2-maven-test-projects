@@ -19,13 +19,13 @@ import org.scalatest.junit.JUnitRunner
  *
  * This is good for testing filter functionality, such as CSRF token and template checks.
  *
- * See https://www.playframework.com/documentation/2.6.x/ScalaFunctionalTestingWithScalaTest for more details.
+ * See https://www.playframework.com/documentation/2.7.x/ScalaFunctionalTestingWithScalaTest for more details.
  */
 @RunWith(classOf[JUnitRunner])
 class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite with Injecting with ScalaFutures {
 
   // CSRF token helper adds "withCSRFToken" to FakeRequest:
-  // https://www.playframework.com/documentation/2.6.x/ScalaCsrf#Testing-CSRF
+  // https://www.playframework.com/documentation/2.7.x/ScalaCsrf#Testing-CSRF
   import CSRFTokenHelper._
 
   "WidgetController" must {

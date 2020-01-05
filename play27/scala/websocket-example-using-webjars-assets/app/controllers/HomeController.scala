@@ -30,7 +30,7 @@ class HomeController @Inject()(@Named("userParentActor") userParentActor: ActorR
 
   // Home page that renders template
   def index = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.index(webJarsUtil))
+    Ok(views.html.index())
   }
 
   /**

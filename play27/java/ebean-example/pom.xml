@@ -31,10 +31,10 @@ under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.7.0</play2.version>
-        <play2-ebean.version>5.0.1</play2-ebean.version>
+        <play2.version>2.7.4</play2.version>
+        <play2-ebean.version>5.0.2</play2-ebean.version>
         <play2-enhancer.version>1.2.2</play2-enhancer.version>
-        <scala.version>2.12.8</scala.version>
+        <scala.version>2.12.10</scala.version>
 
         <jar.plugin.version>3.1.0</jar.plugin.version>
         <surefire.plugin.version>2.22.0</surefire.plugin.version>
@@ -71,6 +71,20 @@ under the License.
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play-java-forms_2.12</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <!-- override version 2.7.3 pulled transitively by play-ebean dependency -->
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-java-jdbc_2.12</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+
+        <!-- override version 2.7.3 pulled transitively by play-ebean dependency -->
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-jdbc-evolutions_2.12</artifactId>
             <version>${play2.version}</version>
         </dependency>
 
