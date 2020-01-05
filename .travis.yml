@@ -24,6 +24,7 @@ env:
   matrix:
     # Travis starts only 5 concurrent processes. Most important (recent) subdirs placed first to build them first.
     - SUBDIR="reporting"
+    - SUBDIR="play28"
     - SUBDIR="play27"
     - SUBDIR="play26"
     - SUBDIR="play25"
