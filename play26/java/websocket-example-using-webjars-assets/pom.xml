@@ -38,7 +38,7 @@ under the License.
         <jar.plugin.version>3.1.0</jar.plugin.version>
         <surefire.plugin.version>2.22.0</surefire.plugin.version>
 
-        <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
+        <play2.plugin.version>1.0.0-rc6-SNAPSHOT</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
 
