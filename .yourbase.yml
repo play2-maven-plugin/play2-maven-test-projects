@@ -13,4 +13,4 @@ ci:
     name: default
 dependencies:
   build:
-  - java:8.232.09
+  - java:8.252.09
