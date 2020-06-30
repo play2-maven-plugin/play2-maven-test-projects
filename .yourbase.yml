@@ -1,5 +1,6 @@
 build_targets:
 - commands:
+  - javac -version
   - java -XX:+PrintFlagsFinal -version
   - mvn --version
   - mvn verify --update-snapshots --settings .travis.settings.xml -e
