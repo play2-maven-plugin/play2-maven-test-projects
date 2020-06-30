@@ -1,0 +1,16 @@
+build_targets:
+- commands:
+  - java -XX:+PrintFlagsFinal -version
+  - mvn --version
+  - mvn verify --update-snapshots --settings .travis.settings.xml -e
+  container:
+    image: yourbase/yb_ubuntu:16.04
+  name: default
+
+ci:
+  builds:
+  - build_target: default
+    name: default
+dependencies:
+  build:
+  - java:8.232.09
