@@ -5,7 +5,7 @@ build_targets:
   - mvn --version
   - mvn verify --update-snapshots --settings .travis.settings.xml -e
   container:
-    image: yourbase/yb_ubuntu:16.04
+    image: yourbase/yb_ubuntu:18.04
   name: default
 
 ci:
@@ -14,4 +14,17 @@ ci:
     name: default
 dependencies:
   build:
-  - java:14
+  - java:8.252.09
+  # or
+  # java:8.252+09
+  # java:14+36
+  # java:9+181
+  # java:11.0.6+10
+  # java:12.0.2+10
+  # java:13.0.2+8
+  - maven:3.6.3
+  # or
+  # maven:3.5.4
+  # maven:3.3.9
+  # maven:3.2.5
+  # maven:3.0.5 NOTE this one has security vulnerabilities and is from 2013!
